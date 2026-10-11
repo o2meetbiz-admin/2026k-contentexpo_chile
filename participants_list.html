@@ -1,0 +1,1085 @@
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+	.kexpo-exh *, .kexpo-exh *::before, .kexpo-exh *::after { box-sizing: border-box; margin: 0; padding: 0; }
+	.kexpo-exh { font-family: 'Pretendard', 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; background: #0E1830; color: #FFFFFF; line-height: 1; word-break: keep-all; overflow-wrap: break-word; position: relative; }
+	.kexpo-exh a { color: inherit; text-decoration: none; }
+	.kexpo-exh img { display: block; max-width: 100%; }
+	.kexpo-exh .inner { max-width: 1440px; margin: 0 auto; padding: 0 64px; }
+	.kexpo-exh .k-stripe { display: flex; height: 4px; }
+	.kexpo-exh .k-stripe .s1 { flex: 3; background: #E8192C; }
+	.kexpo-exh .k-stripe .s2 { flex: 1; background: #1B2F6E; }
+	.kexpo-exh .k-stripe .s3 { flex: 1; background: #3A6FD8; }
+	.kexpo-exh .overline { display: flex; align-items: center; gap: 8px; margin-bottom: 24px; }
+	.kexpo-exh .overline-bar { width: 28px; height: 2px; background: #E8192C; flex-shrink: 0; }
+	.kexpo-exh .overline-text { font-family: 'Inter', -apple-system, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #3A6FD8; }
+
+	/* HERO */
+	.kexpo-exh .s-hero { background: #0E1830; padding: 96px 0 56px; }
+	.kexpo-exh .hero-h1 { font-family: 'Inter', -apple-system, sans-serif; font-size: 72px; font-weight: 700; line-height: .95; letter-spacing: -.02em; text-transform: uppercase; color: #FFFFFF; margin-bottom: 24px; }
+	.kexpo-exh .hero-h1 em { color: #E8192C; font-style: normal; }
+	.kexpo-exh .hero-lead { font-family: 'Inter', -apple-system, sans-serif; font-size: 15px; font-weight: 300; color: #A8B8D8; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 8px; }
+	.kexpo-exh .hero-desc { font-size: 16px; font-weight: 300; color: #A8B8D8; margin-top: 18px; max-width: 640px; line-height: 1.7; }
+
+	/* SPEC */
+	.kexpo-exh .s-spec { background: #1B2F6E; }
+	.kexpo-exh .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+	.kexpo-exh .spec-cell { background: #0A1225; padding: 36px 28px; border-right: 1px solid #1B2F6E; display: flex; flex-direction: column; gap: 8px; }
+	.kexpo-exh .spec-cell:last-child { border-right: none; }
+	.kexpo-exh .spec-label { font-family: 'Inter', -apple-system, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #3A6FD8; }
+	.kexpo-exh .spec-value { font-family: 'Inter', -apple-system, sans-serif; font-size: 30px; font-weight: 700; line-height: 1.1; color: #FFFFFF; }
+
+	/* FILTER */
+	.kexpo-exh .ef-input { position: absolute; opacity: 0; pointer-events: none; width: 0; height: 0; }
+	.kexpo-exh .filter-bar-wrap { position: sticky; top: 0; z-index: 10; background: #0A1225; border-top: 1px solid #1B2F6E; border-bottom: 1px solid #1B2F6E; }
+	.kexpo-exh .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; padding: 20px 64px; max-width: 1440px; margin: 0 auto; }
+	.kexpo-exh .filter-chip { font-family: 'Pretendard', 'Inter', sans-serif; font-size: 14px; font-weight: 400; color: #A8B8D8; background: transparent; border: 1px solid #1B2F6E; padding: 9px 16px; cursor: pointer; white-space: nowrap; display: inline-block; }
+	.kexpo-exh .filter-chip:hover { border-color: #3A6FD8; color: #FFFFFF; }
+	.kexpo-exh .chip-count { color: inherit; opacity: .7; margin-left: 3px; }
+
+	/* LIST */
+	.kexpo-exh .s-list { padding: 64px 0 96px; }
+	.kexpo-exh .ex-group { margin-bottom: 80px; scroll-margin-top: 80px; }
+	.kexpo-exh .group-title { font-family: 'Inter', -apple-system, sans-serif; font-size: 24px; font-weight: 700; color: #FFFFFF; padding-bottom: 16px; border-bottom: 2px solid #E8192C; }
+	.kexpo-exh .group-count { font-size: 14px; font-weight: 400; color: #6B7A9A; margin-left: 10px; }
+	.kexpo-exh .group-index { display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 16px 0 32px; }
+	.kexpo-exh .group-index a { font-size: 13px; color: #6B7A9A; line-height: 1.6; }
+	.kexpo-exh .group-index a:hover { color: #FFFFFF; }
+
+	/* COMPANY */
+	.kexpo-exh .co-card { border: 1px solid #1B2F6E; background: #0E1830; margin-bottom: 28px; scroll-margin-top: 90px; }
+	.kexpo-exh .co-head { display: grid; grid-template-columns: 300px 1fr; }
+	.kexpo-exh .co-logo { background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 32px; min-height: 200px; }
+	.kexpo-exh .co-logo img { max-height: 120px; width: auto; max-width: 100%; object-fit: contain; }
+	.kexpo-exh .co-info { padding: 36px 40px; display: flex; flex-direction: column; gap: 14px; }
+	.kexpo-exh .co-meta { font-family: 'Inter', -apple-system, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #3A6FD8; }
+	.kexpo-exh .co-name { font-size: 26px; font-weight: 700; color: #FFFFFF; line-height: 1.3; }
+	.kexpo-exh .co-en { font-family: 'Inter', -apple-system, sans-serif; font-size: 14px; font-weight: 400; color: #6B7A9A; line-height: 1.4; margin-top: -8px; }
+	.kexpo-exh .co-desc { display: flex; flex-direction: column; gap: 10px; max-width: 860px; }
+	.kexpo-exh .co-desc p { font-size: 15px; font-weight: 300; color: #A8B8D8; line-height: 1.75; }
+	.kexpo-exh .co-footer { margin-top: 6px; }
+	.kexpo-exh .co-btn { display: inline-block; font-family: 'Inter', -apple-system, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #E8192C; border: 1px solid #E8192C; padding: 10px 18px; }
+	.kexpo-exh .co-btn:hover { background: #E8192C; color: #FFFFFF; }
+
+	/* IP */
+	.kexpo-exh .co-ips { border-top: 1px solid #1B2F6E; background: #0A1225; padding: 28px 40px 40px; }
+	.kexpo-exh .ips-label { font-size: 14px; font-weight: 700; color: #FFFFFF; margin-bottom: 20px; }
+	.kexpo-exh .ips-label span { font-weight: 400; color: #6B7A9A; margin-left: 6px; }
+	.kexpo-exh .ip-grid { display: grid; gap: 20px; }
+	.kexpo-exh .ip-grid.n3 { grid-template-columns: repeat(3, 1fr); }
+	.kexpo-exh .ip-grid.n2 { grid-template-columns: repeat(2, 1fr); }
+	.kexpo-exh .ip-grid.n1 { grid-template-columns: 1fr; }
+	.kexpo-exh .ip-card { background: #0E1830; border: 1px solid #1B2F6E; display: flex; flex-direction: column; }
+	.kexpo-exh .ip-thumb { aspect-ratio: 4 / 3; background: #050B18; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+	.kexpo-exh .ip-thumb img { width: 100%; height: 100%; object-fit: contain; }
+	.kexpo-exh .ip-body { padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+	.kexpo-exh .ip-title { font-family: 'Inter', 'Pretendard', -apple-system, sans-serif; font-size: 18px; font-weight: 700; color: #FFFFFF; line-height: 1.35; }
+	.kexpo-exh .ip-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+	.kexpo-exh .ip-tag { font-size: 12px; font-weight: 400; color: #A8B8D8; border: 1px solid #1B2F6E; padding: 5px 9px; line-height: 1.4; }
+	.kexpo-exh .ip-tag b { color: #3A6FD8; font-weight: 700; margin-right: 4px; }
+	.kexpo-exh .ip-desc { display: flex; flex-direction: column; gap: 8px; }
+	.kexpo-exh .ip-desc p { font-size: 14px; font-weight: 300; color: #A8B8D8; line-height: 1.75; }
+	.kexpo-exh .ip-items { list-style: none; display: flex; flex-direction: column; gap: 6px; border-left: 2px solid #1B2F6E; padding-left: 12px; }
+	.kexpo-exh .ip-items li { font-size: 13px; font-weight: 300; color: #A8B8D8; line-height: 1.6; }
+	.kexpo-exh .ip-items li b { color: #FFFFFF; font-weight: 700; }
+	.kexpo-exh .ip-link { font-size: 13px; color: #3A6FD8; text-decoration: underline; text-underline-offset: 3px; }
+	.kexpo-exh .ip-grid.n1 .ip-card { flex-direction: row; }
+	.kexpo-exh .ip-grid.n1 .ip-thumb { flex: 0 0 44%; aspect-ratio: auto; min-height: 320px; }
+	.kexpo-exh .ip-grid.n1 .ip-body { padding: 32px; justify-content: center; }
+
+	/* CTA */
+	.kexpo-exh .s-cta { background: #E8192C; padding: 96px 0; }
+	.kexpo-exh .cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 40px; text-align: center; }
+	.kexpo-exh .cta-h2 { font-family: 'Inter', -apple-system, sans-serif; font-size: 52px; font-weight: 700; line-height: 1.0; letter-spacing: -.01em; text-transform: uppercase; color: #FFFFFF; }
+	.kexpo-exh .cta-btns { display: flex; gap: 12px; }
+	.kexpo-exh .btn-prim { background: #FFFFFF; color: #E8192C; font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 14px 32px; border: none; cursor: pointer; display: inline-block; }
+	.kexpo-exh .btn-out { background: transparent; color: #FFFFFF; font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 13px 30px; border: 1px solid rgba(255, 255, 255, .55); cursor: pointer; display: inline-block; }
+
+	.kexpo-exh a:focus-visible, .kexpo-exh .ef-input:focus-visible + * { outline: 2px solid #3A6FD8; outline-offset: 2px; }
+
+	/* 필터 로직: 전체(ef-all) 기본 체크. 분야 선택 시 해당 그룹만 표시 */
+	#ef1:checked ~ .s-list .ex-group, #ef2:checked ~ .s-list .ex-group, #ef3:checked ~ .s-list .ex-group { display: none; }
+	#ef1:checked ~ .s-list #grp-ef1, #ef2:checked ~ .s-list #grp-ef2, #ef3:checked ~ .s-list #grp-ef3 { display: block; }
+	#ef-all:checked ~ .filter-bar-wrap label[for="ef-all"],
+	#ef1:checked ~ .filter-bar-wrap label[for="ef1"],
+	#ef2:checked ~ .filter-bar-wrap label[for="ef2"],
+	#ef3:checked ~ .filter-bar-wrap label[for="ef3"] { background: #E8192C; border-color: #E8192C; color: #FFFFFF; }
+
+	@media (max-width: 1024px) {
+		.kexpo-exh .ip-grid.n3 { grid-template-columns: repeat(2, 1fr); }
+		.kexpo-exh .co-head { grid-template-columns: 220px 1fr; }
+	}
+	@media (max-width: 768px) {
+		.kexpo-exh .inner { padding: 0 20px; }
+		.kexpo-exh .spec-grid { grid-template-columns: 1fr; }
+		.kexpo-exh .spec-cell { border-right: none; border-bottom: 1px solid #1B2F6E; padding: 22px 24px; }
+		.kexpo-exh .spec-cell:last-child { border-bottom: none; }
+		.kexpo-exh .s-hero { padding: 64px 0 40px; }
+		.kexpo-exh .hero-h1 { font-size: 34px; }
+		.kexpo-exh .filter-bar { padding: 14px 20px; gap: 8px; }
+		.kexpo-exh .filter-chip { font-size: 13px; padding: 8px 12px; }
+		.kexpo-exh .s-list { padding: 40px 0 64px; }
+		.kexpo-exh .group-title { font-size: 19px; }
+		.kexpo-exh .co-head { grid-template-columns: 1fr; }
+		.kexpo-exh .co-logo { min-height: 140px; padding: 24px; }
+		.kexpo-exh .co-logo img { max-height: 84px; }
+		.kexpo-exh .co-info { padding: 24px 20px; }
+		.kexpo-exh .co-name { font-size: 21px; }
+		.kexpo-exh .co-ips { padding: 22px 16px 24px; }
+		.kexpo-exh .ip-grid.n3, .kexpo-exh .ip-grid.n2 { grid-template-columns: 1fr; }
+		.kexpo-exh .ip-grid.n1 .ip-card { flex-direction: column; }
+		.kexpo-exh .ip-grid.n1 .ip-thumb { flex: none; aspect-ratio: 4 / 3; min-height: 0; }
+		.kexpo-exh .ip-body, .kexpo-exh .ip-grid.n1 .ip-body { padding: 20px; }
+		.kexpo-exh .s-cta { padding: 64px 0; }
+		.kexpo-exh .cta-h2 { font-size: 28px; }
+		.kexpo-exh .cta-btns { flex-direction: column; width: 100%; }
+		.kexpo-exh .btn-prim, .kexpo-exh .btn-out { text-align: center; padding: 14px 24px; }
+	}
+</style>
+
+<div class="kexpo-exh">
+<div class="k-stripe"><div class="s1"></div><div class="s2"></div><div class="s3"></div></div>
+<section class="s-hero"><div class="inner">
+<div class="overline"><div class="overline-bar"></div><span class="overline-text">Exhibitors</span></div>
+<h1 class="hero-h1">참가<br><em>기업</em></h1>
+<p class="hero-lead">2026 K-Content Expo Chile</p>
+<p class="hero-desc">칠레를 찾는 한국 콘텐츠 기업과 대표 IP를 미리 확인하실 수 있습니다. 분야를 선택하면 해당 기업만 모아 볼 수 있습니다.</p>
+</div></section>
+<section class="s-spec"><div class="spec-grid">
+<div class="spec-cell"><span class="spec-label">Companies</span><span class="spec-value">30개사</span></div>
+<div class="spec-cell"><span class="spec-label">Categories</span><span class="spec-value">3개 분야</span></div>
+<div class="spec-cell"><span class="spec-label">Contents</span><span class="spec-value">77개 IP</span></div>
+</div></section>
+<input type="radio" name="exh-filter" id="ef-all" class="ef-input" checked>
+<input type="radio" name="exh-filter" id="ef1" class="ef-input">
+<input type="radio" name="exh-filter" id="ef2" class="ef-input">
+<input type="radio" name="exh-filter" id="ef3" class="ef-input">
+<div class="filter-bar-wrap"><div class="filter-bar">
+<label class="filter-chip" for="ef-all">전체 <span class="chip-count">30</span></label>
+<label class="filter-chip" for="ef1">애니메이션 · 캐릭터 <span class="chip-count">11</span></label>
+<label class="filter-chip" for="ef2">방송 콘텐츠 <span class="chip-count">12</span></label>
+<label class="filter-chip" for="ef3">게임 <span class="chip-count">7</span></label>
+</div></div>
+<section class="s-list"><div class="inner">
+<section class="ex-group" id="grp-ef1">
+<h3 class="group-title">애니메이션 · 캐릭터 <span class="group-count">11개사</span></h3>
+<nav class="group-index"><a href="#co-ef1-1">엑세스코리아</a><a href="#co-ef1-2">오로라월드</a><a href="#co-ef1-3">주식회사 달빵크리에이티브</a><a href="#co-ef1-4">(주)이모션웨이브</a><a href="#co-ef1-5">에피소드컴퍼니</a><a href="#co-ef1-6">아이스크림스튜디오</a><a href="#co-ef1-7">그래피직스</a><a href="#co-ef1-8">(주)픽셀플레넷</a><a href="#co-ef1-9">큐티즈(Qtizz) 주식회사</a><a href="#co-ef1-10">(주)루몽스튜디오</a><a href="#co-ef1-11">주식회사 스튜디오쉘터</a></nav>
+<article class="co-card" id="co-ef1-1">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/accesskorea.png" alt="ACCESS KOREA 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Animation / Character</p>
+<h4 class="co-name">엑세스코리아</h4>
+<p class="co-en">ACCESS KOREA</p>
+<div class="co-desc"><p>엑세스코리아는 국내외로 시장을 넓혀 한국의 우수한 문화콘텐츠를 알리고 한류 발전에 기여하고자 2019년 설립되었습니다.</p><p>캐릭터 라이선싱, 애니메이션 배급, 한국 문화상품 공급 등 다양한 방식으로 전 세계 사람들이 한국의 우수한 문화콘텐츠를 즐길 수 있도록 기회를 제공하며, 해외의 유명 콘텐츠를 국내에 소개하고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.accesskorea.co.kr" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>2</span></p><div class="ip-grid n2">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/sauceria.jpg" alt="SauceRia" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">SauceRia</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>TV 애니메이션</span><span class="ip-tag"><b>AGE</b>3–5세</span></div>
+<div class="ip-desc"><p>SauceRia는 과일과 채소로 가득한 활기찬 세상입니다. Master Sauce의 레시피북 덕분에 평화로운 곳이죠!</p><p>그런데 &#x27;Black Tike&#x27;가 레시피북을 훔쳐 달아나자 몬스터들이 SauceRia를 공격합니다. 네 가지 소스 친구들이 착한 정령 ChaCha와 힘을 합쳐 SauceRia를 구하러 나섭니다!</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/dokkaebi-capture.jpg" alt="DOKKAEBI CAPTURE" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">DOKKAEBI CAPTURE</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>TV 애니메이션</span><span class="ip-tag"><b>AGE</b>6–8세</span></div>
+<div class="ip-desc"><p>도깨비 캐처들은 도깨비 정령과 마법을 찾아다니며 위험에 처한 사람들을 돕습니다. 귀여운 도깨비 캐처 Garam과 Bongbal은 곤경에 빠진 나무꾼을 돕고 위기에 처한 마을을 구하기 위해 여정을 떠납니다. 장난꾸러기 두 친구는 마을을 구할 수 있을까요?</p><p>보물을 쏟아내는 신비한 도깨비 주머니와 이를 차지하려는 소동이 이야기의 중심이며, 따뜻한 교훈도 함께 전합니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef1-2">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/PNG/aurora.png" alt="Aurora World Corp. 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Animation / Character</p>
+<h4 class="co-name">오로라월드</h4>
+<p class="co-en">Aurora World Corp.</p>
+<div class="co-desc"><p>오로라월드는 1981년 설립된 플러시 완구·캐릭터 브랜드 분야의 글로벌 선도 기업입니다. 40년 이상 쌓아온 디자인, 제조, 글로벌 유통 역량을 바탕으로 전 세계 80여 개국에 제품과 브랜드를 선보이고 있습니다. Palm Pals, YooHoo &amp; Friends 등 자체 IP를 중심으로 출판, 문구, 의류, 홈, 선물, 프로모션, 라이프스타일 제품 등 폭넓은 분야로 라이선스 사업을 확장해 왔습니다.</p><p>전 세계 주요 리테일러, 제조사, 브랜드 파트너와의 전략적 협업을 통해 IP 포트폴리오의 가치를 높이며 라이선스 기회와 장기적인 파트너십을 이어가고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.auroraworld.com" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>2</span></p><div class="ip-grid n2">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/palm-pals.jpg" alt="Palm Pals" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Palm Pals</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>캐릭터</span><span class="ip-tag"><b>AGE</b>15–29세</span></div>
+<div class="ip-desc"><p>Palm Pals는 손바닥만 한 크기에 저마다 개성을 지닌 사랑스러운 캐릭터들로 구성된, 세계적으로 인정받는 컬렉터블 플러시 브랜드입니다. 2020년 출시 이후 전 세계에서 7,100만 개 이상 판매되었으며 800종 이상의 캐릭터 포트폴리오로 확장되었습니다.</p><p>높은 수집성, 꾸준한 신규 캐릭터 출시, 활발한 소셜 미디어 커뮤니티를 바탕으로 Z세대, 알파세대, 가족 모두에게 사랑받고 있습니다.</p><p>플러시를 넘어 출판, 문구, 의류, 라이프스타일, 선물, 식음료 프로모션, 리테일 협업 등 다양한 라이선스 기회를 제공하며, 장기적인 브랜드 성장과 소비자 참여를 원하는 파트너에게 활용도 높은 IP입니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/yoohoo-to-the-rescue.jpg" alt="YooHoo to the Rescue" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">YooHoo to the Rescue</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>애니메이션 시리즈</span><span class="ip-tag"><b>AGE</b>3–5세</span></div>
+<div class="ip-desc"><p>YooHoo &amp; Friends는 전 세계의 희귀·멸종위기 동물에서 영감을 받은 오로라월드의 대표 캐릭터 IP입니다. 190개국에서 20개 언어로 스트리밍 중인 넷플릭스 오리지널 시리즈 &#x27;YooHoo to the Rescue&#x27;에서 YooHoo와 친구들은 생명의 나무에서 얻은 마법의 씨앗으로 도움이 필요한 동물을 돕고, 자연을 되살리며, 환경 문제를 해결하는 모험을 떠납니다.</p><p>우정, 협동, 친절, 환경 보호의 이야기로 어린이와 가족에게 의미 있는 가치를 전하며, 애니메이션을 넘어 완구, 출판, 의류, 문구, 게임, 라이프스타일 제품으로 확장되어 글로벌 라이선싱과 브랜드 협업 기회를 폭넓게 제공합니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef1-3">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/dalbbang.png" alt="DALBBANG CREATIVE Co., Ltd. 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Animation / Character</p>
+<h4 class="co-name">주식회사 달빵크리에이티브</h4>
+<p class="co-en">DALBBANG CREATIVE Co., Ltd.</p>
+<div class="co-desc"><p>달빵크리에이티브는 한국의 역사, 문화, 전통에서 영감을 받은 오리지널 캐릭터 IP와 실감형 체험 콘텐츠를 개발하는 문화콘텐츠 기업입니다.</p><p>조선시대의 과학적 성취와 문화유산을 바탕으로 실감형 전시 &#x27;Reading and Writing the Sky: Time of Joseon&#x27;을 만들었으며, 조선의 천문 물시계 옥루(Ongnu)와 관련된 전통 설화와 역사 기록에서 영감을 받아 선녀, 십이지, 사방신(청룡·백호·주작·현무) 등 독창적인 한국 캐릭터 IP를 개발했습니다.</p><p>또한 한국의 전통 발효문화와 전통주를 굿즈, 교육 프로그램, 전시, 체험 콘텐츠로 소개하는 캐릭터 &#x27;Nuruki&#x27;를 선보였습니다. 캐릭터 IP, 실감형 전시, 교육 콘텐츠를 결합해 한국의 문화유산을 세계에 알리며 전시, 라이선싱, 머천다이징, 문화관광 분야의 파트너십을 넓혀가고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.dalbbang.pro" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/reading-writing-sky.jpg" alt="Reading and Writing the Sky: Time of Joseon" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Reading and Writing the Sky: Time of Joseon</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>실감형 전시 IP</span><span class="ip-tag"><b>AGE</b>8세 이상</span></div>
+<div class="ip-desc"><p>조선 최고의 발명가 장영실의 과학적 업적과 세종대왕의 혁신에서 영감을 받은 실감형 전시입니다. 천문, 시간 측정, 역사 속 발명품을 다루는 인터랙티브 체험을 통해 관람객은 한국의 과학·문화유산을 흥미롭고 쉽게 만날 수 있습니다.</p><p>확장 가능한 문화 IP로 설계되어 교육 프로그램, 박물관 전시, 문화관광 체험으로 확장할 수 있습니다. 선녀, 십이지, 사방신(청룡·백호·주작·현무) 등 한국 전통 캐릭터 IP가 스토리텔링을 풍성하게 하고 캐릭터 상품, 교육 활동, 체험 프로그램으로 이어질 기회를 만듭니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/ongnu.jpg" alt="Ongnu Character Universe" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Ongnu Character Universe</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>한국 전통 캐릭터 IP</span><span class="ip-tag"><b>AGE</b>10–30세</span></div>
+<div class="ip-desc"><p>조선의 천문 물시계 옥루와 이에 얽힌 전통 설화, 역사 기록에서 영감을 받은 오리지널 한국 캐릭터 IP입니다. 선녀, 십이지, 사방신(청룡·백호·주작·현무) 등 한국 문화유산 속 상징적 존재들을 현대적인 캐릭터 디자인으로 재해석했습니다.</p><p>상품, 애니메이션, 출판, 전시, 디지털 콘텐츠, 체험 콘텐츠 등 폭넓은 상업적 활용을 고려해 설계되었으며, 한국 전통문화의 상징성과 현대적 스토리텔링을 결합해 글로벌 라이선싱, 문화상품, 크로스미디어 협업에서 높은 잠재력을 지니고 있습니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/nuruki.jpg" alt="Nuruki" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Nuruki</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>한국 전통 발효·라이프스타일 캐릭터 IP</span><span class="ip-tag"><b>AGE</b>20–40세</span></div>
+<div class="ip-desc"><p>한국의 전통 발효문화와 전통주를 재미있고 친근하게 소개하기 위해 만든 오리지널 캐릭터 IP입니다. 전통주와 발효문화를 교육, 체험, 전시, 캐릭터 상품과 연결해 모든 연령의 관객이 한국 음식문화를 즐겁게 경험할 수 있도록 합니다.</p><p>확장 가능한 라이프스타일 브랜드로 설계되어 전통주 체험 프로그램, 문화관광, 캐릭터 상품, 글로벌 음식문화 콘텐츠로 성장할 잠재력을 갖추고 있으며, 스토리텔링과 문화 체험을 통해 한국 발효 유산의 가치를 세계에 알리고자 합니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef1-4">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/emotionwave.png" alt="Emotionwave Inc. 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Animation / Character</p>
+<h4 class="co-name">(주)이모션웨이브</h4>
+<p class="co-en">Emotionwave Inc.</p>
+<div class="co-desc"><p>이모션웨이브는 문화예술과 첨단 기술의 접점에서 AX(AI 전환)를 선도하는 기업입니다.</p><p>자율형 AI 에이전트와 독자적인 피지컬 AI 기술을 바탕으로 디지털 지능과 현실 세계를 매끄럽게 연결합니다. CES 2026에서 그 성과를 선보였듯, 글로벌 음악 및 K-컬처 산업 전반의 디지털 혁신을 이끌고 있습니다. NVIDIA, NYU Stern과의 전략적 파트너십을 바탕으로 AI 기반 전환을 이끄는 글로벌 리더로서 2027년 코스닥 상장을 준비하고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.emotionwave.com" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>1</span></p><div class="ip-grid n1">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/infidity.jpg" alt="INFIDITY" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">INFIDITY</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>AI 캐릭터 인터랙션 소셜 플랫폼 (인터랙티브 미디어 / 게임)</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>INFIDITY는 AI 이미지·영상 생성, 노드 기반 시나리오 창작 툴, LLM 파라미터 튜닝 기반 AI 페르소나 엔진을 하나의 파이프라인으로 통합한 혁신적인 AI 캐릭터 창작·인터랙션 플랫폼입니다.</p><p>독자적인 LoRA 파인튜닝 기술로 일반적인 일러스트 스타일의 한계를 넘어, 핵심 소셜 앱 &#x27;Tangle&#x27;을 통해 고품질의 실사형 AI 캐릭터와 일관성 있는 영상 생성을 구현합니다.</p><p>단순한 텍스트 채팅을 넘어 캐릭터 페르소나에 맞춘 자연스러운 대화, 실시간 AI 영상 생성, 사용자의 선택에 따라 결말이 달라지는 몰입형 분기 스토리 모드 등 멀티미디어 관계 경험 전체를 제공합니다. 글로벌 크리에이터 이코노미와 AI 컴패니언 시장을 이끄는 차세대 콘텐츠 생태계입니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef1-5">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/episode.png" alt="Episode Company Co., Ltd. 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Animation / Character</p>
+<h4 class="co-name">에피소드컴퍼니</h4>
+<p class="co-en">Episode Company Co., Ltd.</p>
+<div class="co-desc"><p>2026년 4월 기준, (주)에피소드컴퍼니(코스닥: 317530)는 옛 캐리소프트의 새 이름으로, 애니메이션·영화·TV 드라마를 제작하고 투자하는 한국의 콘텐츠 IP 기업입니다. 2019년 코스닥에 상장했으며, 자체 애니메이션 스튜디오를 운영하며 &#x27;Carrie and Super Kola&#x27;, &#x27;City of Delivery&#x27; 등의 작품을 선보였습니다.</p><p>자회사를 통해 전 세계에 콘텐츠를 개발하고 배급하고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://episodecompany.kr" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/the-shadow.jpg" alt="The Shadow" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">The Shadow</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>K-POP 뮤지컬 복수 스릴러</span><span class="ip-tag"><b>AGE</b>15세 이상</span></div>
+<div class="ip-desc"><p>외모 때문에 그늘 속에서 살아온 천재 가수 한나의 K-POP 뮤지컬 복수극입니다.</p><p>신비한 힘으로 눈부신 제니로 변신한 그녀는 마침내 무대의 주인공이 됩니다.</p><p>그러나 성공과 함께 위험한 음모에 휘말리고, 자신을 이용한 이들에게 복수할 것인지 진정한 자신을 되찾을 것인지 선택해야 합니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/little-carries-big-question.jpg" alt="Little Carrie’s Big Question" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Little Carrie’s Big Question</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>TV 애니메이션 시리즈</span><span class="ip-tag"><b>AGE</b>3–7세</span></div>
+<div class="ip-desc"><p>호기심 많은 캐리와 AI 로봇 Mr. Egg가 함께하는 과학 교육 애니메이션 시리즈입니다.</p><p>달은 왜 모양이 바뀔까? 아이들의 수많은 질문에 재치 있게 답하며 과학의 경이로움으로 안내합니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/carrie-super-kola-school.jpg" alt="Carrie and Super Kola: The School" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Carrie and Super Kola: The School</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>TV 애니메이션 시리즈</span><span class="ip-tag"><b>AGE</b>3–7세</span></div>
+<div class="ip-desc"><p>11살 캐리와 외계인 친구 슈퍼콜라의 일상은 비밀로 가득합니다. 슈퍼콜라에게 지구의 모든 것은 새롭고 신기하며, 사랑, 우정, 존중, 신뢰, 감사 등 사람의 마음에 관한 것들에 깊은 호기심을 느낍니다.</p><p>평범해 보이는 일상 속에서 매일 신나는 모험을 겪으며, 두 친구는 인간의 감정과 사회적 가치를 더 깊이 이해하고 함께 성장해 갑니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef1-6">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/eyescream.png" alt="Eyescream Studio 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Animation / Character</p>
+<h4 class="co-name">아이스크림스튜디오</h4>
+<p class="co-en">Eyescream Studio</p>
+<div class="co-desc"><p>아이스크림스튜디오는 2012년 설립된 애니메이션·콘텐츠 제작사입니다. 하이엔드 영상 제작 분야의 풍부한 경험을 바탕으로 오리지널 IP를 기획·제작하고 있습니다. 대표 IP &#x27;Duda &amp; Dada&#x27;는 TV 시리즈 3개 시즌, 극장판, 공연, 공간 콘텐츠, 라이선싱 사업으로 확장되어 9개 언어, 180개 채널을 통해 50여 개국에 선보였습니다.</p><p>또한 숙련된 아티스트와 자체 AI 툴을 결합한 하이브리드 제작 파이프라인을 고도화하며, K-POP, 숏폼 애니메이션, 버추얼 캐릭터 등 글로벌 콘텐츠 시장으로 영역을 넓히고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.eyescream.tv" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/duda-dada.jpg" alt="Duda &amp; Dada" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Duda &amp; Dada</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>애니메이션</span><span class="ip-tag"><b>AGE</b>3–5세</span></div>
+<div class="ip-desc"><p>2013년 EBS와의 공동제작으로 시작해 13년 넘게 사랑받아 온 자연 탐험 유아 애니메이션 시리즈입니다. TV 시리즈 3개 시즌(10분×78화)과 83분 분량의 극장판 &#x27;Duda &amp; Dada: The Secret of Hoohoo Island&#x27;를 보유하고 있습니다. 시즌 1·2는 EBS 어린이 프로그램 시청률 1위(닐슨)를 기록했고, 극장판은 2023년 개봉 당시 전체 박스오피스 4위, 한국 영화 1위에 올랐습니다.</p><p>BBC·PBS 제작 가이드라인을 따르고 생태 전문기관의 자문을 거쳐 신뢰할 수 있는 어린이 안심 콘텐츠로 자리 잡았습니다. 현재 15개 언어로 50개국 약 180개 채널에서 방영되며 한국에서 가장 널리 수출된 프리미엄 애니메이션 IP 중 하나로 꼽힙니다.</p><p>순천만국가정원 테마 공간, 키즈카페, 뮤지컬, 라이드 필름 등 30여 개의 공간·체험 사업으로 확장했으며, 최근에는 K-POP 아티스트 협업과 Z세대 대상 웹드라마를 통해 성인 캐릭터·라이프스타일 시장까지 브랜드를 넓히고 있습니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/the-girls-play.jpg" alt="The girls play" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">The girls play</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>애니메이션</span><span class="ip-tag"><b>AGE</b>15–30세</span></div>
+<div class="ip-desc"><p>편당 약 90초, 총 40화로 구성된 K-록 테마의 서브컬처 애니메이션 시리즈입니다. 전설적인 기타리스트가 여고생의 몸에 깃들면서 오디션 서바이벌 드라마가 시작됩니다.</p><p>10대와 청년층(15–30세)을 타깃으로 하며, Unreal Engine 5.5와 생성형 AI를 결합한 자체 하이브리드 파이프라인으로 제작되어 많은 캐릭터와 배경을 효율적으로 구현했습니다.</p><p>2026년 하반기 공개 이후 해외 OTT 라이선싱, 버추얼 밴드 공연, 상품 등 관련 사업으로 확장할 계획입니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/qqu-ent-eyescream.jpg" alt="QQu-Ent" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">QQu-Ent</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>애니메이션</span><span class="ip-tag"><b>AGE</b>15세 이상</span></div>
+<div class="ip-desc"><p>K-POP 아이돌 서바이벌 세계를 배경으로 한 세로형 숏폼 코미디 애니메이션 시리즈(2분×5화)입니다. 1990년대 원히트 스타에서 연예기획사 대표가 된 김핑크와, 데뷔를 위해 고군분투하는 옥탑방 연습생들의 이야기를 그립니다.</p><p>10대와 청년층(15세 이상)을 타깃으로, 이상적인 성공담보다 공감 가는 유머와 좌절, 성장에 초점을 맞춥니다. 캐릭터는 Instagram, TikTok, YouTube Shorts 등 소셜 미디어 플랫폼으로의 확장 가능성을 고려해 디자인되었습니다.</p><p>2026년 7월 OTT 플랫폼 KITZ에서 첫 공개된 이후 국내외 숏폼 OTT 플랫폼에 배급되고 있습니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef1-7">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/gfx.png" alt="GraFiziX 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Animation / Character</p>
+<h4 class="co-name">그래피직스</h4>
+<p class="co-en">GraFiziX</p>
+<div class="co-desc"><p>GraFiziX — 재미와 배움의 미래를 만듭니다. GraFiziX는 배움이 즐거워야 하며 호기심과 창의성, 발견을 이끌어야 한다고 믿습니다. 20년 이상의 경험을 바탕으로 전 세계 어린이와 청소년에게 즐거움과 깨달음을 주는 혁신적인 교육 콘텐츠를 전문적으로 제작합니다.</p><p>핵심 철학인 Great Fun Experience(GFX)는 엔터테인먼트와 교육적 가치를 자연스럽게 결합한 매력적인 미디어를 선보이겠다는 의지를 담고 있습니다. 과학, 수학, 음악, 미술을 쉽고 재미있게 풀어낸 인기 프로그램 &#x27;Mind Blowing Breakthroughs&#x27; 등 수상 경력의 TV 프로그램을 개발했으며, 애니메이션 시리즈를 60여 개국에 배급해 어려운 주제를 문화의 경계를 넘어 흥미롭고 친근하게 전하고 있습니다.</p><p>방송을 넘어 인터랙티브 미디어, 몰입형 감각 체험, 체험형 전시 제작에도 강점을 지니며, 전담 에듀테인먼트 연구소에서 자체 IP를 기반으로 가족 뮤지컬, 인터랙티브 전시, 교육용 제품 등 새로운 콘텐츠와 포맷을 꾸준히 개발하고 있습니다. 첨단 기술과 창의적 스토리텔링, 인터랙티브 경험을 결합해 어린이 교육의 미래를 만들어가는 것을 미션으로, 다음 세대가 지식과 호기심, 기쁨을 누릴 수 있도록 즐겁고 접근하기 쉬운 교육을 만드는 데 힘쓰고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.grafizix.com" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/frienzoo.jpg" alt="FrienZoo" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">FrienZoo</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>애니메이션</span><span class="ip-tag"><b>AGE</b>4–7세</span></div>
+<div class="ip-desc"><p>배고프고 지친 농장 동물들이 활기찬 동물원을 발견하고 아늑한 어린이 동물원에 자리 잡으며 펼쳐지는 사랑스러운 모험입니다. 동그란 눈과 따뜻한 마음을 지닌 이들은 신기한 동물원 친구들에게 호기심을 느끼고 새 친구를 사귀고 싶어 합니다.</p><p>하지만 사랑스러운 당나귀, 다정한 고양이, 명랑한 수탉, 친근한 강아지에게 친구를 사귀는 일은 쉽지 않습니다. 소박한 농장 방식이 개성 넘치는 동물원 친구들과 꽤 다르다는 걸 곧 깨닫게 되죠. 이들이 친절과 이해, 우정의 마법에 대해 소중한 교훈을 배워가는 과정을 함께 따라가 보세요.</p><p>잔잔한 유머와 따뜻한 순간으로 가득한 이 이야기는 어린아이들에게 우정을 가꾸고 서로의 다름을 존중하는 법을 알려줍니다. 모든 동물이 우정이란 사랑과 웃음, 그리고 있는 그대로의 나로 존재하는 것임을 깨닫는 즐거운 여정이 시작됩니다!</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/makers-jam.jpg" alt="Makers Jam" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Makers Jam</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>애니메이션</span><span class="ip-tag"><b>AGE</b>7–12세</span></div>
+<div class="ip-desc"><p>Makers Jam은 &#x27;Makers Con&#x27;과 &#x27;Game Jam&#x27;을 합친 이름입니다. 다양한 분야의 과학자들이 어린 시절 모습으로 모여 함께 발명하고, 나누고, 즐기는 창의적인 체험의 장으로, 과학과 상상력, 재미를 결합한 에듀테인먼트 시리즈입니다.</p><p>역사 속 위인이 우리 아이의 선생님이 된다면? 반 친구들이 세계적인 과학자들의 어린 시절 모습이라면? 어린이가 되어 돌아온 전설적인 인물들은 힘을 모아 도전을 극복하며 서로에게 배우고, 서로에게 가장 훌륭한 선생님이 되어 갑니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/mbb-virtual-quiz-show.jpg" alt="MBB Virtual Quiz Show" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">MBB Virtual Quiz Show</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>미디어</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>증강현실(AR), 실시간 렌더링, 버추얼 프로덕션 기술을 결합해 몰입감 있는 학습 경험을 제공하는 프로그램입니다.</p></div>
+<ul class="ip-items"><li>첨단 Facial AR 기술로 제작한 교육 버라이어티 쇼 시리즈</li><li>표정이 풍부한 버추얼 캐릭터 애니메이션의 실시간 AR 합성 및 라이브 스트리밍</li><li>라이브 제작과 동시에 애니메이션 콘텐츠를 생성해 제작 효율을 크게 향상</li><li>과학, 음악 이론, 클래식 음악, 미술, 코딩 등 STEAM 기반 과목을 아우르는 멀티 시리즈 교육 프랜차이즈</li><li>어려운 교육 주제를 어린이와 가족이 흥미롭고 재미있게 즐길 수 있도록 설계</li></ul>
+<div class="ip-desc"><p>버추얼 프로덕션 기술과 교육적 스토리텔링을 결합한 Virtual Tutors는 TV, 디지털 플랫폼, 라이브 스트리밍, 인터랙티브 학습 환경으로 확장 가능한 새로운 세대의 에듀테인먼트를 선보입니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef1-8">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/pixelplanet.png" alt="PIXEL PLANET Inc. 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Animation / Character</p>
+<h4 class="co-name">(주)픽셀플레넷</h4>
+<p class="co-en">PIXEL PLANET Inc.</p>
+<div class="co-desc"><p>픽셀플레넷은 25년 이상의 경험을 보유한 한국의 3D CGI 애니메이션 스튜디오입니다. 원스톱 제작 파이프라인을 바탕으로 SofyRuby, Tea Tea Cherry, Z-Ranger, Ocean Guardian Gangchi 등의 IP를 선보여 왔습니다.</p><p>매력적인 스토리텔링과 혁신적인 애니메이션을 전 세계 관객에게 전하기 위해 라이선싱 및 배급 분야의 글로벌 파트너를 적극적으로 찾고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.instagram.com/gangchi_island/" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>1</span></p><div class="ip-grid n1">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/gangchi-island.jpg" alt="Gangchi Island" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Gangchi Island</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>3D 애니메이션</span><span class="ip-tag"><b>AGE</b>3–5세</span></div>
+<div class="ip-desc"><p>신비로운 Gangchi Island에서 다섯 마리의 아기 강치 강치, 음치, 아치, 이치, 망치가 바다를 지키기 위해 마법학교에 다닙니다. 도움이 필요한 바다 생물들을 도우며 저마다 특별한 힘이 담긴 마법 카드를 얻게 되죠. 장난꾸러기 강치가 늘 말썽을 일으키는 가운데, 사악한 마법사 쭈꾸가 이들의 터전을 위협합니다.</p><p>아기 강치들은 그를 막고 학교를 지켜낼 수 있을까요? 우정과 용기, 해양 보호가 가득한 마법 같은 모험을 함께하세요!</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef1-9">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/qtizz.png" alt="QTIZZ Inc. 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Animation / Character</p>
+<h4 class="co-name">큐티즈(Qtizz) 주식회사</h4>
+<p class="co-en">QTIZZ Inc.</p>
+<div class="co-desc"><p>귀여움이 세상을 구한다! 큐티즈는 마음에 미소를 선사하는 감성 캐릭터와 일상에 기쁨을 주는 콘텐츠로 세상 모든 사람에게 행복한 감정을 전하는 것을 가치이자 목표로 삼고 있습니다. 오리지널 캐릭터 디자인, 애니메이션 제작, IP 라이선싱, 캐릭터 상품, 이모티콘, 콘텐츠 공동제작 등 전방위 사업을 펼치는 콘텐츠 IP 전문기업으로, 모두에게 사랑받는 귀여운 캐릭터 상품과 새롭고 재미있는 콘텐츠를 통해 글로벌 캐릭터 엔터테인먼트 기업으로 성장하고자 합니다.</p><p>큐티즈는 웹툰 기업 재담미디어의 자회사로, 웹툰 캐릭터 IP의 2차 사업, 큐티즈 오리지널 캐릭터 IP 라이선싱, 웹툰·애니메이션 기획 및 제작, 캐릭터 디자인, 이모티콘, 캐릭터 상품, 콜라보레이션 등 콘텐츠 IP와 관련된 전방위 사업을 전개하는 IP 비즈니스 전문기업입니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.qtizz.co.kr" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/goodnight-pajamal.jpg" alt="Goodnight Pajamal" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Goodnight Pajamal</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>캐릭터</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>전 세계의 포동포동한 동물 친구들이 모여 파자마 파티를 엽니다!</p><p>귀여운 동물 친구들이 하와이에 있는 통통국제예체능학교(Tongtong International Arts and Physical Education School)로 유학을 오면서 펼쳐지는 즐겁고 신나는 학교생활과 기숙사 생활 이야기입니다. 예체능 수업이 끝난 주말 밤, 파자멀(파자마+애니멀) 친구들은 기숙사에서 파자마 파티를 열지만 신나게 놀다 그만 잠이 들고 맙니다.</p><p>미국, 영국, 중국, 일본, 태국, 튀르키예 등 여러 국가와 라이선스 및 에이전시 계약을 맺으며 IP 사업을 활발히 전개하고 있으며, 2025 대한민국 콘텐츠대상에서 문화체육관광부 장관상을 수상했습니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/eggoogoo-friends.jpg" alt="Eggoogoo friends" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Eggoogoo friends</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>캐릭터</span><span class="ip-tag"><b>AGE</b>4–8세</span></div>
+<div class="ip-desc"><p>실수로 깨어나 세상 밖으로 나온 친구들의 일상과 작은 모험, 여행 이야기입니다.</p></div>
+<ul class="ip-items"><li><b>Eggoogoo</b> — 실수로 깨져버린 실수투성이 달걀</li><li><b>Mechoo</b> — 메추리알, Eggoogoo의 단짝</li><li><b>Mac</b> — 찜질방 맥반석 달걀, 뼈가 약하고 부끄럼이 많음</li><li><b>Tata</b> — 소심한 타조알</li><li><b>Addy</b> — 방향 감각이 없는 거북알</li><li><b>Gogo</b> — 지진으로 깨어난 공룡알, 말썽꾸러기이자 대식가</li></ul>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/little-minicorn.jpg" alt="Little Minicorn" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Little Minicorn</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>캐릭터</span><span class="ip-tag"><b>AGE</b>3–5세</span></div>
+<div class="ip-desc"><p>구름마을 무지개 놀이터에서 매일 즐겁게 노는 포동포동한 아기 유니콘들의 성장 이야기로, Little Minicorn 친구들은 저마다 타고난 개성을 지니고 있습니다.</p></div>
+<ul class="ip-items"><li><b>Star (하늘색)</b> — 꿈이 많고 늘 웃으며 재미있는 생각을 하는 아기 유니콘</li><li><b>Snow (흰색)</b> — 밝고 호기심 많은, Minicorn Friends의 하얀 아기 유니콘</li><li><b>Sunny (노란색)</b> — 밝고 활기차며 에너지 넘치는 아기 유니콘</li><li><b>Luna (보라색)</b> — 차분하고 조용한 성격의 아기 유니콘</li><li><b>Cloo (회색)</b> — 겁이 아주 많고 무서운 걸 싫어하는 소심한 아기 유니콘</li><li><b>Li (파란색)</b> — 빠르고 강하며 용감한 아기 유니콘</li><li><b>Mint (초록색)</b> — 자연을 사랑하는 순수하고 감성적인 아기 유니콘</li><li><b>Love (분홍색)</b> — 사랑스럽고 다정한 아기 유니콘</li></ul>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef1-10">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/PNG/rumong.png" alt="Rumong Studio Inc. 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Animation / Character</p>
+<h4 class="co-name">(주)루몽스튜디오</h4>
+<p class="co-en">Rumong Studio Inc.</p>
+<div class="co-desc"><p>루몽스튜디오는 오리지널 캐릭터 IP를 개발하고 이를 음악, 게임, 숏폼 콘텐츠, 웹툰, 상품으로 확장해 전 세계 관객에게 선보이는 AI 기반 콘텐츠 기업입니다.</p><p>대표 IP인 FÉLIN은 가상 세계에서 인간 아이돌로 변신하는 다섯 마리 고양이로 구성된 차세대 버추얼 K-POP 아이돌 그룹입니다. 캐릭터 중심 스토리텔링, K-POP 퍼포먼스, AI 기반 콘텐츠 제작을 결합한 FÉLIN은 숏폼 누적 조회수 100만 회를 돌파했으며, 캐나다·스페인·두바이 K-EXPO에 참가하며 글로벌 팬덤을 키워가고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://rumong.kr" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>2</span></p><div class="ip-grid n2">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/felin-idol.jpg" alt="FÉLIN (Idol Ver.)" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">FÉLIN (Idol Ver.)</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>캐릭터 IP</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>FÉLIN은 K-POP과 드라마틱한 스토리텔링을 결합한 5인조 버추얼 아이돌 그룹으로, 독특한 세계관과 캐릭터를 통해 Z세대와 밀레니얼 세대에게 강한 공감과 몰입을 이끌어냅니다.</p><p>인간형 단일 버추얼 캐릭터와 달리 고양이, 버추얼 아이돌, 모에 스타일 캐릭터 디자인이라는 세 가지 요소를 결합해 정서적 친밀감, 캐릭터의 매력, 시각적 정체성을 동시에 전달합니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/felin-cat.jpg" alt="FÉLIN (Cat Ver.)" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">FÉLIN (Cat Ver.)</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>캐릭터 IP</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>실제 고양이 품종의 독특한 외모, 성격, 매력에서 영감을 받은 따뜻한 캐릭터 IP입니다. 다섯 캐릭터는 털 색, 눈 색, 신체적 특징, 기질 등 품종별 특성을 반영하고 있으며, 생일은 전 세계에서 기념하는 고양이 관련 기념일에서 착안했습니다.</p><p>캐릭터 자체의 매력을 넘어 고양이 애호가를 위한 공감형 일상 만화, 2D·3D 숏폼 애니메이션, 라이프스타일 상품으로 확장할 수 있어, 강한 정서적 유대감과 글로벌 캐릭터 IP로서의 폭넓은 잠재력을 갖추고 있습니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef1-11">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/shelter.png" alt="Studio Shelter 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Animation / Character</p>
+<h4 class="co-name">주식회사 스튜디오쉘터</h4>
+<p class="co-en">Studio Shelter</p>
+<div class="co-desc"><p>2009년 설립된 스튜디오쉘터는 독창적인 창작 감각과 대담한 개성으로 인정받는 한국의 애니메이션 스튜디오입니다. 오리지널 스토리텔링을 기반으로 상업성과 예술성이 만나는 새로운 창작 영역을 개척하며 명성을 쌓아왔습니다.</p><p>빠르게 변화하는 애니메이션 환경 속에서 글로벌 관객을 위한 새로운 형태의 애니메이션을 만들어가고자 합니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://studioshelter.co.kr" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/maru-is-a-puppy.jpg" alt="Maru is a Puppy" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Maru is a Puppy</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>일상, 코미디</span><span class="ip-tag"><b>AGE</b>7세 이상</span></div>
+<div class="ip-desc"><p>어느 날 우리 집 강아지가 사람이 되었습니다. 그것도 다섯 살 어린이로요! 마루는 강아지와 어린이의 끝없는 에너지, 충성심, 호기심을 모두 지닌 사고뭉치지만, 순수하고 한없이 다정한 마음을 가졌습니다.</p><p>무지개빌라에 사는 마루는 순수한 놀라움과 소소한 실수, 따뜻한 웃음으로 일상을 채우며 이웃들의 삶을 조금씩 바꿔 갑니다.</p><p>애니메이션 가족 시트콤 &#x27;Maru is a Puppy&#x27;는 사랑과 인내, 순수한 기쁨으로 이루어진 새로운 형태의 가족을 그립니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/always-happy-choco-cream.jpg" alt="Always, Happy Choco Cream" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Always, Happy Choco Cream</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마 / 뮤지컬 어드벤처</span><span class="ip-tag"><b>AGE</b>7세 이상</span></div>
+<div class="ip-desc"><p>크림, 초코, 해피는 무지개다리를 건너기 전 동물들이 머무는 평화로운 마을 Longbridge Town에서 작은 사고를 행복한 하루로 바꾸는 단짝 삼총사입니다.</p><p>매일 이곳을 찾는 동물 친구들이 사랑하는 이를 기다리는 동안 늘 꿈꾸던 삶을 누릴 수 있도록 돕습니다. 잠자리 쫓기, 별 따기, 화장지로 완벽한 놀이 만들기까지, 너무 작은 소원은 없습니다. 새 친구가 오면 삼총사의 가장 중요한 임무가 시작됩니다. 바로 최고의 하루를 만들어 주는 것! Longbridge Town에서는 사랑과 웃음, 우정이 가장 위대한 모험이니까요.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/exorcism-espresso.jpg" alt="Exorcism? Espresso!" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Exorcism? Espresso!</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>스릴러 엑소시즘 로맨스</span><span class="ip-tag"><b>AGE</b>15세 이상</span></div>
+<div class="ip-desc"><p>유연은 타고난 불운의 아이콘입니다. 그녀가 일하는 곳마다 망해 버리죠. 수상한 카페에 새겨진 경고를 무시하고 500년 동안 봉인된 왕실 항아리를 깨뜨리자, 오랫동안 억눌려 있던 영혼들이 현대 도시로 풀려납니다.</p><p>예측할 수 없는 퇴마 능력이 깨어나면서 유연은 자신이 일으킨 혼란을 수습해야 하고, 아이돌 바리스타로 정체를 숨긴 채 살아가는 타락한 천상의 존재 &#x27;균형의 네 수호자&#x27;와 손을 잡게 됩니다. 에스프레소를 내리러 왔던 그녀, 이제 세상을 구할 방법은 퇴마뿐입니다.</p></div>
+</div></div>
+</div></div></article>
+</section>
+<section class="ex-group" id="grp-ef2">
+<h3 class="group-title">방송 콘텐츠 <span class="group-count">12개사</span></h3>
+<nav class="group-index"><a href="#co-ef2-1">애드히시브</a><a href="#co-ef2-2">(주)씨제이이엔엠</a><a href="#co-ef2-3">(주)이엘티비</a><a href="#co-ef2-4">주식회사 한터글로벌</a><a href="#co-ef2-5">주식회사뉴유니버스</a><a href="#co-ef2-6">(주)난센스</a><a href="#co-ef2-7">주식회사 노바스퀘어</a><a href="#co-ef2-8">주식회사 피에이치이엔엠</a><a href="#co-ef2-9">심스토리(주)</a><a href="#co-ef2-10">주식회사 위매드</a><a href="#co-ef2-11">(주)웨스트월드스토리</a><a href="#co-ef2-12">윈디아주식회사</a></nav>
+<article class="co-card" id="co-ef2-1">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/ADHESIVE.png" alt="ADHESIVE Co.Ltd 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">TV Content</p>
+<h4 class="co-name">애드히시브</h4>
+<p class="co-en">ADHESIVE Co.Ltd</p>
+<div class="co-desc"><p>디자인 에이전시에서 AI 하이브리드 시네마의 선두주자로 — ADHESIVE</p><p>세계 3대 디자인 어워드에서 인정받은 비주얼 전략 역량을 바탕으로 2016년부터 오리지널 IP 중심의 콘텐츠를 개발·제작해 왔습니다. 넷플릭스에 공개된 &#x27;Fester&#x27; 이후 장편영화와 오리지널 시리즈로 영역을 넓혔으며, 실사 촬영과 생성형 AI를 결합한 자체 제작 파이프라인으로 AI 하이브리드 영화 제작을 이끌고 있습니다.</p><p>&#x27;Tunda&#x27;는 BIFAN NAFF 프로젝트 마켓에서 칸타나상(Kantana Award)을 수상하며 글로벌 공동제작 가능성을 인정받았고, AI 하이브리드 장편영화 &#x27;Ask Me Anything&#x27;은 제30회 BIFAN AI 국제경쟁부문에 공식 선정되었습니다. 장편영화 &#x27;Karlovy Vary&#x27;는 뉴욕 SOHO 국제영화제에 초청되었으며 국내 극장 개봉을 앞두고 있습니다. 에이핑크 박초롱 주연의 오리지널 오피스 코미디 시리즈 &#x27;Agency ChiChi: Ad Heat Special&#x27; 역시 TVING과 Wavve를 통해 공개될 예정입니다.</p><p>오리지널 IP 개발과 국제 공동제작부터 극장 영화, OTT 시리즈, AI 하이브리드 영화 제작까지, 글로벌 콘텐츠 시장에서 입지를 넓혀가고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.weareadhesive.com" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/tunda.jpg" alt="Tunda" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Tunda</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>19세 이상</span></div>
+<div class="ip-desc"><p>“열일곱 걸음… 그리고 어느새 나는 지구 반대편에 서 있었다.”</p><p>&#x27;TUNDA: The Rock of the Weary&#x27;는 한국과 콜롬비아를 배경으로 한 판타지 미스터리 스릴러 시리즈입니다. 신비로운 &#x27;신의 동굴&#x27;을 발견한 평범한 한국 청년 지석은 동굴을 지날 때마다 콜롬비아 청년 산티아고와 몸이 뒤바뀝니다. 서로의 삶을 살게 된 두 사람은 중남미 전설 속 존재 라 툰다(La Tunda)와 연결된 의문의 아동 실종 사건을 마주하고, 더 많은 무고한 생명이 희생되기 전에 두 대륙을 넘나들며 전설 뒤에 숨은 진실을 밝혀내야 합니다.</p><p>한국의 미스터리와 남미 신화를 결합한 이 작품은 두 대륙을 잇는 긴장감 넘치는 이야기를 통해 인간의 욕망과 희생, 믿음을 탐구하는 글로벌 장르 시리즈입니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/tae-won-jang.jpg" alt="TAE WON JANG" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">TAE WON JANG</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>19세 이상</span></div>
+<div class="ip-desc"><p>판타지 코미디 시리즈 · 걸스데이 방민아 주연</p><p>아버지의 갑작스러운 죽음 이후 쌍둥이 기태와 기원은 파산 직전의 낡은 대중목욕탕 &#x27;태원장&#x27;을 물려받습니다. 텅 빈 목욕탕, 밀린 청구서, 가업을 살릴 방법조차 모르는 상황만으로도 막막한데, 목욕탕 뒷산에서 숨겨진 선녀의 날개옷을 발견하면서 일은 더 복잡해집니다.</p><p>날개옷 하나로 선녀들이 평범한 일상에 들이닥치고, 망해가던 동네 목욕탕은 마법 같은 소동의 중심이 됩니다. 목욕탕을 지키랴, 기대와는 전혀 다른 선녀들을 상대하랴, 끝없는 황당한 사고를 버티랴, 쌍둥이는 파산이 차라리 가장 쉬운 문제였다는 걸 깨닫게 됩니다. &#x27;TAE WON JANG&#x27;은 오래된 한국 목욕탕이 평범한 사람들과 특별한 존재들의 뜻밖의 만남의 장소가 되는 따뜻하고 예측불가한 판타지 코미디입니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/agency-chichi.jpg" alt="Agency ChiChi: Ad Heat Special" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Agency ChiChi: Ad Heat Special</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>19세 이상</span></div>
+<div class="ip-desc"><p>오피스 코미디 시리즈 · 에이핑크 박초롱 주연 · TVING, Wavve 공개 예정</p><p>한때 천재 광고인이었던 용식은 지금 식당에서 고기 불판을 닦으며 하루를 보냅니다. 전설적인 커리어는 온데간데없죠. 그러나 옛 동료 수현과, 회사 생활에 질릴 대로 질린 날카롭고 거침없는 임원 민주가 나타나면서 조용한 일상은 갑자기 끝이 납니다. 정신을 차려 보니 악명 높은 광고대행사 CHICHI가 다시 문을 열었습니다. 원하든 원치 않든 말이죠.</p><p>10억 원짜리 데이터 사고와 냉혹한 사내 정치부터 기상천외한 요구를 하는 괴짜 클라이언트까지, 새 캠페인마다 또 다른 위기가 됩니다. 더 대담하고, 더 미치고, 더 뻔뻔해진 CHICHI가 광고에서는 때로 최악의 아이디어가 최고의 캠페인이 될 수 있음을 증명하러 돌아왔습니다. 황당한 클라이언트, 혼돈의 팀워크, 뜻밖의 로맨스, 광고계의 부조리한 현실이 담긴 빠른 템포의 오피스 코미디입니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef2-2">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/PNG/cjenm.png" alt="CJ ENM Co., Ltd 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">TV Content</p>
+<h4 class="co-name">(주)씨제이이엔엠</h4>
+<p class="co-en">CJ ENM Co., Ltd</p>
+<div class="co-desc"><p>진정한 독창성은 어디에서 오는가? CJ ENM은 1995년부터 그 질문에 답해 왔습니다. 꼭 봐야 할 드라마, 상을 휩쓰는 영화, 중독성 있는 리얼리티 예능을 만들며 독창성의 최전선에 서 있습니다. K-POP의 차세대 스타를 발굴하고, 새로운 돌풍을 일으킬 애니메이션을 만들며, 브로드웨이와 웨스트엔드, 아시아 무대에 오를 세계적 수준의 뮤지컬을 제작합니다. 독창성은 모든 언어, 나이, 세대를 아우르는 공통의 주제에서 피어나며, 새로운 캐릭터와 이야기는 우리 모두가 공유하는 보편적인 감정으로 사람들을 하나로 이어줍니다.</p><p>&#x27;Guardian: The Lonely and Great God&#x27;, &#x27;True Beauty&#x27; 같은 명작부터 &#x27;Lovely Runner&#x27;, &#x27;Dear X&#x27; 등 최신작까지, CJ ENM은 전 세계 시청자를 사로잡는 최고 수준의 K-드라마를 제작·유통하는 선두주자입니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://watch.cjenm.com" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/kitchen-soldier.jpg" alt="The Legend of KITCHEN SOLDIER" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">The Legend of KITCHEN SOLDIER</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span><span class="ip-tag"><b>LANGUAGE</b>스페인어 · 포르투갈어 더빙</span></div>
+<div class="ip-desc"><p>인생이라는 게임에서 우리는 수많은 선택의 퀘스트를 마주합니다.</p><p>힘든 현실에서 벗어나기 위해 입대한 강성재는 어느 날 취사병이 되라는 정체불명의 가상 &#x27;퀘스트&#x27; 창을 마주합니다. 퀘스트를 하나씩 깰 때마다 부대에 숨겨진 비밀들이 드러나기 시작합니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/true-beauty.jpg" alt="True Beauty" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">True Beauty</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>15세 이상</span><span class="ip-tag"><b>LANGUAGE</b>스페인어 · 포르투갈어 더빙</span></div>
+<div class="ip-desc"><p>어릴 때부터 외모 콤플렉스가 있던 고등학생 임주경. 민낯을 감추기 위해 짙은 화장을 시작한 그녀는 뛰어난 메이크업 실력으로 아름다워지고, 화장한 얼굴이 원래 모습이라고 모두를 믿게 만듭니다.</p><p>그녀는 부유하지만 차가운 같은 학교 친구 수호, 그리고 재능 있고 거침없는 서준과 가까워지고, 이야기는 뷰티 전문가를 꿈꾸는 주경의 일상과 목표를 따라갑니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/guardian.jpg" alt="Guardian: the Lonely and Great God" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Guardian: the Lonely and Great God</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span><span class="ip-tag"><b>LANGUAGE</b>스페인어 · 포르투갈어 더빙</span></div>
+<div class="ip-desc"><p>도깨비는 늘 두려운 존재였습니다. 하지만 이번엔 다릅니다. 2016년 서울에 사는 도깨비는 여심을 사로잡는 최고의 매력남입니다. 실제로는 백 살이 훌쩍 넘었지만 젊은이들과 어울려 지내죠. 하지만 그의 속이 텅 비어 있다는 건 아무도 모릅니다. 그는 수십 년 동안 &#x27;도깨비 신부&#x27;를 찾아 헤맸지만 찾지 못했습니다. 그러던 어느 날 그는 은탁에게 계속 소환되고, 그곳에서 저승사자를 만납니다. 둘이 룸메이트가 될 줄은 꿈에도 모른 채 말이죠.</p><p>이야기는 거기서 시작됩니다. 오래전에 죽었어야 할 소녀를 지키려는 도깨비, 그리고 임무를 완수하기 위해 그 소녀를 데려가야 하는 저승사자.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef2-3">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/eltv.png" alt="EL TV Inc. 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">TV Content</p>
+<h4 class="co-name">(주)이엘티비</h4>
+<p class="co-en">EL TV Inc.</p>
+<div class="co-desc"><p>EL TV는 음식을 통해 사람과 문화의 이야기를 발굴하고, 이를 전 세계 시청자의 공감을 얻는 콘텐츠로 만드는 한국의 제작사입니다. 2005년부터 K-Food를 스토리텔링의 중심에 두고 프리미엄 다큐멘터리, 예능 포맷, 디지털 콘텐츠 전반에서 독창적인 오리지널 IP와 제작 역량을 쌓아왔습니다.</p><p>&#x27;K-Food Rhapsody&#x27;, &#x27;A Nation of Taste&#x27; 등 세계적으로 인정받은 음식 다큐멘터리부터 BBC Studios와 공동제작한 &#x27;Ed &amp; Ryu: Mad About Seafood&#x27;까지 해외 시청자를 위한 다양한 라인업을 갖추고 있습니다. 오리지널 IP를 기반으로 포맷 개발, 국제 공동제작, 현지화, 라이선싱을 통해 글로벌 시장으로 확장하고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://eltv.kr" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/monks-in-the-kitchen.jpg" alt="Monks in the Kitchen" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Monks in the Kitchen</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>푸드 &amp; 리얼리티</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>한국 사찰음식을 대표하는 여섯 명의 명장 스님이 함께 요리하고 식사를 나누며 음식, 수행, 삶에 대한 철학을 이야기합니다. 자연과 계절을 존중하는 음식을 통해 한국 사찰음식의 지혜를 전합니다.</p><p>레시피를 넘어 음식이 어떻게 사람들을 하나로 모으고 공동체를 만드는지 탐구하는 따뜻하고 매력적인 푸드 리얼리티 시리즈입니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/philosophers-kitchen.jpg" alt="The Philosopher&#x27;s Kitchen - Jeong Kwan" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">The Philosopher&#x27;s Kitchen - Jeong Kwan</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>다큐멘터리</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>“깨달음으로 빚은 요리, 구도자의 마음을 담다.”</p><p>뉴욕타임스가 &#x27;철학자 셰프&#x27;라 소개한 정관 스님은 사찰음식으로 전 세계 셰프와 관객에게 영감을 준 한국의 비구니입니다.</p><p>&#x27;The Philosopher&#x27;s Kitchen&#x27;은 음식을 통해 정관 스님의 삶과 철학을 따라가는 프리미엄 다큐멘터리로, 요리가 단순한 음식 만들기를 넘어 명상이자 삶의 방식, 자연과 더 깊이 연결되는 길이 될 수 있음을 보여줍니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/foodsong-writer.jpg" alt="FoodSong Writer" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">FoodSong Writer</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>예능 포맷</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>아티스트들이 음식에서 얻은 영감으로 오리지널 곡을 만드는 음식×음악 예능 포맷입니다.</p><p>하나의 요리에서 영감을 받은 여섯 명의 아티스트는 2주 동안 자신의 기억과 경험을 담아 오리지널 곡을 만듭니다. 음식에서 시작된 이야기는 다양한 장르의 음악으로 재탄생해 관객 앞 라이브 공연으로 마무리됩니다.</p><p>현지 음식과 현지 아티스트를 중심으로 구성되어 각 시장의 문화와 이야기를 담아낼 수 있는, 현지화에 최적화된 포맷입니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef2-4">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/hanteo.png" alt="Hanteo Global, Inc. 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">TV Content</p>
+<h4 class="co-name">주식회사 한터글로벌</h4>
+<p class="co-en">Hanteo Global, Inc.</p>
+<div class="co-desc"><p>한터글로벌은 글로벌 K-Pop 음악 차트 &#x27;한터차트&#x27;와 공식 K-Pop 커머스 플랫폼 &#x27;후즈팬스토어(Whosfan Store)&#x27;를 운영하는 K-Pop 빅데이터·미디어·커머스 기업입니다.</p><p>실시간 판매량 집계와 빅데이터 분석을 바탕으로 공식 팝업스토어, 앨범, MD, 독점 상품을 선보이며 글로벌 K-Pop 생태계를 이끌고 있습니다.</p><p>숏폼 웹드라마 &#x27;Sometoon 2021&#x27;, 웹툰 원작 영화 &#x27;Everyday We Are&#x27; 등 IP 기반 미디어 콘텐츠를 제작하며, 매년 한터뮤직어워즈(HMA)를 개최하고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.hanteoglobal.com" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/hma.jpg" alt="Hanteo Music Awards (HMA)" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Hanteo Music Awards (HMA)</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>음악 시상식 / 라이브 이벤트</span><span class="ip-tag"><b>AGE</b>15세 이상</span></div>
+<div class="ip-desc"><p>한터뮤직어워즈(HMA)는 30년 이상의 역사를 지닌 세계 유일의 실시간 K-Pop 음악 차트 &#x27;한터차트&#x27;가 주최하는 대표 K-Pop 시상식입니다.</p><p>신뢰도 높은 빅데이터와 글로벌 지표를 바탕으로 공정하게 수상자를 선정하며, 정상급 K-Pop 아티스트들의 화려하고 독보적인 무대를 선보입니다. 전 세계 팬들의 투표와 적극적인 참여로 완성되는 HMA는 음악으로 전 세계 팬을 하나로 잇는 최고의 K-Pop 축제입니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/everyday-we-are.jpg" alt="Everyday We Are" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Everyday We Are</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>영화 / 드라마</span><span class="ip-tag"><b>AGE</b>15세 이상</span></div>
+<div class="ip-desc"><p>인기 카카오웹툰을 원작으로 한 청춘 로맨스 콘텐츠입니다. 소꿉친구 여우리와 권호수, 그리고 우리의 첫사랑 한재민 사이의 우정과 첫사랑, 성장을 설레게 그립니다.</p><p>학창 시절의 달콤한 설렘과 그리운 추억을 아름다운 영상미로 담아내, 젊은 시청자와 향수를 느끼는 시청자 모두에게 깊은 공감과 특별한 K-드라마 경험을 선사합니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/sometoon-2021.jpg" alt="Sometoon 2021" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Sometoon 2021</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>웹드라마</span><span class="ip-tag"><b>AGE</b>15세 이상</span></div>
+<div class="ip-desc"><p>동명의 인기 웹툰을 원작으로 한 설레는 청춘 로맨스 웹드라마입니다. 시청자들이 보내온 실제 사연에서 영감을 받아 10대와 청년층에게 깊은 공감을 전합니다.</p><p>인기 K-POP 아티스트들이 출연하는 이 숏폼 시리즈는 첫사랑, 짝사랑, 풋풋한 연애의 달콤하고 설레는 순간들을 매력적인 영상과 따뜻한 감성으로 담아냅니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef2-5">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/newunivers.png" alt="NewUnivers 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">TV Content</p>
+<h4 class="co-name">주식회사뉴유니버스</h4>
+<p class="co-en">NewUnivers</p>
+<div class="co-desc"><p>AI 기반 세로형 콘텐츠 기술을 선도하는 기업</p><p>“뉴유니버스는 K-숏폼 드라마를 시작으로 창작자와 IP를 글로벌 스트리밍 시장에 연결하는 확장형 AI 콘텐츠 생태계를 만들고, 다양한 세로형 콘텐츠와 제작 솔루션으로 확장해 나가고 있습니다.”</p><p>2024년 설립 이후 20편 이상의 숏폼 드라마를 제작해 글로벌 Top 10 플랫폼을 통해 성공적으로 배급했습니다. &#x27;Goodbye My Brothers&#x27;가 한국 숏폼 드라마 최초로 글로벌 1위에 오르는 역사적인 기록을 세웠고, 약 10편의 작품이 주요 플랫폼의 일간·주간 인기 차트 1위를 차지했습니다. 이를 통해 독자적인 제작 공식과 프리미엄 스토리텔링 역량을 꾸준히 입증해 왔습니다.</p><p>2026년에는 시나리오 생성부터 제작, 후반 작업까지 아우르는 완전 통합 자동화 파이프라인으로 실사에 가까운 퀄리티의 AI 숏폼 드라마를 선보일 계획입니다. AI 기반 제작 혁신을 통해 숏폼 드라마 산업의 글로벌 선도 제작·서비스 기업으로서 입지를 강화하고, 차세대 세로형 콘텐츠 시장 전반에서 확장 가능한 성장을 가속화하고자 합니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.youtube.com/@NewUnivers1" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/golden-cage.jpg" alt="The Golden Cage" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">The Golden Cage</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>AI 숏드라마 / AI</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>100% AI 숏드라마 · 러닝타임 75분 · 50화 · 타깃: 20–40대 여성</p><p>로그라인: 전 세계를 사로잡은 K-POP 슈퍼스타 류와 할리우드 무명 배우 클로이의 위험하고 중독적인 관계를 그린 로맨스.</p><p>시놉시스: 할리우드의 무명 배우 클로이는 월세를 벌기 위해 맡은 가벼운 화보 촬영에서 글로벌 K-POP 슈퍼스타 류와 마주칩니다. 빼어난 외모와 완벽한 몸매, 철저히 관리된 이미지를 지닌 흠잡을 데 없는 톱스타. 하지만 그에게는 위험할 만큼 집착적인 성향이 있다는 소문이 돕니다. 류의 통제 아래 클로이는 현실 감각마저 흐려질 만큼 강렬한 쾌락에 빠져듭니다. “배우 맞죠? 내 앞에서 떨고 있는 거… 연기예요, 진짜예요?”</p><p>그녀는 그의 완벽한 소유물이 될까요, 아니면 그를 무너뜨릴 유일한 약점이 될까요?</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/falling-for-my-boss.jpg" alt="Falling for My Boss" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Falling for My Boss</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>AI 하이브리드 숏드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>AI 하이브리드 숏드라마 · 러닝타임 75분 · 50화 · 오피스 로맨스</p><p>대사관 계약직 직원 홍(여, 25세 / 싱가포르 여성 설정 검토 중)은 자신이 쓴 19금 웹소설을 선배에게 공개합니다. 소설 속 주인공의 이름마저 그녀의 담당 선배 외교관인 여주환(남, 33세)입니다.</p><p>&#x27;모태솔로&#x27; 원칙주의 선배와 그녀가 서로의 업무 기술과 연애 기술을 주고받으며 펼쳐지는, 국경을 넘나드는 오피스 로맨틱 코미디입니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/kiss-three-divine-beasts.jpg" alt="The Kiss That Awakened Three Divine Beasts" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">The Kiss That Awakened Three Divine Beasts</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>AI 동양 판타지 숏폼 애니메이션</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>장르: BL · 형식: 50화 숏폼 드라마</p><p>키워드: #MMReverseHarem #OrientalFantasy #PastLife/Reincarnation #FatedImprint</p><p>로그라인: 닿는 모든 것에 생명을 불어넣는 손. 그러나 그 힘을 견딜 수 있는 인간은 없다.</p><p>평생 붕대로 몸을 감싼 채 누구와도 닿을 수 없었던 소년은 어느 날 저주받은 버려진 궁전에 봉인됩니다. 그의 입맞춤으로 백 년의 봉인이 깨어나고, 그의 손길을 견디고 온전히 받아들일 수 있는 유일한 존재인 세 신수가 그의 마음을 얻기 위해 치열하면서도 다정한 싸움을 시작합니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef2-6">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/nonsense.png" alt="NONSENSE FORMATS 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">TV Content</p>
+<h4 class="co-name">(주)난센스</h4>
+<p class="co-en">NONSENSE FORMATS</p>
+<div class="co-desc"><p>(주)난센스는 &#x27;흥미롭고 독창적인 예능 콘텐츠&#x27;를 만들기 위해 2021년 6월 설립되었습니다. 기획안, 포맷 바이블, 트레일러로 구성된 포맷 패키지를 제작하는 사전 제작 단계를 전문으로 하며, 온라인·모바일 플랫폼과 네트워크를 통해 전 세계에 콘텐츠를 판매해 다양한 라이선스 수익을 창출합니다.</p><p>한국의 문화와 가치를 반영한 오리지널 포맷을 중심으로 유리한 IP 포지션을 확보해 해외 시장을 공략하며, 한국 예능 창작력의 우수성을 알리는 것을 목표로 합니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://nonsenseformat.com" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/talent-in-the-kitchen.jpg" alt="TALENT IN THE KITCHEN" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">TALENT IN THE KITCHEN</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>요리 쇼</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>아이들은 식사 시간에 비위를 맞추기 어렵습니다. 편식도 심하고 쉽게 지루해하죠. 이제 이 두 가지를 결합한 혁신적인 요리 경연이 시작됩니다. 까다로운 아이 심사위원단을 즐겁게 하면서 입맛까지 사로잡아야 우승할 수 있는, 재미 넘치는 하이브리드 포맷입니다.</p><p>매회 완결되는 에피소드에서 2인 1조 세 팀이 독특한 스튜디오 키친에서 대결합니다. 각 팀은 셰프 한 명과 엔터테이너 한 명으로 구성되며, 총 2라운드로 진행되고 아이들이 우승자를 선택합니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/love-summit.jpg" alt="LOVE SUMMIT" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">LOVE SUMMIT</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>데이팅 쇼</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>세계 각국의 남녀가 세기의 정상회담이 열렸던 장소에서 실제로 데이트를 하는 글로벌 데이팅 쇼입니다. 국적이 다른 남녀 각 3명이 정상회담 장소에서 1박 2일 동안 머뭅니다.</p><p>기자회견에서 처음 만난 이들은 이후 48시간 동안 실제 정상회담이 열린 호텔의 세 장소에서 세 명의 상대와 세 번의 데이트를 합니다. 모든 데이트가 끝나면 첫 대면이 이루어졌던 로비 기자회견장에서 매칭 합의가 발표됩니다. 정상회담을 통해 어떤 글로벌 커플이 탄생할까요?</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/desktop.jpg" alt="DESKTOP" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">DESKTOP</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>게임 쇼</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>책상은 당신에 대해 많은 것을 말해줍니다. 깔끔한지 지저분한지, 무엇을 손 닿는 곳에 두는지, 무엇을 마시는지, 어떻게 일하는지, 무엇에 관심이 있는지, 그리고 쓰레기통에 무엇이 들어 있는지까지! 연예인 패널은 미스터리 게스트의 책상을 샅샅이 살펴보는 것만으로 그 정체를 알아낼 수 있을까요? 당신을 아는 사람이 당신의 책상을 본다면 당신인 줄 알아챌까요?</p><p>패널이 책상만 보고 숨은 연예인의 정체를 맞히는 데스크톱 미스터리 게임쇼입니다. 정체가 공개되면 쇼는 토크쇼로 바뀌어, 연예인이 직접 자신의 책상을 소개하며 숨은 이야기를 들려줍니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef2-7">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/nova.png" alt="NOVA square Inc. 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">TV Content</p>
+<h4 class="co-name">주식회사 노바스퀘어</h4>
+<p class="co-en">NOVA square Inc.</p>
+<div class="co-desc"><p>노바스퀘어는 숏폼 드라마 전용 OTT 플랫폼 everyreels를 개발·운영하는 콘텐츠 테크 기업입니다. 콘텐츠와 플랫폼 개발 전문가들이 모여 20–40대 여성을 주요 타깃으로 몰입감 높은 숏폼 드라마 경험을 제공합니다.</p><p>everyreels는 합리적인 요금, 유연한 결제 방식, 광고, AI 기반 가상 다이내믹 광고 기술로 새로운 수익원을 만들어 가고 있습니다. 또한 인기 드라마 IP와 스핀오프 콘텐츠를 바탕으로 매력적인 오리지널 숏폼 드라마를 제작·유통하며, 빠르게 성장하는 글로벌 숏폼 드라마 시장의 선도 콘텐츠 플랫폼 기업을 목표로 하고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.everyreels.com" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/love-exe.jpg" alt="Love.exe" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Love.exe</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>로맨틱 코미디 · 30분×16화 · 방영: Wavve, VIU · 연출: 윤성호 · 출연: 김요한, 황보름별</p><p>컴퓨터공학과와 모델과가 하나의 학부로 통합되면서, 팔로워 백만 명의 연애 리얼리티 스타이자 캠퍼스 최고의 인기남 민학과 연애 능력은 제로인 공부 천재 연산이 만납니다.</p><p>그는 누구의 마음이든 얻을 수 있고, 그녀는 연애만 빼고 무엇이든 풀어낼 수 있습니다. 정반대의 두 세계가 부딪치며 케미와 혼돈, 어떤 알고리즘으로도 고칠 수 없는 오류로 가득한 예측불가 캠퍼스 로맨스가 시작됩니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/my-heart-is-aaa.jpg" alt="My Heart is AAA" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">My Heart is AAA</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>숏폼 드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>로맨틱 코미디 · 2분×51화 · 방영: everyreels, Reelshot · 연출: 양경희 · 출연: 윤서빈, 추예진</p><p>우등생 가영은 잘 알려지지 않은 유일대학교 홍보대사 정우에게 반해 꿈의 학교를 포기하고 그곳에 입학합니다.</p><p>그런데 정우의 이상형이 가슴이 큰 여자라는 사실을 알게 되고, 자신을 바꾸려는 필사적인 시도는 번번이 실패로 끝나죠. 그러던 중 “AAA컵도 D, E, F컵으로 바꿔 드립니다”라는 수상한 문자가 도착합니다. 소꿉친구 서준과 함께 가영은 엘리시아에 들어서고, 그곳에서 뜻밖의 변신이 기다립니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/everyreels.jpg" alt="EveryReels" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">EveryReels</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>숏폼 드라마 앱</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>매일 짜릿한 1분, 숏드라마의 모든 것!</p><p>everyreels는 숏폼 드라마 전용 한국 플랫폼입니다. 드라마를 사랑하는 여성을 핵심 이용자로, 로맨틱 코미디와 멜로드라마를 중심으로 서비스하며 오리지널 숏폼 드라마 라인업을 계속 확대해 나갈 예정입니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef2-8">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/PHEnM.png" alt="PH E&amp;M 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">TV Content</p>
+<h4 class="co-name">주식회사 피에이치이엔엠</h4>
+<p class="co-en">PH E&amp;M</p>
+<div class="co-desc"><p>PH E&amp;M은 독창적인 아이디어를 다양한 콘텐츠와 비즈니스 기회로 확장하는 글로벌 콘텐츠·엔터테인먼트 기업입니다. 오리지널 IP의 발굴과 개발부터 드라마, 영화, TV 프로그램, 공연, K-POP, 다큐멘터리, 오디오 콘텐츠 제작, 그리고 글로벌 유통, 라이선싱, 커머스, AI 기반 IP 관리까지 콘텐츠 전 생애주기를 아우르는 통합 IP 가치사슬을 구축했습니다.</p><p>한국을 기반으로 일본, 북미, 유럽 등 해외 방송사·제작사·플랫폼과의 파트너십을 통해 국제 공동제작과 배급 네트워크를 꾸준히 넓히고 있습니다. 창의적 스토리텔링과 제작 역량, 기술 기반 IP 관리를 결합해 하나의 프로젝트를 여러 장르·포맷·지역으로 확장하고 지속 가능한 수익 모델을 만들어 갑니다. 한국의 창의성을 전 세계 관객과 연결하고, 확장 가능한 새로운 콘텐츠 생태계를 구축하는 것이 목표입니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.phenm.com" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/the-egg.jpg" alt="The Egg" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">The Egg</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>2007년 태안 허베이 스피릿호 원유 유출 사고 이후 회복을 위해 몸부림치는 작은 섬마을을 배경으로 한 사회 스릴러입니다. 바다는 오염되고 생계는 무너진 채, 주민들은 정부 보상금으로 버티고 한때 번성했던 공동체는 서서히 무너져 갑니다. 그러던 중 &#x27;알(The Egg)&#x27;의 존재에 대한 보이지 않는 믿음이 사람들 사이에 퍼지기 시작합니다. 아무도 본 적 없지만, 사람들은 그것이 희망이자 기회, 절망적인 현실에서 벗어날 길이라 믿게 됩니다.</p><p>믿음이 커질수록 희망은 집착으로, 신뢰는 의심으로 변하고 공동체는 점점 더 위험한 선택으로 내몰립니다. 재난 자체보다 두려움과 욕망, 집단적 믿음이 인간의 행동을 어떻게 바꾸는지에 주목하며, 사회적 리얼리즘과 심리 서스펜스를 결합해 벼랑 끝에 선 공동체의 모습을 강렬하게 그리고, 희망만이 남았을 때 사람들은 무엇을 믿게 되는지 묻습니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/time-without-her.jpg" alt="The Time without Her" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">The Time without Her</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>아내를 잃은 충격으로 세상을 떠난 아내에 대한 기억만을 잃어버린 남자의 이야기를 그린 한일 공동제작 판타지 로맨스 드라마입니다.</p><p>떠올릴 수 없는 기억을 찾아 헤매던 그는 기억과 시간의 경계를 넘나드는 특별한 여정으로 자신을 이끄는 신비로운 여고생을 만납니다. 과거의 조각들이 하나둘 되살아나면서 그는 사랑했던 여인에 대한 진실을 알게 되고, 어떤 인연은 상실을, 나아가 시간마저 넘어 이어질 수 있음을 깨닫습니다.</p><p>로맨스, 판타지, 미스터리를 결합해 사랑, 기억, 슬픔, 치유라는 보편적 주제를 탐구합니다. 감성적인 서사와 영화 같은 스토리텔링으로 문화를 넘어 공감을 얻는 시대를 초월한 이야기이자, 사랑의 변치 않는 힘에 관한 진심 어린 여정을 전 세계 시청자에게 선사합니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/broke-rookie-star.jpg" alt="Broke Rookie Star" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Broke Rookie Star</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>화려한 K-POP 세계의 이면을 신선하고 따뜻하게 들여다보는 청춘 코미디 드라마입니다. 바이럴 히트로 뜻밖의 인기를 얻은 신인 아이돌 그룹은 무대 위 성공이 경제적 안정을 보장하지 않는다는 사실을 깨닫습니다. 인기가 높아져도 멤버들은 꿈을 좇으며 여전히 일상의 어려움과 씨름합니다.</p><p>코미디와 진정성 있는 이야기를 결합해 공감 가는 캐릭터와 현실적인 경험으로 K-POP 산업의 현실을 보여줍니다. 아이돌의 세계를 넘어 청춘, 우정, 끈기, 꿈을 좇는 용기라는 보편적 메시지로 전 세계 시청자의 공감을 얻는 이야기입니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef2-9">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/simstory.png" alt="SIMSTORY 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">TV Content</p>
+<h4 class="co-name">심스토리(주)</h4>
+<p class="co-en">SIMSTORY</p>
+<div class="co-desc"><p>“당신이 곧 콘텐츠입니다.” 심스토리는 인간미 가득한, 마음에서 우러난 이야기를 전합니다.</p><p>20년간 TV 예능과 교양 프로그램을 제작해 온 경험을 바탕으로 드라마와 유튜브 콘텐츠 제작, 아티스트 매니지먼트, 콘텐츠 커머스 등의 콘텐츠 사업을 운영하고 있습니다.</p><p>여러분의 이야기를 이곳에서 기다립니다. 심스토리는 한국어로 연필의 획이자 사람의 마음을 뜻하는 &#x27;심(SIM)&#x27;으로 창의적이고 다채로운 이야기를 만듭니다. 창의적인 아이템으로 세상과 소통하며, 우리의 발걸음이 미디어 시장의 혁신이 되기를 바랍니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://simstoryent.co.kr" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/kidnap-game.jpg" alt="Kidnap Game" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Kidnap Game</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>TV 시리즈</span><span class="ip-tag"><b>AGE</b>15세 이상</span></div>
+<div class="ip-desc"><p>아시아 일곱 도시에서 동시에 일곱 건의 납치 사건이 발생합니다. 피해자 가족들에게 “이 중 단 한 명만 살아남는다”는 의문의 메시지가 도착하면서 국경을 초월한 잔혹한 생존 게임이 시작됩니다.</p><p>&#x27;kiDnap GAME&#x27;은 서울, 도쿄, 타이베이, 싱가포르, 홍콩, 방콕, 나하, 마닐라를 배경으로 한국·일본·홍콩이 공동제작한 11부작 서스펜스 스릴러 TV 시리즈입니다. 사카구치 켄타로, 이준기, 가가연(Alice Ko) 등 아시아를 대표하는 배우들의 화려한 캐스팅으로, 서로 무관해 보이던 사건들이 하나의 진실로 수렴하며 인간 본성을 극한까지 시험하는 장대한 스케일을 선보입니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/casting-1147km.jpg" alt="Casting 1147km" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Casting 1147km</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>예능</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>&#x27;Casting 1147km&#x27;는 서울과 도쿄 사이의 거리 1,147km에서 착안한 글로벌 배우 육성 서바이벌 프로그램입니다. 약 2주간의 집중 트레이닝 캠프에서 한국 남자 배우 지망생 6명은 실제 드라마 제작을 준비하기 위한 다양한 연기 미션과 오디션에 도전하며, 최종 우승자는 한일 공동제작 드라마의 주연으로 데뷔할 기회를 얻습니다.</p><p>드라마 감독, 작가, 기성 배우 등 업계 전문가들이 심사위원과 멘토로 직접 참여한다는 점이 특징이며, 참가자들은 연기력뿐 아니라 스타성, 창의성, 팀워크, 적응력까지 평가받습니다. 개인·팀 미션, 실제 드라마 대본 연기, 프로 배우와의 상대역 연기, 파이널 쇼케이스 등 실제 제작 과정을 반영한 다양한 도전을 거치며, 시청자는 이들이 연기자이자 미래의 스타로 성장하는 과정을 지켜봅니다.</p><p>단순한 재능 경연을 넘어 피날레 이후 우승자가 한일 공동제작 드라마의 주연으로 거듭나는 여정까지 기록하며, 진정한 글로벌 엔터테인먼트 프로젝트의 시작을 알립니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/ailee-band.jpg" alt="Ailee Band" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Ailee Band</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>예능</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>&#x27;Ailee Band&#x27;는 한국을 대표하는 보컬리스트 에일리가 밴드를 결성해 함께 공연하는 새로운 도전을 따라가는 음악 리얼리티 프로그램입니다. 수백 명의 지원자 가운데 드럼, 기타, 베이스, 키보드 등 밴드의 핵심 포지션을 맡을 실력파 뮤지션과 유망 신인들이 치열한 오디션을 거쳐 하나의 그룹으로 모입니다.</p><p>리허설, 연습, 라이브 공연을 통해 하나의 밴드로 성장하는 과정은 물론, 더 높은 음악적 완성도를 향한 노력, 멤버 간의 갈등과 유대, 무대 뒤의 솔직한 이야기까지 담아냅니다.</p><p>완성된 밴드는 마침내 에일리와 함께 라이브 무대에 오릅니다. 멤버 선발부터 완전한 밴드의 탄생까지 모든 과정을 기록한 음악 성장 프로젝트입니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef2-10">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/wemad.png" alt="WEMAD Co., Ltd. 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">TV Content</p>
+<h4 class="co-name">주식회사 위매드</h4>
+<p class="co-en">WEMAD Co., Ltd.</p>
+<div class="co-desc"><p>위매드(WEMAD)는 &#x27;WE MAKE DREAM&#x27;, &#x27;WE MAKE DRAMA&#x27;를 뜻하며, 드라마 콘텐츠 제작을 전문으로 하는 종합 엔터테인먼트 기업입니다.</p><p>15년 이상의 경험을 지닌 콘텐츠 전문가 집단으로, 문화 콘텐츠 개발을 위한 체계적인 지원 시스템을 제공해 혁신적인 대중문화 창출에 기여하고자 합니다. 이러한 목표를 실현하고 최고의 서비스를 제공하기 위해 2019년 6월 설립되었습니다.</p><p>급변하는 4차 산업혁명 시대에 경쟁력 있는 시스템과 창의적인 콘텐츠, 다양한 마케팅 전략을 바탕으로 문화 콘텐츠 산업에서 로맨스 장르를 전문으로 하는 글로벌 공동제작 선도 기업이 되고자 합니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.wemadenter.com" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/love-phobia.jpg" alt="Love Phobia" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Love Phobia</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>AI가 일상이 된 세상을 배경으로 한 로맨틱 코미디입니다. 진정한 사랑을 굳게 믿는 베스트셀러 로맨스 소설가 선호와, 감정보다 데이터를 신뢰하는 AI 매칭 플랫폼 대표 비아의 이야기를 그립니다. 사랑에 대해 정반대의 생각을 가진 두 사람이 만나 진정한 사랑의 의미를 찾아가는 여정을 시작합니다.</p><p>서로 다른 신념으로 끊임없이 부딪치면서도 선호와 비아는 점차 서로를 이해하고, 서로의 상처를 치유하며 함께 성장합니다. AI 기술이라는 신선한 소재와 진솔한 인간의 감정을 결합해, 예상치 못한 사건과 숨겨진 비밀 속에 따뜻한 로맨스와 미스터리를 함께 담았습니다.</p><p>AI라는 렌즈로 현대인의 관계를 탐구하며 로맨스, 유머, 감정적 깊이, 미스터리를 선사하고, 사랑과 인간적 유대, 그리고 인간다움의 진정한 의미에 대한 따뜻한 메시지를 전합니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/end-up-in-inkigayo.jpg" alt="End up In INKIGAYO" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">End up In INKIGAYO</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>인기를 계산할 수밖에 없는 청춘들의 씁쓸하고 달콤한 로맨스입니다. 생방송보다 더 치열하고 긴장감 넘치는 &#x27;인기가요&#x27;의 무대 뒤 시간과 공간, 그리고 사람들의 이야기를 그립니다. 오늘날의 K-pop이 어떻게 만들어졌는지, 과거에 어떤 노래들이 사랑받았는지, 아이돌과 팬덤 문화가 어떻게 변해왔는지를 보여줍니다.</p><p>흔한 이야기처럼 보일 수 있지만 &#x27;인기가요&#x27;의 30년 역사를 깊이 파고들어 색다르게 풀어내고자 합니다. 우아한 백조가 물 아래에서 쉼 없이 발을 젓듯, &#x27;인기가요&#x27;의 백조들이 완벽한 무대 뒤에서 기울인 치열한 노력을 본격 K-pop 백스테이지 스토리로 들려줍니다.</p><p>겉으로는 화려하고 프로페셔널하지만 무대 뒤는 결코 화려하기만 하지 않습니다. 서툴고 소박하며 때로는 맹목적인 헌신으로 눈물짓게 하는 무대 뒤 사람들의 이야기는 지난날의 감성을 불러일으키고 K-pop의 명곡들을 되살릴 것입니다. 조금은 옛스럽지만 가슴 따뜻하고 신나던 지난 시절을 떠올리며 K-pop 클래식의 유산을 기리는 재치 있는 드라마를 만들고자 합니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/myeong-dong.jpg" alt="Myeong-Dong" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Myeong-Dong</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>한때 한국 사채 시장의 중심지였던 명동을 배경으로 한, 네이버 웹소설 원작의 누아르 드라마입니다. 실제 금융 스캔들에서 영감을 받아 권력과 야망, 돈에 이끌린 두 세대의 치열한 대결을 그립니다.</p><p>정치인, 조직폭력배, 변호사, 회계사, 금융인들이 복잡한 이해관계로 얽히며, 고위험 M&amp;A와 대규모 부동산 개발, 무자비한 금융 공작을 통해 이야기가 펼쳐집니다. 배신과 조작, 전략적 권력 다툼이 부와 지배권을 둘러싼 치열한 전쟁에 불을 붙입니다.</p><p>자본으로 영향력을 쌓아온 기성세대와 금융 판도를 새로 짜려는 젊은 세대의 충돌을 통해 인간의 욕망과 권력, 돈의 진정한 대가를 강렬하게 그려내며, 사실적인 금융 범죄와 몰입감 있는 캐릭터 드라마를 결합해 보편적 매력을 지닌 세련된 누아르 스릴러를 선보입니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef2-11">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/westworld.png" alt="Westworld Story Co., Ltd. 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">TV Content</p>
+<h4 class="co-name">(주)웨스트월드스토리</h4>
+<p class="co-en">Westworld Story Co., Ltd.</p>
+<div class="co-desc"><p>웨스트월드스토리는 첨단 VFX·AI 역량을 갖춘 글로벌 콘텐츠 그룹 웨스트월드의 제작 스튜디오입니다. 드라마 &#x27;Face Me&#x27;, &#x27;Strangers Again&#x27;, &#x27;Tracer&#x27;와 영화 &#x27;HOPE&#x27;를 제작했으며, 마이크로드라마와 언스크립티드(비대본) 콘텐츠로 영역을 넓히고 있습니다.</p><p>배급, 리메이크 및 포맷 판매, 국제 파트너십을 통해 글로벌 IP 사업을 확대하고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.westworld.co.kr" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/face-me.jpg" alt="Face Me" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Face Me</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>웨스트월드스토리가 제작하고 KBS에서 방영된 12부작 메디컬 수사 드라마로, 이민기와 한지현이 출연했습니다.</p><p>전 세계 170여 개국에 판매되었으며, 냉철한 성형외과 의사와 열정적인 형사가 범죄 피해자를 위한 재건 수술을 통해 사건의 진실을 밝혀내고, 의문의 죽음 뒤에 숨겨진 충격적인 비밀에 다가가는 이야기를 그립니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/touch-me-not.jpg" alt="Touch Me Not" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Touch Me Not</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>웨스트월드스토리가 제작한 6부작 판타지 로맨틱 코미디입니다. 가까워질수록 서로의 목숨이 위태로워지는 위험한 운명으로 묶인 두 사람의 이야기를 그립니다.</p><p>전생의 조각과 오래된 미스터리가 드러나기 시작하면서, 두 사람은 운명에 굴복할지 사랑을 위해 맞설지 선택해야 합니다. 2027년 1월 Rakuten Viki를 통해 전 세계에 공개될 예정입니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/my-daughters-bias.jpg" alt="My Daughter&#x27;s Bias Loves Me" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">My Daughter&#x27;s Bias Loves Me</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마</span><span class="ip-tag"><b>AGE</b>20세 이상</span></div>
+<div class="ip-desc"><p>웨스트월드스토리가 제작하고 올해 안에 완성될 예정인 로맨틱 코미디 마이크로드라마입니다.</p><p>갑작스러운 사고 이후, 한 싱글맘이 딸이 가장 좋아하는 아이돌의 스타일리스트 몸으로 깨어납니다. 딸의 최애 아이돌과 다시 나타난 첫사랑 사이에서, 그녀는 모바일 시청에 최적화된 유쾌한 인생 리셋 로맨스에 휘말립니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef2-12">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/windia.png" alt="WINDIA INC 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">TV Content</p>
+<h4 class="co-name">윈디아주식회사</h4>
+<p class="co-en">WINDIA INC</p>
+<div class="co-desc"><p>2020년 9월 설립된 윈디아는 오리지널 웹툰 IP를 개발·제작합니다.</p><p>2026년부터는 한국의 프로듀서 및 감독들과의 파트너십을 통해 영화·드라마 제작으로 사업을 확장하며, 다양한 포맷으로 각색될 수 있는 이야기를 만들어가고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.windiainc.com" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/round.jpg" alt="ROUND" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">ROUND</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>웹툰 (희망 비즈니스 모델: 시리즈 드라마 공동제작)</span><span class="ip-tag"><b>AGE</b>15세 이상</span></div>
+<div class="ip-desc"><p>사형제도가 &#x27;무기한 격투형&#x27;으로 대체된 가까운 미래를 배경으로 한 액션 드라마 웹툰입니다. 형을 선고받은 범죄자들은 전국에 공개적으로 생중계되는 교도소 경기에서 목숨을 건 격투를 강요받습니다. 그 중심에는 속죄를 위해 경기장에 들어선 한 십대 소년이 있습니다.</p><p>박정우 감독이 시리즈 영상화에 관심을 표명했습니다.</p></div>
+<a class="ip-link" href="http://www.imdb.com/name/nm1203781/" target="_blank" rel="noopener">감독 프로필 (IMDb)</a>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/cash-therapy.jpg" alt="Cash Therapy" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Cash Therapy</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>웹툰 (희망 비즈니스 모델: 시리즈 드라마 공동제작)</span><span class="ip-tag"><b>AGE</b>15세 이상</span></div>
+<div class="ip-desc"><p>학교폭력으로 8년간 혼수상태에 빠졌다 깨어난 김주원은 자신의 삶은 망가졌는데 가해자들은 승승장구하고 있다는 사실을 알게 됩니다.</p><p>그때 자신의 명의로 된 계좌에 무려 1조가 입금되어 있다는 것을 발견하고, 막대한 부를 무기로 가해자들의 돈과 지위, 인간관계, 사회적 입지를 하나씩 무너뜨리기 시작합니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/rather-not-take-the-crown.jpg" alt="I`d Rather Not Take the Crown" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">I`d Rather Not Take the Crown</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>드라마 및 웹툰 (희망 비즈니스 모델: 공동제작)</span><span class="ip-tag"><b>AGE</b>15세 이상</span></div>
+<div class="ip-desc"><p>왕이 갑자기 퇴위하면서 세 왕자와 막내 공주가 뜻밖의 왕위 쟁탈전에 휘말리는, 현대 군주제 국가를 배경으로 한 코미디 드라마입니다.</p><p>반전은 아무도 왕위를 원하지 않는다는 것. 저마다 자신의 꿈을 지키기 위해 싸우는 가운데, 막내 공주 지호는 자신이 진정 원하는 것이 무엇인지 깨닫기 시작합니다.</p><p>권수경 감독이 시리즈 연출에 관심을 표명했습니다.</p></div>
+<a class="ip-link" href="http://www.imdb.com/name/nm2363449/" target="_blank" rel="noopener">감독 프로필 (IMDb)</a>
+</div></div>
+</div></div></article>
+</section>
+<section class="ex-group" id="grp-ef3">
+<h3 class="group-title">게임 <span class="group-count">7개사</span></h3>
+<nav class="group-index"><a href="#co-ef3-1">(주)데브언리밋</a><a href="#co-ef3-2">가원글로벌</a><a href="#co-ef3-3">(주)엘엔케이로직코리아</a><a href="#co-ef3-4">(주)큐랩</a><a href="#co-ef3-5">스카이워크</a><a href="#co-ef3-6">슈가웍스</a><a href="#co-ef3-7">주식회사 테이크원컴퍼니</a></nav>
+<article class="co-card" id="co-ef3-1">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/devunlimit.png" alt="DevUnlimit 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Game</p>
+<h4 class="co-name">(주)데브언리밋</h4>
+<p class="co-en">DevUnlimit</p>
+<div class="co-desc"><p>데브언리밋은 모션 인식과 이미지 생성 기술을 활용한 AI 기반 인터랙티브 엔터테인먼트를 개발합니다. 오프라인 아케이드 브랜드 CHOOMCHOOM은 CHOOMCHOOM DANCE, CHOOMCHOOM 4-CUT, CHOOMCHOOM ANIMATE로 구성됩니다.</p><p>게임, 사진, AI 생성 영상을 결합해 행사, 쇼핑몰, FEC(가족 엔터테인먼트 센터), 관광지, K-pop 팬 이벤트를 위한 몰입감 있는 체험을 만듭니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://devunlimit.com" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/choomchoom-dance.jpg" alt="CHOOMCHOOM DANCE" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">CHOOMCHOOM DANCE</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>AI 기반 K-pop 댄스 게임</span><span class="ip-tag"><b>AGE</b>12세 이상</span></div>
+<div class="ip-desc"><p>CHOOMCHOOM의 대표 타이틀인 AI 기반 K-pop 댄스 게임입니다. 플레이어의 몸이 곧 컨트롤러가 되며, 웨어러블이나 별도 센서 없이 카메라로 움직임을 실시간 추적합니다.</p><p>타이밍과 안무 정확도를 분석해 즉시 점수와 피드백을 제공하여 행사, 쇼핑몰, FEC, 관광지, 팬 이벤트에 제격입니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/choomchoom-4cut.jpg" alt="CHOOMCHOOM 4-CUT" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">CHOOMCHOOM 4-CUT</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>인터랙티브 K-pop 포토 체험</span><span class="ip-tag"><b>AGE</b>12세 이상</span></div>
+<div class="ip-desc"><p>현장에서 촬영한 인물 사진을 빠르고 직관적인 과정을 거쳐 K-pop 테마의 4컷 이미지로 만들어 주는 인터랙티브 포토 체험입니다.</p><p>완성된 결과물은 개인 기념품이자 공유 가능한 소셜 콘텐츠가 되어 행사, 쇼핑몰, 팬 이벤트, 관광지, 브랜드 프로모션에 적합합니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/choomchoom-animate.jpg" alt="CHOOMCHOOM ANIMATE" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">CHOOMCHOOM ANIMATE</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>AI 댄스 영상 체험</span><span class="ip-tag"><b>AGE</b>12세 이상</span></div>
+<div class="ip-desc"><p>참가자의 사진이나 이미지로 K-pop 안무를 추는 듯한 영상을 만들어 주는 AI 댄스 영상 체험입니다.</p><p>춤 실력과 관계없이 누구나 주인공이 될 수 있으며, 결과물은 개인 기념품이나 공유 가능한 숏폼 콘텐츠로 행사, 쇼핑몰, 관광지, 팬 프로모션, 브랜드 캠페인에 활용할 수 있습니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef3-2">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/gawon.png" alt="Gawon Global 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Game</p>
+<h4 class="co-name">가원글로벌</h4>
+<p class="co-en">Gawon Global</p>
+<div class="co-desc"><p>가원글로벌은 게임을 통한 힐링을 추구하는 열정적인 게임 개발자들의 스튜디오입니다. 진정으로 만들고 싶은 것을 만들고자 하는 애정으로 뭉쳐, 의미 있으면서도 재미있는 게임을 만드는 과정 자체를 즐깁니다. 열정과 도전 정신으로 세상에 긍정적인 영향을 주는 감성 풍부한 콘텐츠를 만들고자 합니다.</p><p>게임이라는 디지털 문화 콘텐츠를 통해 플레이어에게 새로운 경험과 따뜻한 즐거움을 선사하는 것이 목표입니다. 바쁘고 지친 일상 속에서 잠시 멈춰 숨 돌릴 수 있는 힐링 콘텐츠를 만들기 위해 노력하며, 더 좋고 더 많은 영감을 주는 게임을 향한 여정을 이어가고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://store.steampowered.com/app/2603290/Block_The_Monster/" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>2</span></p><div class="ip-grid n2">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/block-the-monster.jpg" alt="Block the Monster" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Block the Monster</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>게임</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>내가 만드는 대로 길이 된다! 사각 블록으로 끝없는 전략을 짜고 영웅들이 전세를 뒤집는 3D 타워 디펜스 게임 &#x27;Block the Monster&#x27;에 오신 것을 환영합니다. 방어선을 구축하고, 경로를 선택하고, 끊임없이 밀려오는 몬스터의 공세를 버텨내세요.</p><p>이건 단순한 디펜스가 아니라 당신의 모험입니다. 몰입감 있는 이야기와 개성 있는 캐릭터, 갈림길 선택으로 가득한 판타지 세계로 들어가 영웅이 되어 역동적인 전투를 펼치고, 위기에 처한 세계의 운명을 바꿔 보세요. 블록 하나, 영웅 하나가 당신만의 전설을 써 내려갑니다. 전략을 세우고, 살아남고, 당신의 이야기를 들려주세요.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/flow-of-sound.jpg" alt="Flow of Sound" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Flow of Sound</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>게임</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>음악과 빛을 따라가는 힐링 퍼즐 여정</p><p>모든 움직임이 음악과 조화를 이루는 아름다운 퍼즐 게임에서 형형색색의 공을 목적지까지 이끌어 보세요. 공 하나하나가 몽환적인 사운드트랙에 맞춰 태어나고 사라지며 명상적이고 황홀한 경험을 선사합니다.</p><p>소리와 움직임의 흐름에서 영감을 받은 독특한 퍼즐을 풀고, 아름다운 비주얼과 감성적인 게임플레이 속에서 리듬과 색, 논리가 만나는 세계에 빠져 보세요. 소리와 빛의 아름다움이 길을 안내합니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef3-3">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/LnK.png" alt="L&amp;K Co., Ltd. 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Game</p>
+<h4 class="co-name">(주)엘엔케이로직코리아</h4>
+<p class="co-en">L&amp;K Co., Ltd.</p>
+<div class="co-desc"><p>엘엔케이는 1997년부터 독창적이고 창의적인 색깔로 게임을 개발하고 서비스해 온 한국 게임 산업의 1세대 개척자입니다. 2004년 선보인 &#x27;RED STONE&#x27;은 일본에서 큰 반향을 일으키며 일본 게임 문화에서 &#x27;K-GAME&#x27;의 아이콘이 되었습니다.</p><p>&#x27;RED STONE&#x27;, &#x27;Record of Lodoss War&#x27;, &#x27;Mirror War&#x27; 등 PC 온라인 게임 3종의 글로벌 서비스를 출시·운영했으며, 모바일 게임 &#x27;RED STONE 2&#x27;를 한국과 일본 시장에 성공적으로 선보였습니다.</p><p>대표 MMORPG &#x27;RED STONE&#x27;은 한국 서비스 23주년, 일본 서비스 21주년을 맞이했습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.logickorea.co.kr" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>1</span></p><div class="ip-grid n1">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/red-stone-online.jpg" alt="RED STONE Online" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">RED STONE Online</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>온라인 게임 (MMORPG)</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>2003년 출시된 온라인 MMORPG &#x27;RED STONE&#x27;은 특히 일본에서 폭발적인 반응을 얻으며 대표 온라인 MMORPG로 사랑받고 있습니다.</p><p>천상계에서 떨어진 신비한 붉은 보석을 찾아 나선 모험가들이 이야기의 주인공이자 플레이어의 아바타입니다.</p><p>플레이어는 상반된 직업으로 변신할 수 있습니다. 예를 들어 원거리 마법 공격을 하는 마법사가 근거리 물리 공격을 하는 늑대인간으로 변신해 위험한 상황을 벗어날 수 있습니다.</p><p>한국과 일본을 중심으로 글로벌 시장에서 충성도 높은 이용자층을 확보한 RED STONE은 현지 이용자의 요구와 취향에 맞춘 서비스로 중남미 진출을 준비하고 있습니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef3-4">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/edugym.png" alt="QLAB 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Game</p>
+<h4 class="co-name">(주)큐랩</h4>
+<p class="co-en">QLAB</p>
+<div class="co-desc"><p>실내 신체활동 기반 학습 플랫폼과 동작인식 K-POP 댄스 게임 시스템을 개발하는 선도 기업입니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.qlab.co.kr" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>2</span></p><div class="ip-grid n2">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/edugym.jpg" alt="EDUGYM" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">EDUGYM</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>에듀테크</span><span class="ip-tag"><b>AGE</b>15세 이하</span></div>
+<div class="ip-desc"><p>정면 스크린과 바닥 스크린을 활용해 신체활동 기반 학습을 제공하는 실내 인터랙티브 학습 플랫폼으로, 언어, 수학, 체육, 게임 등 40종의 다양한 콘텐츠 모듈을 갖추고 있습니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/kpop-dance-master.jpg" alt="KPOP DANCE MASTER" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">KPOP DANCE MASTER</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>게임</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>화면 속 안무를 따라 추는 K-POP 댄스 게임으로, 1인 모드와 2인 모드를 모두 지원합니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef3-5">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/PNG/skywalk.png" alt="SKYWALK 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Game</p>
+<h4 class="co-name">스카이워크</h4>
+<p class="co-en">SKYWALK</p>
+<div class="co-desc"><p>스카이워크는 2019년 설립된 게임 개발·퍼블리싱 기업입니다.</p><p>최고의 게임으로 전 세계 이용자에게 최고의 경험을 선사하는 것을 목표로, 장르별 전문성을 높이기 위해 5개의 독립 스튜디오를 운영하며 다양한 장르의 게임을 최고의 퀄리티로 선보일 준비를 갖추고 있습니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="http://skywalkgames.com/" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/cocomine-sanrio.jpg" alt="COCOMINE Sanrio Characters" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">COCOMINE Sanrio Characters</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>게임</span><span class="ip-tag"><b>AGE</b>18세 이상</span></div>
+<div class="ip-desc"><p>&#x27;Cocomine Sanrio Characters&#x27;와 함께 산리오 캐릭터들의 새로운 소셜 월드로 떠나보세요!</p><p>좋아하는 산리오 캐릭터들과 함께 신나고 사랑스럽고 따뜻한 소셜 경험을 즐길 수 있습니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/hello-hero.jpg" alt="HELLO HERO: LION HEART" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">HELLO HERO: LION HEART</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>게임</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>“수집형 RPG의 원조, 글로벌 IP Hello Hero 10주년 기념작”</p></div>
+<ul class="ip-items"><li>'Hello Hero IP' 기반의 방대한 세계관과 몰입감 있는 시나리오</li><li>268종 이상의 매력적인 캐릭터와 코스튬</li><li>무한 성장 콘텐츠를 갖춘 독창적이고 깊이 있는 전략 전투</li><li>감성적인 SNG 스타일 마을 경영 콘텐츠</li></ul>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/girl-globe.jpg" alt="Girl Globe" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Girl Globe</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>게임</span><span class="ip-tag"><b>AGE</b>12세 이상</span></div>
+<div class="ip-desc"><p>4,000개 이상의 실제 패션 브랜드로 다양한 스타일링을 경험할 수 있는 애니메이션 스타일 드레스업 게임입니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef3-6">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/SUGARWORKS.png" alt="Sugar Works 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Game</p>
+<h4 class="co-name">슈가웍스</h4>
+<p class="co-en">Sugar Works</p>
+<div class="co-desc"><p>슈가웍스는 차세대 e스포츠 &#x27;MOBA Lite&#x27;를 만들고 있습니다. 기존 MOBA보다 더 빠르고 역동적이며 훨씬 더 많은 이용자가 쉽게 즐길 수 있도록 설계했습니다.</p><p>경기 시간을 절반으로 줄이고 전장 전략을 처음부터 새롭게 설계해, 캐주얼 이용자의 진입 장벽은 없애면서도 e스포츠 팬덤을 이끄는 경쟁의 깊이는 그대로 유지합니다. 확장성을 갖춘 캐주얼 e스포츠입니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://youtu.be/qFxl1r9p7N0" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>1</span></p><div class="ip-grid n1">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/project-g.jpg" alt="Project-G" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">Project-G</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>게임, e스포츠</span><span class="ip-tag"><b>AGE</b>12세 이상</span></div>
+<div class="ip-desc"><p>기존 MOBA의 전략적 깊이를 현대 이용자를 위한 빠르고 박진감 넘치는 경기로 구현한 차세대 MOBA Lite입니다.</p><p>인터랙티브 맵 메커니즘, 역동적인 목표, 창의적인 팀 전투 전략으로 반복적인 라인 중심 플레이에서 벗어납니다.</p><p>경쟁의 재미와 접근성을 모두 갖추도록 설계되어, 쉬운 진입, 높은 리플레이성, 관전하기 좋은 전투를 결합한 새로운 글로벌 PvP 경험을 선사합니다.</p></div>
+</div></div>
+</div></div></article>
+<article class="co-card" id="co-ef3-7">
+<div class="co-head">
+<div class="co-logo"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/takeone.png" alt="Takeone Company 로고" loading="lazy"></div>
+<div class="co-info">
+<p class="co-meta">Game</p>
+<h4 class="co-name">주식회사 테이크원컴퍼니</h4>
+<p class="co-en">Takeone Company</p>
+<div class="co-desc"><p>테이크원컴퍼니는 K-pop 아티스트 IP를 중심으로 성장해 온 콘텐츠 기업입니다.</p><p>게임을 통해 K-pop 콘텐츠가 팬덤과의 관계 속에서 지속적으로 소비되는 구조를 구축해 왔으며, 글로벌 서비스 운영 경험과 팬덤 데이터를 바탕으로 K-pop 콘텐츠의 몰입도와 지속성을 높여 왔습니다.</p><p>이를 기반으로 K-pop 기반 게임과 플랫폼을 핵심 축으로 콘텐츠 사업을 확장하고 있습니다. 게임과 플랫폼은 각기 다른 방식으로 팬 경험을 깊게 만들며, 테이크원의 K-pop 콘텐츠 전략을 이끄는 두 개의 중심축 역할을 합니다.</p></div>
+<div class="co-footer"><a class="co-btn" href="https://www.takeonecompany.com" target="_blank" rel="noopener">웹사이트 방문 &rarr;</a></div>
+</div></div>
+<div class="co-ips"><p class="ips-label">주요 콘텐츠<span>3</span></p><div class="ip-grid n3">
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/enhypen-world.jpg" alt="ENHYPEN WORLD : ETERNAL MOMENT" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">ENHYPEN WORLD : ETERNAL MOMENT</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>모바일 게임</span><span class="ip-tag"><b>AGE</b>전 연령</span></div>
+<div class="ip-desc"><p>K-pop 아이돌 그룹 ENHYPEN IP를 기반으로 한 시네마틱 어드벤처 게임입니다.</p><p>ENHYPEN은 독보적인 뱀파이어 콘셉트로 잘 알려져 있지만, 그것이 단지 콘셉트가 아니라면? 사실 멤버들은 진짜 뱀파이어입니다. 수백 년의 영생 동안 쌓인 생생한 기억이 이들 힘의 원천이죠. 그런데 어느 날, 정체불명의 크리처들이 이 기억을 노리며 힘을 빼앗으려 합니다. 공격이 거세질수록 멤버들의 기억은 왜곡되고, 결국 안식처인 Vampire Town마저 무너집니다. 멤버들의 힘을 강화하는 특별한 능력을 지닌 당신은 ENHYPEN에게 핵심 조력자로 인정받습니다.</p><p>플레이어는 최애 멤버를 선택해 드래그 앤 매치-3 퍼즐로 ENHYPEN의 기억을 지키고, ENHYPEN WORLD에서만 만날 수 있는 멤버들의 귀여운 3D 캐릭터 &#x27;Vamkids&#x27;와 함께 자원을 모으며 개성을 담은 다양한 아이템으로 마을을 꾸밀 수 있습니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/kitz.jpg" alt="KITZ" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">KITZ</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>K-POP 숏폼 플랫폼</span><span class="ip-tag"><b>AGE</b>12세 이상</span></div>
+<div class="ip-desc"><p>K-pop을 가장 강렬하고 간결하게 경험할 수 있는 글로벌 K-pop 숏폼 플랫폼입니다. K-pop 아이돌이 출연하는 프리미엄 숏폼 드라마, 예능 콘텐츠, 시청자의 선택으로 전개되는 인터랙티브 스토리, 소장 욕구를 자극하는 컬렉터블 요소와 독점 콘텐츠를 선보입니다.</p><p>NCT 제노·재민이 출연하는 &#x27;Wind Up&#x27;은 한때 천재 투수였지만 더 이상 스트라이크를 던지지 못하는 고등학생 우진 앞에 의문의 전학생 태희가 나타나 그가 다시 마운드로 돌아갈 수 있도록 돕는, 두 소년의 빛나는 우정과 성장을 담은 청춘 야구 드라마입니다. VERIVERY 강민이 출연하는 &#x27;Jump Boy LIVE&#x27;는 인플루언서를 꿈꾸던 과학고 학생이 우연히 운석을 발견해 순간이동 능력을 얻고 세계적인 &#x27;히어로&#x27;로 성장하는 이야기입니다.</p><p>이 프리미엄 타이틀을 비롯한 다양한 작품을 KITZ에서 독점으로 만날 수 있습니다.</p></div>
+</div></div>
+<div class="ip-card">
+<div class="ip-thumb"><img src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/main/IP/qqu-ent-takeone.jpg" alt="QQu ENT" loading="lazy"></div>
+<div class="ip-body">
+<p class="ip-title">QQu ENT</p>
+<div class="ip-tags"><span class="ip-tag"><b>TYPE</b>숏폼 드라마 애니메이션</span><span class="ip-tag"><b>AGE</b>15세 이상</span></div>
+<div class="ip-desc"><p>낡은 옥탑방에 살며 데뷔를 꿈꾸는 &#x27;QQU Entertainment&#x27; 아이돌 지망생들의 일상을 그린 시트콤입니다. 열정은 넘치지만 조금 어설픈 김핑크 대표를 따라, 연습생들은 열악한 환경 속에서도 데뷔를 향해 버티고, 살아남고, 거듭 도전합니다.</p><p>코미디와 따뜻한 일상의 순간을 버무려 이 여정을 담아냅니다.</p><p>K-pop 연습생 문화를 진정성 있게 그려, 아이돌 지망생은 물론 그들의 여정을 이해하고 공감하는 팬들에게도 울림을 줍니다.</p></div>
+</div></div>
+</div></div></article>
+</section>
+</div></section>
+<section class="s-cta"><div class="inner"><div class="cta-wrap"><h2 class="cta-h2">Join 2026<br>K&#8209;Content Expo Chile</h2><div class="cta-btns"><a href="https://kcontentexpochile.com/KEXPOC/59492/register/select.do" class="btn-prim">참가기업 등록 &rarr;</a> <a href="https://kcontentexpochile.com/KEXPOC/59492/register/buyer.do" class="btn-out">바이어 등록 &rarr;</a></div></div></div></section>
+<div class="k-stripe"><div class="s1"></div><div class="s2"></div><div class="s3"></div></div>
+</div>
