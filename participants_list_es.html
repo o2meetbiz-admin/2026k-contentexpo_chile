@@ -1,0 +1,1489 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Empresas Participantes | 2026 K-Content Expo Chile</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&amp;display=swap" rel="stylesheet"/><style>
+	.kexpo-comp *,
+	.kexpo-comp *::before,
+	.kexpo-comp *::after {
+		box-sizing: border-box
+	}
+	
+	.kexpo-comp {
+		font-family: 'Pretendard', 'Inter', -apple-system, sans-serif;-webkit-font-smoothing: antialiased;background: #0E1830;color: #fff;line-height: 1.5;word-break: keep-all;overflow-wrap: anywhere
+	}
+	
+	.kexpo-comp h1,
+	.kexpo-comp h2,
+	.kexpo-comp h3,
+	.kexpo-comp p {
+		margin: 0
+	}
+	
+	.kexpo-comp a {
+		color: inherit;text-decoration: none
+	}
+	
+	.kexpo-comp button {
+		font: inherit
+	}
+	
+	.kexpo-comp .inner {
+		max-width: 1440px;margin: 0 auto;padding: 0 64px
+	}
+	
+	.kexpo-comp .k-stripe {
+		display: flex;height: 4px
+	}
+	
+	.kexpo-comp .s1 {
+		flex: 3;background: #E8192C
+	}
+	
+	.kexpo-comp .s2 {
+		flex: 1;background: #1B2F6E
+	}
+	
+	.kexpo-comp .s3 {
+		flex: 1;background: #3A6FD8
+	}
+	
+	.kexpo-comp .s-hero {
+		padding: 96px 0 56px
+	}
+	
+	.kexpo-comp .overline {
+		display: flex;align-items: center;gap: 8px;margin-bottom: 24px
+	}
+	
+	.kexpo-comp .overline-bar {
+		width: 28px;height: 2px;background: #E8192C
+	}
+	
+	.kexpo-comp .overline-text {
+		color: #3A6FD8;font: 700 12px Inter, sans-serif;letter-spacing: .18em;text-transform: uppercase
+	}
+	
+	.kexpo-comp .hero-h1 {
+		font: 700 72px/.95 Inter, sans-serif;letter-spacing: -.02em;margin-bottom: 24px
+	}
+	
+	.kexpo-comp .hero-h1 em {
+		color: #E8192C;font-style: normal
+	}
+	
+	.kexpo-comp .hero-lead {
+		font: 300 15px Inter, sans-serif;color: #A8B8D8;letter-spacing: .14em;text-transform: uppercase
+	}
+	
+	.kexpo-comp .hero-desc {
+		font-size: 16px;color: #A8B8D8;line-height: 1.7;margin-top: 18px
+	}
+	
+	.kexpo-comp .spec-grid {
+		display: grid;grid-template-columns: repeat(2, 1fr);background: #0A1225
+	}
+	
+	.kexpo-comp .spec-cell {
+		padding: 36px 28px;border-right: 1px solid #1B2F6E
+	}
+	
+	.kexpo-comp .spec-cell:last-child {
+		border-right: 0
+	}
+	
+	.kexpo-comp .spec-label {
+		display: block;color: #3A6FD8;font: 700 12px Inter, sans-serif;letter-spacing: .16em;text-transform: uppercase;margin-bottom: 8px
+	}
+	
+	.kexpo-comp .spec-value {
+		font: 700 30px Inter, sans-serif
+	}
+	
+	.kexpo-comp .filter-bar-wrap {
+		position: static;top: 0;z-index: 10;background: #0A1225;border-top: 1px solid #1B2F6E;border-bottom: 1px solid #1B2F6E
+	}
+	
+	.kexpo-comp .filter-bar {
+		max-width: 1440px;margin: auto;padding: 20px 64px;display: flex;flex-wrap: wrap;gap: 10px
+	}
+	
+	.kexpo-comp .filter-chip {
+		background: transparent;color: #A8B8D8;border: 1px solid #1B2F6E;padding: 9px 16px;cursor: pointer;font-size: 14px
+	}
+	
+	.kexpo-comp .filter-chip span {
+		opacity: .65;padding-left: 4px
+	}
+	
+	.kexpo-comp .filter-chip.active {
+		background: #E8192C;color: white;border-color: #E8192C
+	}
+	
+	.kexpo-comp .filter-chip:hover {
+		border-color: #E8192C
+	}
+	
+	.kexpo-comp .s-list {
+		padding: 64px 0 110px
+	}
+	
+	.kexpo-comp .list-head {
+		display: flex;align-items: baseline;gap: 16px;border-bottom: 2px solid #E8192C;padding-bottom: 16px;margin-bottom: 28px
+	}
+	
+	.kexpo-comp .list-head h2 {
+		font: 700 24px Inter, sans-serif
+	}
+	
+	.kexpo-comp .result-count {
+		font-size: 14px;color: #A8B8D8
+	}
+	
+	.kexpo-comp .company-grid {
+		display: grid;grid-template-columns: repeat(3, minmax(0, 1fr));gap: 20px;align-items: stretch
+	}
+	
+	.kexpo-comp .company-card {
+		border: 1px solid #1B2F6E;background: #0E1830;padding: 28px;display: flex;flex-direction: column;gap: 24px;min-width: 0
+	}
+	
+	.kexpo-comp .company-body {
+		flex: 1;min-width: 0
+	}
+	
+	.kexpo-comp .company-meta {
+		font: 700 12px Inter, sans-serif;color: #3A6FD8;letter-spacing: .12em;margin-bottom: 12px
+	}
+	
+	.kexpo-comp .company-name {
+		font-size: 20px;line-height: 1.4;margin-bottom: 16px
+	}
+	
+	.kexpo-comp .company-desc {
+		font-size: 14px;font-weight: 300;color: #A8B8D8;line-height: 1.8;max-height: 134px;overflow: hidden;white-space: normal
+	}
+	
+	.kexpo-comp .company-desc.expanded {
+		max-height: none
+	}
+	
+	.kexpo-comp .more-btn,
+	.kexpo-comp .ip-more {
+		border: 0;background: none;color: #89A6E9;font-size: 12px;padding: 10px 0 0;cursor: pointer;text-align: left
+	}
+	
+	.kexpo-comp .company-footer {
+		display: flex;justify-content: flex-end;min-height: 37px;align-items: flex-end
+	}
+	
+	.kexpo-comp .company-btn {
+		font: 700 12px Inter, sans-serif;color: #E8192C;border: 1px solid #E8192C;padding: 10px 18px
+	}
+	
+	.kexpo-comp .company-btn:hover {
+		background: #E8192C;color: #fff
+	}
+	
+	.kexpo-comp .muted {
+		opacity: .65
+	}
+	
+	@media(max-width:1024px) {
+		.kexpo-comp .company-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr))
+		}
+	}
+	
+	@media(max-width:768px) {
+		.kexpo-comp .inner {
+			padding: 0 24px
+		}
+		.kexpo-comp .s-hero {
+			padding: 64px 0 40px
+		}
+		.kexpo-comp .hero-h1 {
+			font-size: 34px
+		}
+		.kexpo-comp .spec-grid {
+			grid-template-columns: 1fr
+		}
+		.kexpo-comp .spec-cell {
+			padding: 22px 24px;border-right: 0;border-bottom: 1px solid #1B2F6E
+		}
+		.kexpo-comp .filter-bar {
+			padding: 16px 24px
+		}
+		.kexpo-comp .s-list {
+			padding: 48px 0 70px
+		}
+		.kexpo-comp .company-grid {
+			grid-template-columns: 1fr
+		}
+		.kexpo-comp .company-card {
+			padding: 24px
+		}
+		.kexpo-comp .list-head h2 {
+			font-size: 20px
+		}
+	}
+	
+	.kexpo-comp .company-group {
+		margin: 0 0 76px;scroll-margin-top: 100px
+	}
+	
+	.kexpo-comp .company-group:last-child {
+		margin-bottom: 0
+	}
+	
+	.kexpo-comp .group-title {
+		font: 700 24px/1.4 'Inter', sans-serif;border-bottom: 2px solid #E8192C;padding-bottom: 16px;margin: 0 0 28px;color: #fff
+	}
+	
+	.kexpo-comp .group-count {
+		font-size: 14px;font-weight: 400;color: #6B7A9A;margin-left: 10px
+	}
+	
+	.kexpo-comp .company-grid {
+		align-items: start;grid-template-columns: repeat(3, minmax(0, 1fr));gap: 20px
+	}
+	
+	.kexpo-comp .company-card {
+		padding: 24px;gap: 14px;min-height: 0
+	}
+	
+	.kexpo-comp .company-body {
+		flex: initial
+	}
+	
+	.kexpo-comp .card-head {
+		display: flex;gap: 16px;align-items: center;min-height: 72px;margin-bottom: 14px
+	}
+	
+	.kexpo-comp .logo-frame {
+		width: 84px;height: 72px;flex: 0 0 84px;display: flex;align-items: center;justify-content: center;background: #fff;border-radius: 2px;padding: 9px;overflow: hidden
+	}
+	
+	.kexpo-comp .logo-frame img {
+		width: 100%;height: 100%;object-fit: contain
+	}
+	
+	.kexpo-comp .lumong-logo {
+		background: #0A1225
+	}
+	
+	.kexpo-comp .logo-frame.empty-logo {
+		background: #0A1225;border: 1px solid #1B2F6E
+	}
+	
+	.kexpo-comp .card-heading {
+		flex: 1;min-width: 0
+	}
+	
+	.kexpo-comp .company-meta {
+		margin-bottom: 7px;font-size: 11px
+	}
+	
+	.kexpo-comp .company-name {
+		font-size: 17px;line-height: 1.4;margin: 0;overflow-wrap: anywhere
+	}
+	
+	.kexpo-comp .company-preview {
+		color: #A8B8D8;font-size: 14px;font-weight: 300;line-height: 1.72;display: block;min-height: 0
+	}
+	
+	.kexpo-comp .company-footer {
+		justify-content: flex-start;min-height: 0;align-items: center
+	}
+	
+	.kexpo-comp .company-btn {
+		display: inline-block;line-height: 1.3;font-size: 12px
+	}
+	
+	.kexpo-comp .company-group[hidden] {
+		display: none!important
+	}
+	
+	@media(max-width:1024px) {
+		.kexpo-comp .company-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr))
+		}
+	}
+	
+	@media(max-width:768px) {
+		.kexpo-comp .company-grid {
+			grid-template-columns: 1fr
+		}
+		.kexpo-comp .company-group {
+			margin-bottom: 56px
+		}
+		.kexpo-comp .group-title {
+			font-size: 20px
+		}
+		.kexpo-comp .company-card {
+			padding: 22px
+		}
+		.kexpo-comp .logo-frame {
+			width: 72px;height: 62px;flex-basis: 72px
+		}
+	}
+	
+	.kexpo-comp .company-grid {
+		align-items: stretch
+	}
+	
+	.kexpo-comp .company-card {
+		height: 100%;align-self: stretch
+	}
+	
+	.kexpo-comp .company-body {
+		flex: 1 1 auto
+	}
+	
+	.kexpo-comp .company-footer {
+		margin-top: auto
+	}
+	
+	.kexpo-comp .cf-input {
+		position: absolute!important;width: 1px;height: 1px;opacity: 0;pointer-events: none;clip-path: inset(50%)
+	}
+	
+	.kexpo-comp #cf-all:checked~.filter-bar-wrap label[for=cf-all],
+	.kexpo-comp #cf-animation:checked~.filter-bar-wrap label[for=cf-animation],
+	.kexpo-comp #cf-broadcast:checked~.filter-bar-wrap label[for=cf-broadcast],
+	.kexpo-comp #cf-game:checked~.filter-bar-wrap label[for=cf-game] {
+		background: #E8192C;color: #fff;border-color: #E8192C
+	}
+	
+	.kexpo-comp #cf-animation:checked~.s-list .company-group,
+	.kexpo-comp #cf-broadcast:checked~.s-list .company-group,
+	.kexpo-comp #cf-game:checked~.s-list .company-group {
+		display: none
+	}
+	
+	.kexpo-comp #cf-animation:checked~.s-list #grp-animation,
+	.kexpo-comp #cf-broadcast:checked~.s-list #grp-broadcast,
+	.kexpo-comp #cf-game:checked~.s-list #grp-game {
+		display: block
+	}
+
+
+/* 기업별 IP 상세 보기: 원본 색상/버튼 톤 유지, JavaScript 불필요 */
+.kexpo-comp .company-detail-overlay{display:none;position:fixed;inset:0;z-index:99999;background:rgba(3,8,21,.88);padding:28px 18px;overflow-y:auto;align-items:center;justify-content:center}
+.kexpo-comp .company-detail-overlay:target{display:none}
+.kexpo-comp .detail-panel{position:relative;width:min(100%,990px);max-height:calc(100vh - 56px);overflow-y:auto;background:#0E1830;border:1px solid #3A6FD8;box-shadow:0 18px 65px rgba(0,0,0,.55);padding:36px 40px}
+.kexpo-comp .detail-close{position:sticky;top:0;float:right;width:38px;height:38px;border:1px solid #3A6FD8;background:#0A1225;color:#fff;font-size:23px;text-align:center;line-height:35px;z-index:2}
+.kexpo-comp .detail-company{font-size:23px;line-height:1.4;font-weight:700;margin:4px 50px 9px 0}
+.kexpo-comp .detail-eyebrow{font:700 11px Inter,sans-serif;letter-spacing:.16em;color:#3A6FD8;text-transform:uppercase}
+.kexpo-comp .detail-separator{height:2px;background:#E8192C;margin:18px 0 24px}
+.kexpo-comp .detail-ip{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:24px;padding:23px 0;border-bottom:1px solid #1B2F6E}
+.kexpo-comp .detail-ip:last-of-type{border-bottom:0}
+.kexpo-comp .detail-ip-image{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:#0A1225;border:1px dashed #1B2F6E;color:#6B7A9A;font-size:12px;text-align:center;padding:16px}
+.kexpo-comp .detail-ip-image img{width:100%;height:100%;object-fit:contain}
+.kexpo-comp .detail-ip-title{font-size:19px;line-height:1.4;font-weight:700;color:#fff;margin-bottom:10px}
+.kexpo-comp .detail-ip-desc{color:#A8B8D8;font-size:14px;font-weight:300;line-height:1.85;white-space:pre-line;overflow-wrap:anywhere}
+.kexpo-comp .detail-website{display:inline-block;margin-top:24px;font:700 12px Inter,sans-serif;color:#E8192C;border:1px solid #E8192C;padding:12px 20px}
+.kexpo-comp .detail-website:hover{background:#E8192C;color:#fff}
+.kexpo-comp .detail-caption{font-size:12px;color:#6B7A9A;margin:0 0 7px}
+@media(max-width:768px){.kexpo-comp .company-detail-overlay{padding:10px}.kexpo-comp .detail-panel{max-height:calc(100dvh - 20px);padding:22px 19px}.kexpo-comp .detail-ip{grid-template-columns:1fr;gap:12px}.kexpo-comp .detail-ip-image{max-width:320px}.kexpo-comp .detail-company{font-size:19px}}
+
+
+/* 상세 팝업 개선: 원본 톤앤매너 유지 */
+.kexpo-comp .detail-actions{position:absolute;top:36px;right:40px;z-index:5;display:flex;justify-content:flex-end;align-items:flex-start;gap:10px;margin:0;background:#0E1830}
+.kexpo-comp .detail-actions .detail-website{margin:0;line-height:1.3;white-space:nowrap;padding:11px 14px}
+.kexpo-comp .detail-actions .detail-close{position:static;float:none;flex:0 0 38px;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;line-height:1}
+.kexpo-comp .detail-eyebrow{max-width:calc(100% - 260px)}
+.kexpo-comp .detail-company{max-width:calc(100% - 260px);margin-right:0}
+@media(max-width:768px){.kexpo-comp .detail-actions{top:22px;right:19px}.kexpo-comp .detail-eyebrow{max-width:calc(100% - 155px)}.kexpo-comp .detail-company{max-width:100%;padding-top:34px}}
+.kexpo-comp .detail-ip-meta{display:flex;flex-wrap:wrap;gap:6px 15px;margin:0 0 11px;color:#89A6E9;font-size:11px;font-weight:400;line-height:1.5}
+.kexpo-comp .detail-ip-meta strong{color:#3A6FD8;font-weight:700;margin-right:5px}
+.kexpo-comp .detail-ip-image{padding:0;overflow:hidden;border:1px solid #1B2F6E}
+.kexpo-comp .detail-ip-image img{display:block;width:100%;height:100%;object-fit:contain}
+.kexpo-comp .detail-dismiss{position:absolute;inset:0;display:block;z-index:0;cursor:default}
+.kexpo-comp .detail-panel{z-index:1}
+@media(max-width:768px){.kexpo-comp .detail-actions{gap:7px}.kexpo-comp .detail-actions .detail-website{font-size:11px;padding:10px 8px}}
+
+/* 2026-10: 레이아웃 및 팝업 동작만 보정. 기업/IP 정보는 유지 */
+.kexpo-comp .inner,.kexpo-comp .filter-bar{max-width:1200px}
+.kexpo-comp .ip-modal-toggle{position:absolute!important;width:1px;height:1px;opacity:0;pointer-events:none;clip-path:inset(50%)}
+.kexpo-comp .company-btn{cursor:pointer}
+.kexpo-comp .company-detail-overlay{height:100%;height:100dvh;overflow:hidden;padding:clamp(10px,3vh,24px) 16px;align-items:center}
+.kexpo-comp .detail-panel{width:min(100%,1060px);max-height:calc(100% - 8px);max-height:calc(100dvh - 48px);overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.kexpo-comp .detail-dismiss{cursor:pointer}
+.kexpo-comp .detail-close{cursor:pointer}
+.kexpo-comp .detail-ip-image{background:#fff}
+.kexpo-comp .detail-ip-image img{background:#fff}
+@media(max-width:768px){.kexpo-comp .company-detail-overlay{padding:8px}.kexpo-comp .detail-panel{max-height:calc(100dvh - 16px);width:100%}}
+
+
+/* Vercel iframe: 해시 이동 및 숨겨진 checkbox 포커스 없이 팝업 제어 */
+.kexpo-comp .company-detail-overlay.is-open{display:flex}
+.kexpo-comp .detail-dismiss{border:0;padding:0;background:transparent;appearance:none}
+.kexpo-comp .detail-close{padding:0;appearance:none;cursor:pointer}
+.kexpo-comp .company-footer .company-btn{background:transparent;display:inline-block;text-align:center;line-height:1.3;cursor:pointer;border-radius:0}
+.kexpo-comp .company-footer .company-btn:hover{background:#E8192C;color:#fff}
+
+/* Descripciones de empresas: cinco líneas y opción de lectura completa. */
+.kexpo-comp .company-preview.is-collapsed {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  overflow: hidden;
+}
+.kexpo-comp .company-more-toggle {
+  display: inline-block;
+  margin-top: 9px;
+  padding: 4px 0;
+  border: 0;
+  background: none;
+  color: #89A6E9;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+}
+.kexpo-comp .company-more-toggle:hover { color: #fff; text-decoration: underline; }
+.kexpo-comp .company-more-toggle[hidden] { display: none !important; }
+.kexpo-comp .company-more-toggle:focus-visible { outline: 2px solid #3A6FD8; outline-offset: 3px; }
+</style></head><body style="margin:0;background:#0E1830"><div class="kexpo-comp" id="kexpo-comp-directory">
+<div class="k-stripe">
+<div class="s1">
+<br/>
+</div>
+<div class="s2">
+<br/>
+</div>
+<div class="s3">
+<br/>
+</div></div>
+<section class="s-hero">
+<div class="inner">
+<div class="overline"><span class="overline-bar"></span><span class="overline-text">Directorio</span></div>
+<h1 class="hero-h1">Empresas<br/><em>Participantes</em></h1>
+<p class="hero-lead">2026 K-Content Expo Chile</p>
+<p class="hero-desc">Conozca a las empresas participantes. Seleccione una categoría para explorar las empresas de cada sector.</p>
+</div>
+</section>
+<section class="s-spec">
+<div class="spec-grid">
+<div class="spec-cell"><span class="spec-label">Companies</span><span class="spec-value">30 empresas</span></div>
+<div class="spec-cell"><span class="spec-label">Categories</span><span class="spec-value">3 categorías</span></div></div>
+</section>
+<input checked="true" class="cf-input" id="cf-all" name="kexpo-company-filter" type="radio"/> 
+	<input class="cf-input" id="cf-animation" name="kexpo-company-filter" type="radio"/> 
+	<input class="cf-input" id="cf-broadcast" name="kexpo-company-filter" type="radio"/> 
+	<input class="cf-input" id="cf-game" name="kexpo-company-filter" type="radio"/>
+<div class="filter-bar-wrap">
+<div class="filter-bar">
+<label class="filter-chip" for="cf-all">Todas<span>30</span></label>
+<label class="filter-chip" for="cf-animation">ANIMACIÓN / PERSONAJES<span>11</span></label>
+<label class="filter-chip" for="cf-broadcast">RADIODIFUSIÓN<span>12</span></label>
+<label class="filter-chip" for="cf-game">JUEGOS<span>7</span></label>
+</div></div>
+<section class="s-list">
+<div class="inner">
+<section class="company-group" data-group="ANIMATION / CHARACTER" id="grp-animation">
+<h2 class="group-title">ANIMACIÓN / PERSONAJES<span class="group-count">11 empresas</span></h2>
+<div class="company-grid">
+<article class="company-card" data-primary="ANIMATION / CHARACTER">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="그래피직스 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/gfx.png"/></div>
+<div class="card-heading">
+<div class="company-meta">ANIMACIÓN / PERSONAJES</div>
+<h3 class="company-name">GraFiziX</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-01">GraFiziX: creando el futuro de la diversión y el aprendizaje La visión GraFiziX dice que el aprendizaje debe ser divertido y despertar la curiosidad, la creatividad y el espíritu de descubrimiento. Con más de dos décadas de experiencia, esta empresa es especialista en la creación de contenidos educativos innovadores que entretienen y enriquecen a niños y adolescentes de todo el mundo. Su filosofía central, Great Fun Experience (GFX), refleja un compromiso por ofrecer contenido multimedia atractivo que combine a la perfección el entretenimiento con el valor educativo. En esta empresa se han desarrollado programas de televisión galardonados, como el popular Mind Blowing Breakthroughs, que explora la ciencia, las matemáticas, la música y el arte a través de formatos sencillos, divertidos y accesibles. Sus series de animación se distribuyen en más de 60 países, lo que hace que temas complejos resulten emocionantes y accesibles en todas las culturas. Más allá de la radiodifusión tradicional, GraFizix destaca en la producción de contenidos multimedia interactivos, experiencias sensoriales inmersivas y exposiciones participativas. Su laboratorio de investigación de educación y entretenimiento desarrolla continuamente nuevos contenidos y formatos innovadores, entre los que se incluyen musicales familiares, exposiciones interactivas y productos educativos basados en nuestras propiedades intelectuales propias. La misión de esta empresa es dar forma al futuro de la educación infantil, fusionando tecnología de vanguardia, narración creativa y experiencias interactivas. En GraFizix se dedican a hacer que la educación sea divertida y accesible, dotando a la próxima generación de conocimientos, curiosidad y alegría.</p>
+<button type="button" class="company-more-toggle" data-company-more="1" aria-expanded="false" aria-controls="company-preview-01" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-01" aria-haspopup="dialog" aria-label="그래피직스 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-01" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="ANIMATION / CHARACTER">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="아이스크림스튜디오 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/eyescream.png"/></div>
+<div class="card-heading">
+<div class="company-meta">ANIMACIÓN / PERSONAJES</div>
+<h3 class="company-name">Eyescream Studio</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-02">Fundada en 2012, Eyescream Studio es una empresa de producción de animación y contenidos. La empresa desarrolla y produce personajes originales, aprovechando su amplia experiencia en producción visual de alta calidad. Su marca estrella, Duda &amp; Dada, ya cuenta con tres temporadas de televisión, un largometraje, espectáculos, contenido 3D interactivo y negocios de licencia. Además, su alcance supera los 50 países a través de 180 canales en 9 idiomas. En Eyescream Studio también se está impulsando la producción híbrida, que combina artistas experimentados con herramientas de IA propias, al mismo tiempo que se expande al mercado global de contenido como el k-pop, los cortometrajes y los personajes virtuales.</p>
+<button type="button" class="company-more-toggle" data-company-more="2" aria-expanded="false" aria-controls="company-preview-02" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-02" aria-haspopup="dialog" aria-label="아이스크림스튜디오 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-02" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="ANIMATION / CHARACTER">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="에피소드컴퍼니 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/episode.png"/></div>
+<div class="card-heading">
+<div class="company-meta">ANIMACIÓN / PERSONAJES</div>
+<h3 class="company-name">Episode Company Co., Ltd.</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-03">Desde abril de 2026, Episode Company Co., Ltd. (KOSDAQ: 317530), anteriormente conocida como Carriesoft Co., Ltd., es una empresa coreana dedicada a la propiedad intelectual de contenido que produce e invierte en animación, películas y series de televisión. Desde 2019, esta empresa cotiza en el KOSDAQ y cuenta con su propio estudio de animación, que ha estrenado títulos como Carrie and Super Kola y City of Delivery. A través de sus filiales, en Episode Company Co., Ltd. se desarrolla y distribuye contenido a todo el mundo.</p>
+<button type="button" class="company-more-toggle" data-company-more="3" aria-expanded="false" aria-controls="company-preview-03" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-03" aria-haspopup="dialog" aria-label="에피소드컴퍼니 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-03" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="ANIMATION / CHARACTER">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="엑세스코리아 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/accesskorea.png"/></div>
+<div class="card-heading">
+<div class="company-meta">ANIMACIÓN / PERSONAJES</div>
+<h3 class="company-name">ACCESS KOREA</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-04">ACCESS KOREA se fundó en 2019, con el objetivo de promover contenido cultural coreano y de excelencia, mediante la expansión de los mercados locales e internacionales. Debido a su éxito, Access Korea ha contribuido al desarrollo de la llamada “ola coreana”. Esta empresa ofrece diversos enfoques y oportunidades como: concesión de licencias de personajes, distribución de animación y suministro de productos culturales coreanos. Este acerca a personas de todo el mundo y les permite disfrutar contenido cultural de gran calidad. Además, Access Korea presenta contenido extranjero de renombre al público coreano.</p>
+<button type="button" class="company-more-toggle" data-company-more="4" aria-expanded="false" aria-controls="company-preview-04" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-04" aria-haspopup="dialog" aria-label="엑세스코리아 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-04" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="ANIMATION / CHARACTER">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="주식회사 스튜디오쉘터 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/shelter.png"/></div>
+<div class="card-heading">
+<div class="company-meta">ANIMACIÓN / PERSONAJES</div>
+<h3 class="company-name">Studio Shelter</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-05">Fundado en 2009, Studio Shelter es un estudio de animación con sede en Corea reconocido por su voz creativa distintiva y su audaz individualidad. Arraigados en la narración original, nos hemos labrado una reputación al adentrarnos en nuevos territorios creativos, donde se unen el comercio y el arte. Surgidos de un panorama de la animación en rápida evolución, nuestro objetivo es ayudar a dar forma a nuevas formas de animación para un público global.</p>
+<button type="button" class="company-more-toggle" data-company-more="5" aria-expanded="false" aria-controls="company-preview-05" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-05" aria-haspopup="dialog" aria-label="주식회사 스튜디오쉘터 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-05" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="ANIMATION / CHARACTER">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="큐티즈(Qtizz) 주식회사 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/qtizz.png"/></div>
+<div class="card-heading">
+<div class="company-meta">ANIMACIÓN / PERSONAJES</div>
+<h3 class="company-name">QTIZZ Inc.</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-06">¡La ternura salva el mundo! El valor y el objetivo que persigue Qtizz es transmitir emociones alegres a todo el mundo a través de personajes entrañables que hacen sonreír de corazón y de contenidos conmovedores que aportan alegría a la vida cotidiana. Como empresa especializada en propiedad intelectual de contenidos que desarrolla su actividad en todos los ámbitos (incluidos el diseño de personajes originales, la producción de animación, la concesión de licencias de propiedad intelectual, los productos derivados de los personajes, los emoticonos y la coproducción de contenidos), Qtizz aspira a convertirse en una empresa global de entretenimiento basada en personajes a través de productos con personajes adorables que gusten a todo el mundo y de contenidos diversos, novedosos y divertidos. Qtizz es una filial de Jaedam Media, una empresa dedicada al webtoon. Sus actividades secundarias incluyen la gestión de la propiedad intelectual de personajes de webtoon, la concesión de licencias de la propiedad intelectual de los personajes originales de Qtizz, la planificación y producción de webtoons y animaciones, el diseño de personajes, los emoticonos, los productos de personajes y las colaboraciones. Qtizz es una empresa especializada en propiedad intelectual que desarrolla actividades integrales relacionadas con la propiedad intelectual de contenidos.</p>
+<button type="button" class="company-more-toggle" data-company-more="6" aria-expanded="false" aria-controls="company-preview-06" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-06" aria-haspopup="dialog" aria-label="큐티즈(Qtizz) 주식회사 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-06" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="ANIMATION / CHARACTER">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="(주)이모션웨이브 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/emotionwave.png"/></div>
+<div class="card-heading">
+<div class="company-meta">ANIMACIÓN / PERSONAJES</div>
+<h3 class="company-name">Emotionwave Inc.</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-07">Emotionwave es una empresa pionera y líder en AX (transformación mediante IA) que se sitúa en la intersección entre las artes culturales y la tecnología avanzada. Gracias al uso de agentes autónomos de IA y a su tecnología patentada de IA física, Emotionwave conecta a la perfección la inteligencia digital con el mundo físico. La empresa impulsa la innovación digital en las industrias de la música global y de k-pop, cuyo un avance que quedó demostrado en el CES 2026. Con el respaldo de sus colaboraciones con NVIDIA y la NYU Stern, Emotionwave se está preparando para presentar ser presentada en 2027 en el KOSDAQ como líder mundial en la transformación impulsada por la IA.</p>
+<button type="button" class="company-more-toggle" data-company-more="7" aria-expanded="false" aria-controls="company-preview-07" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-07" aria-haspopup="dialog" aria-label="(주)이모션웨이브 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-07" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="ANIMATION / CHARACTER">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="오로라월드 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/2e590ef4cbb07ec645de868d748d1b3b4c402fec/PNG/aurora.svg"/></div>
+<div class="card-heading">
+<div class="company-meta">ANIMACIÓN / PERSONAJES</div>
+<h3 class="company-name">Aurora World Corp.</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-08">Fundada en 1981, Aurora World es líder mundial en peluches y marcas de personajes. Con más de 40 años de experiencia en diseño, fabricación y distribución a nivel global, la empresa distribuye sus productos y marcas a más de 80 países de todo el mundo. En Aurora World se ha expandido el negocio de las licencias a una amplia gama de categorías como la edición, la papelería, la ropa, el hogar, los regalos, los artículos promocionales y los productos de estilo de vida, con el enfoque puesto en la propiedad intelectual propia de la empresa, creaciones entre las que se encuentran Palm Pals y Yoohoo &amp; Friends. A través de colaboraciones con vendedores minoristas, fabricantes y socios de marca líderes de todo el mundo, Aurora World sigue aumentando el valor de su cartera de propiedad intelectual, mientras crea nuevas oportunidades de concesión de licencias y colaboración a largo plazo.</p>
+<button type="button" class="company-more-toggle" data-company-more="8" aria-expanded="false" aria-controls="company-preview-08" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-08" aria-haspopup="dialog" aria-label="오로라월드 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-08" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="ANIMATION / CHARACTER">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="주식회사 달빵크리에이티브 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/dalbbang.png"/></div>
+<div class="card-heading">
+<div class="company-meta">ANIMACIÓN / PERSONAJES</div>
+<h3 class="company-name">DALBBANG CREATIVE Co., Ltd.</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-09">Dalbbang Creative es una empresa de contenido cultural que desarrolla personajes originales y experiencias inmersivas inspiradas en la historia, la cultura y las tradiciones de Corea. En esta empresa se creó la exposición inmersiva Leer y escribir el cielo: la época de Joseon, que se fundamenta en los logros científicos y el patrimonio cultural de la dinastía Joseon. También, tomando inspiración en leyendas tradicionales y registros históricos relacionados con el Ongnu, el reloj de agua astronómico de la dinastía Joseon, en Dalbbang Creative se han desarrollado personajes coreanos únicos, entre los que se incluyen las hadas, los doce animales del zodiaco y las cuatro deidades guardianas (el dragón azul, el tigre blanco, el pájaro bermellón y la tortuga negra). En la empresa también se creó a Nuruki, un personaje que da a conocer la cultura tradicional de la fermentación y las bebidas alcohólicas tradicionales de Corea a través de productos, programas educativos, exposiciones y experiencias interactivas. Mediante la integración de personajes con derechos de propiedad intelectual, exposiciones inmersivas y contenidos educativos, Dalbbang Creative acerca el patrimonio cultural coreano al público internacional y amplía sus colaboraciones en el ámbito de las exposiciones, las licencias, la promoción comercial y el turismo cultural.</p>
+<button type="button" class="company-more-toggle" data-company-more="9" aria-expanded="false" aria-controls="company-preview-09" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-09" aria-haspopup="dialog" aria-label="주식회사 달빵크리에이티브 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-09" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="ANIMATION / CHARACTER">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="(주)픽셀플레넷 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/pixelplanet.png"/></div>
+<div class="card-heading">
+<div class="company-meta">ANIMACIÓN / PERSONAJES</div>
+<h3 class="company-name">PIXEL PLANET Inc.</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-10">Pixel Planet Inc. es un estudio de animación 3D CGI con sede en Corea del Sur y más de 25 años de experiencia. Gracias a un proceso de producción integral y centralizado, cuenta con un historial de propiedades intelectuales que incluye títulos de éxito como SofyRuby, Tea Tea Cherry, Z-Ranger y Ocean Guardian Gangchi. En Pixel Planet Inc, se buscan activamente socios internacionales para la concesión de licencias y la distribución, con el fin de llevar historias cautivadoras y animaciones innovadoras al público de todo el mundo.</p>
+<button type="button" class="company-more-toggle" data-company-more="10" aria-expanded="false" aria-controls="company-preview-10" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-10" aria-haspopup="dialog" aria-label="(주)픽셀플레넷 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-10" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="ANIMATION / CHARACTER">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame lumong-logo"><img alt="(주)루몽스튜디오 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/refs/heads/main/PNG/lumongstudio.png"/></div>
+<div class="card-heading">
+<div class="company-meta">ANIMACIÓN / PERSONAJES</div>
+<h3 class="company-name">Rumong Studio Inc.</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-11">Rumong Studio es una empresa de contenidos impulsada por la inteligencia artificial que desarrolla propiedades intelectuales (IP) de personajes originales y las expande a través de música, videojuegos, contenido corto, webtoons y comercialización para un público global. Su propiedad intelectual estrella, FÉLIN, es un grupo virtual de idols del k-pop de nueva generación formado por cinco gatos que se transforman en idols humanos en un mundo virtual. Combinando una narrativa centrada en los personajes, actuaciones de k-pop y una producción de contenidos impulsada por la IA, FÉLIN ha superado el millón de visualizaciones acumuladas de sus vídeos de formato corto y ha creado una comunidad de seguidores global en constante crecimiento, con apariciones en eventos de K-EXPO en Canadá, España y Dubái.</p>
+<button type="button" class="company-more-toggle" data-company-more="11" aria-expanded="false" aria-controls="company-preview-11" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-11" aria-haspopup="dialog" aria-label="(주)루몽스튜디오 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-11" type="button">Ver detalles</button></div>
+</article>
+</div>
+</section>
+<section class="company-group" data-group="TV Content" id="grp-broadcast">
+<h2 class="group-title">RADIODIFUSIÓN<span class="group-count">12 empresas</span></h2>
+<div class="company-grid">
+<article class="company-card" data-primary="TV Content">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="(주)난센스 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/nonsense.png"/></div>
+<div class="card-heading">
+<div class="company-meta">RADIODIFUSIÓN</div>
+<h3 class="company-name">NONSENSE FORMATS</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-12">Nonsense Formats Co., Ltd. se fundó en junio de 2021 con el objetivo de crear «contenido de entretenimiento interesantes y únicos». Su especialidad es la fase de preproducción, mediante la elaboración de paquetes de formato; aquí se incluyen guiones de desarrollo, guías de formato y tráilers. A través de plataformas y redes online y móviles, esta empresa vende contenido en todo el mundo para generar diversos ingresos a través de la concesión de licencias. Con contenido original que refleja la cultura y los valores coreanos como eje central, Nonsense Formats Co., Ltd se dirige a los mercados extranjeros con posiciones de propiedad intelectual favorables. Su objetivo es promover la excelencia de la creatividad coreana en el ámbito del entretenimiento.</p>
+<button type="button" class="company-more-toggle" data-company-more="12" aria-expanded="false" aria-controls="company-preview-12" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-12" aria-haspopup="dialog" aria-label="(주)난센스 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-12" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="TV Content">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="(주)씨제이이엔엠 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/refs/heads/main/PNG/CJ-ENM.png"/></div>
+<div class="card-heading">
+<div class="company-meta">RADIODIFUSIÓN</div>
+<h3 class="company-name">CJ ENM Co., Ltd</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-13">¿De dónde surge la verdadera originalidad?, en CJ ENM se lleva respondiendo a esa pregunta desde 1995. Es una empresa a la vanguardia cuando se trata de originalidad, creando series imprescindibles, películas galardonadas y programas de telerrealidad adictivos. Aquí se descubren a las próximas estrellas del k-pop, se inventan a la próxima sensación de la animación y se producen musicales de talla mundial para Broadway, West End y Asia. La originalidad se nutre de temas comunes en todos los idiomas, todas las edades y todas las generaciones. Los nuevos personajes e historias nos unen a través de emociones universales que todos compartimos. Desde clásicos de todos los tiempos como Guardian: The Lonely and Great God y True Beauty, hasta títulos más recientes como Lovely Runner y Dear X, CJ ENM está a la vanguardia de la producción y distribución de dramas coreanos de alta calidad y primer nivel para cautivar al público mundial.</p>
+<button type="button" class="company-more-toggle" data-company-more="13" aria-expanded="false" aria-controls="company-preview-13" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-13" aria-haspopup="dialog" aria-label="(주)씨제이이엔엠 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-13" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="TV Content">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="(주)웨스트월드스토리 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/westworld.png"/></div>
+<div class="card-heading">
+<div class="company-meta">RADIODIFUSIÓN</div>
+<h3 class="company-name">Westworld Story Co., Ltd.</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-14">WESTWORLD STORY es el estudio de producción de WESTWORLD, un grupo de contenido global con avanzada tecnología en efectos visuales (VFX) e inteligencia artificial (IA). La empresa ha producido series como Face Me, Strangers Again y Tracer, así como la película HOPE y se está expandiendo hacia los microdramas y el contenido sin guión. Esta empresa amplía su negocio global de propiedad intelectual a través de la distribución, la venta de remakes y formatos y las colaboraciones internacionales.</p>
+<button type="button" class="company-more-toggle" data-company-more="14" aria-expanded="false" aria-controls="company-preview-14" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-14" aria-haspopup="dialog" aria-label="(주)웨스트월드스토리 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-14" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="TV Content">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="(주)이엘티비 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/eltv.png"/></div>
+<div class="card-heading">
+<div class="company-meta">RADIODIFUSIÓN</div>
+<h3 class="company-name">EL TV Inc.</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-15">EL TV Inc. es una productora coreana que descubre historias de personas y cultura a través de la gastronomía y las transforma en contenido que conecta con el público de todo el mundo. Desde 2005, han desarrollado propiedad intelectual original y cultivado una experiencia incomparable en la producción de documentales de alta calidad, formatos de entretenimiento y contenidos digitales, con la gastronomía coreana (k-food) como eje central de la narrativa. Desde documentales gastronómicos reconocidos a nivel mundial, como K-Food Rhapsody y A Nation of Taste, hasta la coproducción con BBC Studios Ed &amp; Ryu: Mad About Seafood, en EL TV Inc. han desarrollado una oferta diversa dirigida al público internacional. A partir de su propiedad intelectual original, es una empresa que sigue expandiéndose a nivel mundial mediante el desarrollo de formatos, la coproducción internacional, la localización y la concesión de licencias.</p>
+<button type="button" class="company-more-toggle" data-company-more="15" aria-expanded="false" aria-controls="company-preview-15" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-15" aria-haspopup="dialog" aria-label="(주)이엘티비 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-15" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="TV Content">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="심스토리(주) 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/simstory.png"/></div>
+<div class="card-heading">
+<div class="company-meta">RADIODIFUSIÓN</div>
+<h3 class="company-name">SIMSTORY</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-16">«¡Tú eres el contenido!». Contamos historias desde el corazón, llenas de humanidad. Con 20 años de experiencia en la producción de programas de variedades y programas educativos para televisión, esta empresa gestiona diversos negocios relacionados con la creación de contenido, como la producción de series y contenido para YouTube, el manejo de artistas y el comercio de contenidos. «Aquí esperamos tu historia». Sim Story crea historias creativas y coloridas con SIM, que en coreano significa tanto ‘trazo de lápiz’ como ‘corazón humano’. En Sim Story quieren comunicarse con el mundo a través de creaciones originales y esperan que sus pasos innoven en el mercado de los medios de comunicación.</p>
+<button type="button" class="company-more-toggle" data-company-more="16" aria-expanded="false" aria-controls="company-preview-16" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-16" aria-haspopup="dialog" aria-label="심스토리(주) 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-16" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="TV Content">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="애드히시브 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/ADHESIVE.png"/></div>
+<div class="card-heading">
+<div class="company-meta">RADIODIFUSIÓN</div>
+<h3 class="company-name">ADHESIVE Co.Ltd</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-17">De agencia de diseño a líder en cine de IA híbrida: ADHESIVE Con una trayectoria galardonada en estrategia visual y reconocida por tres de los premios de diseño más importantes del mundo, desde 2016, en ADHESIVE se ha estado desarrollando y produciendo contenido original basados en propiedad intelectual. Tras el estreno de Fester en Netflix, ADHESIVE se extendió al ámbito de los largometrajes y las series originales, al tiempo que impulsaba la realización cinematográfica IA híbrida a través de su propio proceso de producción, que combina la cinematografía de acción real con la IA generativa. Su proyecto Tunda ganó el Premio Kantana en el BIFAN NAFF Project Market, lo que demostró su gran potencial para la coproducción internacional. Su largometraje producido con IA híbrida, Ask Me Anything, fue seleccionado oficialmente para la 30.ª edición del Concurso Internacional de IA del BIFAN. El largometraje de ADHESIVE, Karlovy Vary, fue invitado al Festival Internacional de Cine SOHO de Nueva York y está previsto que se estrene en las salas de Corea. Su serie original de comedia ambientada en el mundo laboral, Agency ChiChi: Ad Heat Special, protagonizada por Park Cho-rong de Apink, también se estrenará en TVING y Wavve en Corea.</p>
+<button type="button" class="company-more-toggle" data-company-more="17" aria-expanded="false" aria-controls="company-preview-17" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-17" aria-haspopup="dialog" aria-label="애드히시브 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-17" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="TV Content">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="윈디아주식회사 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/windia.png"/></div>
+<div class="card-heading">
+<div class="company-meta">RADIODIFUSIÓN</div>
+<h3 class="company-name">WINDIA INC</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-18">Fundada en septiembre de 2020, WINDIA Inc. desarrolla y produce contenido original de webtoon. A partir de 2026, la empresa se está expandiendo hacia la producción de películas y series a través de colaboraciones con productores y directores coreanos, creando historias pensadas para ser adaptadas a múltiples formatos.</p>
+<button type="button" class="company-more-toggle" data-company-more="18" aria-expanded="false" aria-controls="company-preview-18" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-18" aria-haspopup="dialog" aria-label="윈디아주식회사 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-18" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="TV Content">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="주식회사 노바스퀘어 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/nova.png"/></div>
+<div class="card-heading">
+<div class="company-meta">RADIODIFUSIÓN</div>
+<h3 class="company-name">NOVA square Inc.</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-19">Nova Square Co., Ltd. es una empresa tecnológica de contenido que desarrolla y gestiona everyreels, una plataforma OTT dedicada a las series de formato corto. Reuniendo a expertos en desarrollo de contenido y plataformas, la empresa ofrece experiencias inmersivas de series de formato corto dirigidas principalmente a mujeres de entre 20 y 40 años. Everyreels está creando nuevas fuentes de ingresos a través de precios asequibles, opciones de pago flexibles, publicidad y dinamismo en su tecnología publicitaria dentro de la red virtual impulsada por IA La empresa también produce y distribuye atractivas series originales de formato corto inspiradas en propiedades intelectuales de otras series populares y contenidos derivados. Nova Square aspira a convertirse en una empresa líder a nivel mundial en las plataformas de contenido corto, que está experimentando un rápido crecimiento.</p>
+<button type="button" class="company-more-toggle" data-company-more="19" aria-expanded="false" aria-controls="company-preview-19" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-19" aria-haspopup="dialog" aria-label="주식회사 노바스퀘어 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-19" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="TV Content">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="주식회사 위매드 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/wemad.png"/></div>
+<div class="card-heading">
+<div class="company-meta">RADIODIFUSIÓN</div>
+<h3 class="company-name">WEMAD Co., Ltd.</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-20">WEMAD son las siglas de «WE MAKE DREAM» y «WE MAKE DRAMA». WEMAD es una empresa de entretenimiento integral especializada en la producción de contenido dramático; es un colectivo de expertos en contenido con más de 15 años de experiencia. Su objetivo es contribuir a la innovación de la cultura pop, a través de un sistema de apoyo sistemático para el desarrollo de contenido cultural. WEMAD se fundó en junio de 2019, para fomentar este objetivo y ofrecer un servicio de máxima calidad. En la era de la 4.ª Revolución Industrial, que evoluciona a un ritmo vertiginoso, en esta empresa se esfuerzan por convertirse en líderes de la coproducción a nivel mundial, en ser especialistas del género romántico dentro de la industria de los contenidos culturales, a través de un sistema competitivo, contenidos creativos y diversas estrategias de marketing.</p>
+<button type="button" class="company-more-toggle" data-company-more="20" aria-expanded="false" aria-controls="company-preview-20" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-20" aria-haspopup="dialog" aria-label="주식회사 위매드 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-20" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="TV Content">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="주식회사 피에이치이엔엠 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/PHEnM.png"/></div>
+<div class="card-heading">
+<div class="company-meta">RADIODIFUSIÓN</div>
+<h3 class="company-name">PH E&amp;M</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-21">PH E&amp;M es una empresa global de contenido y entretenimiento que transforma ideas originales en contenido diverso y oportunidades de negocio. Desde su fundación, ha establecido una cadena de valor íntegra de propiedad intelectual, que abarca todo el ciclo de vida de los contenidos: desde el descubrimiento y desarrollo de propiedad intelectual hasta la producción de series, películas, programas de televisión, actuaciones en directo, k-pop, documentales y contenidos de audio, así como la distribución global, la concesión de licencias, el comercio y la gestión de la propiedad intelectual generada por IA. Con sede en Corea, PH E&amp;M sigue ampliando su red internacional de coproducción y distribución a través de colaboraciones con cadenas de televisión, productoras y plataformas de Japón, Norteamérica, Europa y otros mercados. Al combinar la narración creativa, la experiencia en producción y la gestión de la propiedad intelectual generada con nuevas tecnologías, se ha ampliado cada proyecto a múltiples géneros, formatos y territorios, creando, en consecuencia, modelos de ingresos sostenibles. El objetivo de PH E&amp;Mes conectar la creatividad coreana con el público global y construir un nuevo ecosistema de contenidos escalable.</p>
+<button type="button" class="company-more-toggle" data-company-more="21" aria-expanded="false" aria-controls="company-preview-21" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-21" aria-haspopup="dialog" aria-label="주식회사 피에이치이엔엠 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-21" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="TV Content">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="주식회사 한터글로벌 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/hanteo.png"/></div>
+<div class="card-heading">
+<div class="company-meta">RADIODIFUSIÓN</div>
+<h3 class="company-name">Hanteo Global, Inc.</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-22">Hanteo Global, Inc. es una empresa dedicada a los macrodatos, los medios de comunicación y el comercio del k-pop, que gestiona Hanteo Chart, una lista musical global de k-pop, y Whosfan Store, una plataforma oficial de comercio de k-pop. Aprovechando el seguimiento de ventas en tiempo real y el análisis de los macrodatos, esta empresa es líder en el ecosistema global del k-pop, ofreciendo tiendas efímeras (o pop-ups) oficiales, álbumes, artículos de promoción comercial y productos exclusivos. También, son productores de contenidos multimedia basados en propiedad intelectual, como la miniserie web Sometoon 2021 y la película Everyday We Are, basada en un webtoon, además de organizar anualmente los Hanteo Music Awards (HMA).</p>
+<button type="button" class="company-more-toggle" data-company-more="22" aria-expanded="false" aria-controls="company-preview-22" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-22" aria-haspopup="dialog" aria-label="주식회사 한터글로벌 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-22" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="TV Content">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="주식회사뉴유니버스 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/newunivers.png"/></div>
+<div class="card-heading">
+<div class="company-meta">RADIODIFUSIÓN</div>
+<h3 class="company-name">NewUnivers</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-23">Una empresa líder en tecnología de contenido vertical impulsada por IA. «NewUnivers está creando un ecosistema de contenido escalable generado por IA (comenzando por las miniseries coreanas) con el fin de conectar a los creadores y la propiedad intelectual con el mercado global del streaming y expandirse hacia contenidos en multiformatos y soluciones de producción». Desde su fundación en 2024, NewUnivers ha producido más de 20 series de formato corto y los ha distribuido con éxito a través de las 10 principales plataformas mundiales. Liderada por el hito histórico de Goodbye My Brothers, que se convirtió en la primera serie coreana de este formato en alcanzar el número 1, aproximadamente otros 10 títulos también han alcanzado esta posición en las listas de popularidad diarias y semanales de las principales plataformas. A través de estos logros, NewUnivers ha demostrado continuamente su fórmula de producción única y su capacidad para crear historias de primera calidad en el mercado de las series de formato corto. En 2026, NewUnivers tiene previsto introducir series de formato corto generadas por IA con una calidad cercana a la de las producciones de acción real, mediante un proceso de producción automatizado y totalmente integrado que abarca la generación de guiones, la producción y el posprocesamiento. Aprovechando la innovación en la producción por IA, la empresa pretende reforzar aún más su posición como líder mundial en producción y servicios en el sector de las series de formato corto, al tiempo que acelera un crecimiento escalable a los mercados de contenidos verticales de próxima generación.</p>
+<button type="button" class="company-more-toggle" data-company-more="23" aria-expanded="false" aria-controls="company-preview-23" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-23" aria-haspopup="dialog" aria-label="주식회사뉴유니버스 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-23" type="button">Ver detalles</button></div>
+</article>
+</div>
+</section>
+<section class="company-group" data-group="Game" id="grp-game">
+<h2 class="group-title">JUEGOS<span class="group-count">7 empresas</span></h2>
+<div class="company-grid">
+<article class="company-card" data-primary="Game">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="(주)데브언리밋 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/devunlimit.png"/></div>
+<div class="card-heading">
+<div class="company-meta">JUEGOS</div>
+<h3 class="company-name">DevUnlimit</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-24">DEVUNLIMIT Inc. desarrolla entretenimiento interactivo generado con IA utilizando tecnologías de reconocimiento de movimiento y generación de imágenes. Su marca de salas recreativas físicas, CHOOMCHOOM, está compuesta por CHOOMCHOOM DANCE, CHOOMCHOOM 4-CUT y CHOOMCHOOM ANIMATE. Al combinar juegos, fotos y vídeos generados por IA, crea experiencias atractivas para eventos, centros comerciales, centros de entretenimiento familiar (FEC), lugares turísticos y actividades para fans del K-pop.</p>
+<button type="button" class="company-more-toggle" data-company-more="24" aria-expanded="false" aria-controls="company-preview-24" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-24" aria-haspopup="dialog" aria-label="(주)데브언리밋 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-24" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="Game">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="(주)엘엔케이로직코리아 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/LnK.png"/></div>
+<div class="card-heading">
+<div class="company-meta">JUEGOS</div>
+<h3 class="company-name">L&amp;K Co., Ltd.</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-25">L&amp;K es una de las empresas pioneras de la industria coreana de los videojuegos; desde 1997 lleva desarrollando juegos y ofreciendo sus servicios con un toque único y creativo. En 2004, L&amp;K lanzó RED STONE, que causó un gran revuelo en Japón y pronto se convirtió en un icono de los K-GAME en la cultura japonesa de los videojuegos. Han lanzado y gestionado servicios globales para tres videojuegos online para PC: RED STONE, Record of Lodoss War y Mirror War. Además. han lanzado con éxito el título para móviles RED STONE 2 en los mercados coreano y japonés. Nuestro principal título MMORPG, RED STONE, celebra su 23.º aniversario en Corea y su 21.º aniversario en Japón.</p>
+<button type="button" class="company-more-toggle" data-company-more="25" aria-expanded="false" aria-controls="company-preview-25" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-25" aria-haspopup="dialog" aria-label="(주)엘엔케이로직코리아 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-25" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="Game">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="가원글로벌 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/gawon.png"/></div>
+<div class="card-heading">
+<div class="company-meta">JUEGOS</div>
+<h3 class="company-name">Gawon Global</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-26">Gawon Global es un estudio formado por desarrolladores de videojuegos apasionados y dedicados a la sanación a través de los juegos. Unidos por el amor de crear por pasión, en este estudio los colaboradores disfrutan del proceso de crear videojuegos que sean a la vez significativos y divertidos. Con pasión y espíritu de superación, el objetivo es crear contenido emocionalmente rico que impacte positivamente en el mundo.También, se preocupan de ofrecer a los jugadores nuevas experiencias y felicidad a través de videojuegos con un contexto cultural. En el mundo ajetreado y abrumador de hoy en día, en Wagon Global hacen el esfuerzo por crear contenido reconfortante que le ofrezca a las personas un momento para hacer una pausa y respirar. Son un estudio que continúa con su viaje para desarrollar videojuegos mejores y más inspiradores.</p>
+<button type="button" class="company-more-toggle" data-company-more="26" aria-expanded="false" aria-controls="company-preview-26" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-26" aria-haspopup="dialog" aria-label="가원글로벌 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-26" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="Game">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="슈가웍스 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/SUGARWORKS.png"/></div>
+<div class="card-heading">
+<div class="company-meta">JUEGOS</div>
+<h3 class="company-name">Sugar Works</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-27">En SugarWorks se está desarrollando la próxima generación de deportes electrónicos: MOBA Lite. Diseñado para ser más rápido, más dinámico y más accesible para un público mucho más amplio que los MOBA tradicionales. Al reducir a la mitad la duración de las partidas y replantear la estrategia de combate desde cero, han eliminado las barreras que alejaban a los jugadores ocasionales y conservado, a su vez, lo que impulsa a las comunidades de aficionados a los deportes electrónicos. Se trata de deportes electrónicos ocasionales, diseñados para crecer.</p>
+<button type="button" class="company-more-toggle" data-company-more="27" aria-expanded="false" aria-controls="company-preview-27" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-27" aria-haspopup="dialog" aria-label="슈가웍스 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-27" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="Game">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="스카이워크 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/refs/heads/main/PNG/skywalk.png"/></div>
+<div class="card-heading">
+<div class="company-meta">JUEGOS</div>
+<h3 class="company-name">SKYWALK</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-28">Skywalk es una empresa fundada en 2019 dedicada al desarrollo y la publicación de videojuegos. Su objetivo es ofrecer a los usuarios de todo el mundo la mejor experiencia y los mejores juegos. Para ello, cuentan con cinco estudios independientes que se especializan en distintos géneros y están preparados para presentar una variedad de juegos con la máxima calidad.</p>
+<button type="button" class="company-more-toggle" data-company-more="28" aria-expanded="false" aria-controls="company-preview-28" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-28" aria-haspopup="dialog" aria-label="스카이워크 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-28" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="Game">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="주식회사 테이크원컴퍼니 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/takeone.png"/></div>
+<div class="card-heading">
+<div class="company-meta">JUEGOS</div>
+<h3 class="company-name">Takeone Company</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-29">TakeOne Company es una empresa de contenidos creada en torno a la propiedad intelectual de artistas del k-pop. A través de los videojuegos, TakeOne ha desarrollado una estructura que permite el consumo continuo de contenido de k-pop en el contexto de la participación de los fans. Aprovechando su experiencia en la gestión de servicios a nivel mundial y los datos sobre los fans, la empresa ha mejorado tanto la inmersión como la longevidad de los contenidos de k-pop. Partiendo de esta base, TakeOne está ampliando su negocio de contenido con los videojuegos y las plataformas de k-pop como pilares fundamentales. Tanto los videojuegos como las plataformas enriquecen la experiencia de los fans de diferentes maneras; dos ejes centrales que impulsan la estrategia global de contenido de TakeOne.</p>
+<button type="button" class="company-more-toggle" data-company-more="29" aria-expanded="false" aria-controls="company-preview-29" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-29" aria-haspopup="dialog" aria-label="주식회사 테이크원컴퍼니 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-29" type="button">Ver detalles</button></div>
+</article>
+<article class="company-card" data-primary="Game">
+<div class="company-body">
+<div class="card-head">
+<div class="logo-frame"><img alt="(주)큐랩 로고" class="fr-fil fr-dib" src="https://raw.githubusercontent.com/o2meetbiz-admin/2026k-contentexpo_chile/77b9a7bd7f947f242339aff7393b0d207c898fd7/PNG/edugym.png"/></div>
+<div class="card-heading">
+<div class="company-meta">JUEGOS</div>
+<h3 class="company-name">QLAB</h3>
+</div></div>
+<p class="company-preview is-collapsed" id="company-preview-30">Empresa líder en el desarrollo de plataformas de aprendizaje basadas en lla actividad física en interiores y sistemas de videojuegos de baile k-pop con reconocimiento de movimiento</p>
+<button type="button" class="company-more-toggle" data-company-more="30" aria-expanded="false" aria-controls="company-preview-30" hidden>Leer más ↓</button>
+</div>
+<div class="company-footer"><button aria-controls="kexpo-detail-30" aria-haspopup="dialog" aria-label="(주)큐랩 자세히 보기" class="company-btn" data-modal-open="kexpo-detail-30" type="button">Ver detalles</button></div>
+</article>
+</div>
+</section>
+</div>
+</section>
+<div class="k-stripe">
+<div class="s1">
+<br/>
+</div>
+<div class="s2">
+<br/>
+</div>
+<div class="s3">
+<br/>
+</div></div><section aria-hidden="true" aria-label="GraFiziX — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-01" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-01" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-01" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">GraFiziX</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="01" data-ip-number="1"><img alt="FrienZoo" loading="lazy" src="IP_image/15.png"/></div>
+<div><h3 class="detail-ip-title">FrienZoo</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> Animation</span><span><strong>PÚBLICO OBJETIVO</strong> 4-7</span></div><p class="detail-ip-desc">¡Únete a nuestra encantadora aventura para los más pequeños, en la que unos animales de granja hambrientos y cansados descubren un animado zoológico y se instalan en la acogedora zona de caricias! Con los ojos muy abiertos y el corazón lleno de ilusión, sienten curiosidad por los maravillosos animales del zoológico y están deseando hacer nuevos amigos. Pero hacer amigos no siempre es fácil para nuestro adorable BURRO, nuestro dulce GATO, nuestro alegre GALLO y nuestro simpático PERRO. Pronto se darán cuenta de que sus sencillas costumbres de granja pueden ser muy diferentes de las de los alocados amigos del zoológico con quienes quieren relacionarse. ¡Acompáñalos mientras aprenden valiosas lecciones sobre la amabilidad, la empatía y la magia de la amistad! Repleta de un humor tierno y momentos conmovedores, esta encantadora historia le enseña a los más pequeños cómo cultivar las amistades y a celebrar sus diferencias. ¡Prepárate para un viaje lleno de alegría en el que cada animal descubre que el secreto de la amistad son el amor, la risa y el ser simplemente uno mismo!</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="01" data-ip-number="2"><img alt="Makers Jam" loading="lazy" src="IP_image/16.png"/></div>
+<div><h3 class="detail-ip-title">Makers Jam</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> Animation</span><span><strong>PÚBLICO OBJETIVO</strong> 7-12</span></div><p class="detail-ip-desc">Makers Jam es una combinación de Makers Con y Game Jam. Es un espacio creativo y práctico donde científicos de diversos campos se reúnen, volviendo a su niñez, para inventar, compartir y disfrutar de la creación colaborativa. La serie combina ciencia, imaginación y diversión en una atractiva experiencia de entretenimiento educativo. ¿Qué pasaría si las figuras históricas más importantes se convirtieran en los profesores de tu hijo o hija? ¿Y si sus compañeros de clase fueran las versiones jóvenes de los científicos más destacados del mundo? A medida que estas figuras legendarias regresan como niños y unen sus fuerzas para superar retos, aprenden unos de otros y se convierten en los mejores maestros.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="01" data-ip-number="3"><img alt="MBB Virtual Quiz Show" loading="lazy" src="IP_image/17.png"/></div>
+<div><h3 class="detail-ip-title">MBB Virtual Quiz Show</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> Media</span><span><strong>PÚBLICO OBJETIVO</strong> familia</span></div><p class="detail-ip-desc">Mediante la combinación de realidad aumentada (RA), renderización en tiempo real y tecnologías de producción virtual, el programa ofrece una experiencia de aprendizaje atractiva y envolvente. Características principales: Al integrar a la perfección la tecnología de producción virtual con la narración educativa, Virtual Tutors crea una nueva generación de entretenimiento educativo que se adapta a la televisión, las plataformas digitales, las retransmisiones en directo y los entornos de aprendizaje interactivos.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="Eyescream Studio — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-02" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-02" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-02" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">Eyescream Studio</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="02" data-ip-number="1"><img alt="Duda &amp; Dada" loading="lazy" src="IP_image/12.png"/></div>
+<div><h3 class="detail-ip-title">Duda &amp; Dada</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> animación</span><span><strong>PÚBLICO OBJETIVO</strong> preescolar</span></div><p class="detail-ip-desc">«Duda &amp; Dada» es una serie de animación preescolar dedicada a la exploración de la naturaleza que comenzó en 2013 como una coproducción con el sistema de radiodifusión público de surcorea (EBS, por sus siglas en inglés) y que lleva más de 13 años cautivando al público. La franquicia incluye tres temporadas de televisión (78 episodios de 10 minutos) y el largometraje de 83 minutos Duda &amp; Dada: The Secret of HooHoo Island. En índices de audiencia (Nielsen), las temporadas 1 y 2 ocuparon el primer puesto entre los programas infantiles de EBS , mientras que el largometraje alcanzó el cuarto puesto en la taquilla general y el primero entre las películas coreanas tras su estreno en cines en 2023. Desarrollada de acuerdo con las directrices de producción de la BBC y la PBS (sistema de radiodifusión público), y con el asesoramiento de instituciones ecológicas profesionales, Duda &amp; Dada se ha consolidado como un contenido fiable y apto para niños. En la actualidad, la serie está disponible en 15 idiomas y se ha emitido en aproximadamente 180 canales de 50 países, lo que la convierte en una de las animaciones originales de alta calidad más exportadas de Corea. La propiedad intelectual también se ha expandido a más de 30 negocios de experiencia localizados, entre los que se incluyen una atracción temática en el Jardín Nacional de Suncheonman, cafeterías infantiles, musicales y películas para atracciones. Más recientemente, Duda &amp; Dada ha ampliado su alcance más allá del mercado preescolar mediante colaboraciones con artistas de k-pop y series web dirigidas a la Generación Z, expandiendo la marca al mercado de personajes y estilo de vida para adultos.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="02" data-ip-number="2"><img alt="The girls play" loading="lazy" src="IP_image/13.png"/></div>
+<div><h3 class="detail-ip-title">The girls play</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> animación</span><span><strong>PÚBLICO OBJETIVO</strong> adolescentes y adultos</span></div><p class="detail-ip-desc">The Girls Play es una serie de animación sobre la subcultura K-Rock, compuesta por 40 episodios, cada uno de aproximadamente 90 segundos de duración. La historia sigue a una legendaria guitarrista que poseé el cuerpo de una chica de instituto, lo que da pie a un drama de supervivencia en las audiciones. Dirigida a un público entre 15 y 30 años, la serie se ha producido mediante un proceso híbrido que combina Unreal Engine 5.5 e inteligencia artificial generativa, lo que permite la producción eficiente de un gran volumen de personajes y entornos. Tras su lanzamiento en la segunda mitad de 2026, está previsto que la propiedad intelectual se expanda a la concesión de licencias over-the-top (OTT, por sus siglas en inglés) en el extranjero, actuaciones de bandas virtuales, promociones comerciales y otros negocios relacionados.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="02" data-ip-number="3"><img alt="QQu-Ent" loading="lazy" src="IP_image/14.png"/></div>
+<div><h3 class="detail-ip-title">QQu-Ent</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> animación</span><span><strong>PÚBLICO OBJETIVO</strong> adolescentes y adultos</span></div><p class="detail-ip-desc">QQu Entertainment es una serie cómica de animación vertical y formato corto (50 episodios de 2 minutos) centrada en el mundo de los programas de supervivencia de idols del k-pop. La historia sigue a Kim Pink, una antigua estrella de los años 90 que solo tuvo un éxito, quien se ha convertido en la directora de una agencia de entretenimiento y a su grupo de trainees, que se alojan en una azotea y luchan por debutar. Dirigida a jóvenes a partir de 15 años, la serie se centra en contratiempos humorísticos con los que el público puede identificarse y en el crecimiento personal, más que en una historia de éxito idealizada. Sus personajes se han diseñado con un gran potencial de viralización en plataformas de redes sociales como Instagram, TikTok y YouTube Shorts. Tras su estreno en julio de 2026 en la plataforma OTT KITZ, QQu Entertainment se está distribuyendo actualmente a través de plataformas OTT de formato corto tanto en Corea como en los mercados internacionales.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="Episode Company Co., Ltd. — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-03" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-03" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://episodecompany.kr/" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-03" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">Episode Company Co., Ltd.</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="03" data-ip-number="1"><img alt="The Shadow" loading="lazy" src="IP_image/09.png"/></div>
+<div><h3 class="detail-ip-title">The Shadow</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> thriller musical de venganza de k-pop</span><span><strong>PÚBLICO OBJETIVO</strong> adolescentes y adultos jóvenes</span></div><p class="detail-ip-desc">he Shadow es un musical de k-pop que trata la historia de venganza de Hanna, una cantante con mucho talento que ha vivido en las sombras debido a su aspecto físico. Cuando un misterioso poder la transforma en la deslumbrante Jenny, por fin se convierte en la estrella del show. Pero, a medida que el éxito llega a su vida, se ve envuelta en una peligrosa conspiración y debe elegir entre vengarse de quienes se aprovecharon de ella o recuperar su verdadera identidad.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="03" data-ip-number="2"><img alt="Little Carrie’s Big Question" loading="lazy" src="IP_image/10.png"/></div>
+<div><h3 class="detail-ip-title">Little Carrie’s Big Question</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> serie de televisión animada</span><span><strong>PÚBLICO OBJETIVO</strong> niños</span></div><p class="detail-ip-desc">La serie de animación educativa sobre ciencia protagonizada por la curiosa Carrie y el robot de IA, Mr. Egg. ¿Por qué cambia de forma la luna? Esta serie responde con maestría a muchas preguntas y busca guiar a los niños con las maravillas de la ciencia.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="03" data-ip-number="3"><img alt="Carrie &amp; Super Kota: The School" loading="lazy" src="IP_image/11.png"/></div>
+<div><h3 class="detail-ip-title">Carrie &amp; Super Kota: The School</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> serie de televisión animada</span><span><strong>PÚBLICO OBJETIVO</strong> niños</span></div><p class="detail-ip-desc">Carrie, de 11 años, y su amigo extraterrestre Super Kola tienen un día a día lleno de secretos; todo en la tierra es nuevo y fascinante para Super Kola. Conceptos como el amor, la amistad, el respeto, la confianza, la gratitud y otros aspectos del corazón humano le intrigan profundamente. En medio de lo que parece ser una rutina diaria típica, Carrie y Super Kola viven emocionantes aventuras que los hacen crecer y comprender a más profundidad las emociones humanas y los valores sociales.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="ACCESS KOREA — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-04" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-04" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.accesskorea.co.kr" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-04" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">ACCESS KOREA</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="04" data-ip-number="1"><img alt="Sauceria" loading="lazy" src="IP_image/01.png"/></div>
+<div><h3 class="detail-ip-title">Sauceria</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> animación televisiva</span><span><strong>PÚBLICO OBJETIVO</strong> preescolar</span></div><p class="detail-ip-desc">Sauceria es un lugar lleno de frutas y verduras. ¡Todo era tranquilo gracias al recetario del Maestro Sauce! Pero Black Tike robó el libro de recetas y, desde entonces, monstruos atacan Sauceria sin parar. ¡Las cuatro salsas y ChaCha, un espíritu bondadoso, se unen para salvar SauceRia!</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="04" data-ip-number="2"><img alt="DOKKAEBI CAPTURE" loading="lazy" src="IP_image/02.png"/></div>
+<div><h3 class="detail-ip-title">DOKKAEBI CAPTURE</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> serie de animación</span><span><strong>PÚBLICO OBJETIVO</strong> 6 a 8 años TIPO : serie de animación</span></div><p class="detail-ip-desc">Dos simpáticos cazadores de goblins se embarcan en distintas aventuras para ayudar a quién lo necesite, mientras buscan magia y dokkaebis. Garam y Bongbal, los cazadores de dokkaebis, se aventuran en un viaje para ayudar a un leñador en apuros y salvar un pueblo en crisis ¿Conseguirán estos traviesos amigos salvar el día? La trama gira en torno a un misterioso artilugio mitológico con el poder de generar tesoros y el caos que se desata a su alrededor, pues todos quieren apoderarse de él. Con esta divertida historia y sus personajes se le transmite al público una cálida lección que los acompañará en su infancia.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="Studio Shelter — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-05" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-05" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://studioshelter.co.kr/" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-05" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">Studio Shelter</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="05" data-ip-number="1"><img alt="Maru is a Puppy" loading="lazy" src="IP_image/24.png"/></div>
+<div><h3 class="detail-ip-title">Maru is a Puppy</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> recuentos de la vida, comedia</span><span><strong>PÚBLICO OBJETIVO</strong> niños y familia</span></div><p class="detail-ip-desc">Un día, mi perro se convierte en humano, y no en cualquier humano, sino en un niño de cinco años. Maru es un torbellino de caos, impulsado por la energía desbordante, la lealtad y la curiosidad tanto de un cachorro como de un niño, con un corazón puro e infinitamente cariñoso. Maru vive en la Villa Arcoíris y llena el día a día con inocentes sorpresas, pequeños percances y risas cálidas, cambiando poco a poco la vida de sus alegres residentes. Maru is a Puppy, una comedia familiar animada, celebra un nuevo tipo de familia, construida sobre el amor, la paciencia y la alegría de un corazón puro.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="05" data-ip-number="2"><img alt="Always, Happy Choco Cream" loading="lazy" src="IP_image/25.png"/></div>
+<div><h3 class="detail-ip-title">Always, Happy Choco Cream</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama / musical</span><span><strong>PÚBLICO OBJETIVO</strong> niños y familia</span></div><p class="detail-ip-desc">Cream, Choco y Happy son tres mejores amigos que convierten los pequeños percances en días felices en la Ciudad Cruce, un lugar tranquilo donde los animales esperan antes de cruzar el Puente del Arcoíris. Cada día, ayudan a los amigos animales que los visitan a disfrutar de la vida con la que siempre han soñado, mientras esperan a sus seres queridos. Ya sea persiguiendo libélulas, atrapando estrellas o convirtiendo el papel higiénico en el juego perfecto, ningún deseo es demasiado pequeño. Cuando llega un nuevo amigo, comienza la misión más importante del trío: crear el mejor día de todos. Porque en Ciudad Cruce, el amor, la risa y la amistad son la mayor aventura de todas.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="05" data-ip-number="3"><img alt="Exorcism? Espresso!" loading="lazy" src="IP_image/26.png"/></div>
+<div><h3 class="detail-ip-title">Exorcism? Espresso!</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> romance de exorcismo lleno de emoción</span><span><strong>PÚBLICO OBJETIVO</strong> jóvenes adultos</span></div><p class="detail-ip-desc">Yoo-Yeon es un auténtico imán de la mala suerte: todos los sitios en los que trabaja acaban en ruinas. Cuando hace caso omiso de las advertencias grabadas en una extraña cafetería y rompe un jarrón real sellado desde hace 500 años, espíritus que llevan mucho tiempo atrapados se desatan en la ciudad. A medida que despiertan sus impredecibles poderes de exorcismo, Yoo-Yeon se ve obligada a poner orden al caos que ha provocado, aliándose con los Cuatro guardianes del equilibrio; seres celestiales caídos que se ocultan a plena vista como baristas-idols. Llegó para preparar café espresso… y ahora los exorcismos son la única opción para salvar el mundo.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="QTIZZ Inc. — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-06" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-06" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.qtizz.co.kr" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-06" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">QTIZZ Inc.</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="06" data-ip-number="1"><img alt="Goodnight Pajamal" loading="lazy" src="IP_image/19.png"/></div>
+<div><h3 class="detail-ip-title">Goodnight Pajamal</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> personaje</span><span><strong>PÚBLICO OBJETIVO</strong> todos</span></div><p class="detail-ip-desc">¡Unos simpáticos animalitos regordetes de todo el mundo se reúnen para celebrar una fiesta de pijamas! Goodnight, Pajamal es una historia sobre la residencia y emocionante vida escolar de unos simpáticos amigos animales que llegan a la Escuela Internacional de Artes y Educación Física de Tongtong en Hawái. La noche del fin de semana, tras terminar la clase de arte y educación física, los amigos de la Pajamal (pijama + animal) organizaron una pijamada en la residencia. Estamos desarrollando activamente nuestro negocio de propiedad intelectual mediante la firma de acuerdos de licencia y de representación con diversos países, entre ellos Estados Unidos, Reino Unido, China, Japón, Tailandia y Turquía. Hemos recibido el Premio del Ministro de Cultura, Deportes y Turismo en los Premios Korea Content Awards 2025.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="06" data-ip-number="2"><img alt="Eggoogoo &amp; Friends" loading="lazy" src="IP_image/20.png"/></div>
+<div><h3 class="detail-ip-title">Eggoogoo &amp; Friends</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> personaje</span><span><strong>PÚBLICO OBJETIVO</strong> todos</span></div><p class="detail-ip-desc">Es una historia sobre la vida cotidiana, las pequeñas aventuras y los viajes de unos amigos que salieron al mundo tras despertar por accidente. Eggoogoo - un huevo lleno de errores que se rompió por accidente. Mechoo - un huevo de codorniz, el mejor amigo de Egoogoo. Mac - jjimjilbang (un sauna seco); es un huevo de piedra de Elvan y de huesos frágiles, una pena. Tata - huevo de avestruz; bastante tímida. Addy - un huevo de tortuga sin sentido de la orientación. Gogo - huevo de dinosaurio despertado por un terremoto; es alborotador y glotón.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="06" data-ip-number="3"><img alt="Little Minicorn" loading="lazy" src="IP_image/21.png"/></div>
+<div><h3 class="detail-ip-title">Little Minicorn</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> personaje</span><span><strong>PÚBLICO OBJETIVO</strong> todos</span></div><p class="detail-ip-desc">Little Minicorn narra la historia del crecimiento de unos pequeños y regordetes unicornios que se divierten cada día en el Parque Arcoíris de la Villa Nube, y cada uno de ellos tiene características de nacimiento que lo destaca. - Acerca de los personajes - Cloo (Gris) - Un unicornio tímido que se asusta mucho y no le gusta Star (Celeste) - Un pequeño unicornio con muchos sueños, Snow (Blanco) - Un unicornio bebé blanco, de personalidad brillante, Li (Azul) - Un unicornio rápido, fuerte y valiente. Mint (Verde) - Un unicornio puro y sensible que ama la naturaleza. Sunny (Amarillo) - Un pequeño unicornio alegre, vivaz y lleno de energía. Love (Rosa) - Un unicornio encantador y amable. Luna (Morado) - Un pequeño unicornio de personalidad tranquila y silenciosa.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="Emotionwave Inc. — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-07" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-07" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.emotionwave.com" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-07" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">Emotionwave Inc.</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="07" data-ip-number="1"><img alt="INFIDITY" loading="lazy" src="IP_image/08.png"/></div>
+<div><h3 class="detail-ip-title">INFIDITY</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> plataforma social de interacción con personajes de IA (medios interactivos / videojuegos)</span><span><strong>PÚBLICO OBJETIVO</strong> adultos</span></div><p class="detail-ip-desc">INFIDITY es una innovadora plataforma de creación e interacción con personajes creados por IA que integra, en un único flujo de trabajo, la generación de imágenes y vídeos, una herramienta de creación de escenarios basada en nodos y un motor de personalidades de IA impulsado por el ajuste de parámetros de grandes modelos de lenguaje grande (LLM, por sus siglas en inglés). Caracterizada por su exclusiva tecnología de ajuste fino LoRA, supera los límites de los estilos ilustrativos habituales para ofrecer personajes de IA realistas y de alta calidad, así como una generación de vídeo coherente a través de su aplicación social principal: Tangle. Más allá de los simples chats de texto, los usuarios pueden disfrutar de una relación multimedia completa, con diálogos naturales adaptados a la personalidad de cada personaje, generación de vídeo con IA en tiempo real y modos de historias ramificadas interactivas e inmersivas en las que las decisiones del usuario determinan el desenlace. Se trata de un ecosistema de contenidos de última generación que lidera la economía global de los creadores y el mercado de los compañeros de IA.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="Aurora World Corp. — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-08" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-08" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.auroraworld.com" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-08" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">Aurora World Corp.</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="08" data-ip-number="1"><img alt="Palm Pals" loading="lazy" src="IP_image/03.png"/></div>
+<div><h3 class="detail-ip-title">Palm Pals</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> personaje</span><span><strong>PÚBLICO OBJETIVO</strong> generación Z, generación alfa</span></div><p class="detail-ip-desc">Palm Pals es una marca de peluches coleccionables reconocida a nivel mundial que presenta adorables personajes del tamaño de la palma de la mano con personalidades únicas. Desde su lanzamiento en 2020, la marca ha vendido más de 71 millones de unidades en todo el mundo y ha ampliado su catálogo a más de 800 personajes. Gracias a su gran atractivo como objeto de colección, al lanzamiento continuo de nuevos personajes y a una comunidad muy activa en las redes sociales, Palm Pals tiene gran aceptación entre la Generación Z, la Generación alfa y las familias en general. Más allá de los peluches, la marca ofrece importantes oportunidades de licencia en los sectores de la edición, la papelería, la moda, el estilo de vida, los regalos, las promociones de alimentos y bebidas, y las colaboraciones con el comercio minorista, lo que la convierte en una propiedad intelectual versátil para socios que buscan el crecimiento a largo plazo de la marca y la fidelización de los consumidores.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="08" data-ip-number="2"><img alt="YooHoo al rescate" loading="lazy" src="IP_image/04.png"/></div>
+<div><h3 class="detail-ip-title">YooHoo al rescate</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> serie de animación</span><span><strong>PÚBLICO OBJETIVO</strong> preescolar (3 a 5 años) TIPO : serie de animación</span></div><p class="detail-ip-desc">YYooHoo &amp; Friends, inspirada en animales raros y en peligro de extinción de todo el mundo, es la propiedad intelectual de personajes más emblemática de Aurora World. En la serie original de Netflix «YooHoo to the Rescue», que actualmente se emite en 190 países y está disponible en 20 idiomas, YooHoo y sus amigos se embarcan en aventuras para ayudar a los animales necesitados, restaurar la naturaleza y resolver retos medioambientales utilizando semillas mágicas del Árbol de la Vida. A través de historias de amistad, trabajo en equipo, bondad y responsabilidad medioambiental, la marca transmite valores significativos a los niños y a las familias. YooHoo &amp; Friends se ha expandido a los sectores de los juguetes, la edición, la ropa, la papelería, los juegos y productos de estilo de vida, lo que ofrece amplias oportunidades para la concesión de licencias a nivel mundial y colaboraciones de marca.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="DALBBANG CREATIVE Co., Ltd. — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-09" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-09" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.dalbbang.pro" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-09" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">DALBBANG CREATIVE Co., Ltd.</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="09" data-ip-number="1"><img alt="Leer y escribir el cielo: la época de Joseon" loading="lazy" src="IP_image/05.png"/></div>
+<div><h3 class="detail-ip-title">Leer y escribir el cielo: la época de Joseon</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> propiedad intelectual de exposición inmersiva</span><span><strong>PÚBLICO OBJETIVO</strong> familias, estudiantes y turistas culturales (a partir de 8 años / público familiar)</span></div><p class="detail-ip-desc">«Leer y escribir el cielo: la época de Joseon» es una exposición inmersiva inspirada en los logros científicos de Janp Yeong-sil, el mayor inventor de la dinastía Joseon, y en las innovaciones del rey Sejong. A través de experiencias interactivas relacionadas con la astronomía, la cronometría y los inventos históricos, los visitantes pueden descubrir el patrimonio científico y cultural de Corea de una forma atractiva y accesible. Diseñada como una propiedad intelectual con potencial escalabilidad, la exposición cultural puede ampliarse a programas educativos,exposiciones en museos y experiencias de turismo cultural. También incorpora personajes tradicionales coreanos —como las hadas, los doce animales del zodiaco y las cuatro deidades guardianas (el dragón azul, el tigre blanco, el pájaro bermellón y la tortuga negra)— que enriquecen la narración y crean oportunidades para productos derivados de los personajes, actividades educativas y programas interactivos.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="09" data-ip-number="2"><img alt="Universo de personajes de Ongnu" loading="lazy" src="IP_image/06.png"/></div>
+<div><h3 class="detail-ip-title">Universo de personajes de Ongnu</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> propiedad intelectual de personajes tradicionales coreanos</span><span><strong>PÚBLICO OBJETIVO</strong> adolescentes y jóvenes adultos</span></div><p class="detail-ip-desc">El Ongnu Character Universe es una propiedad intelectual original coreana inspirada tanto en el Ongnu, reloj de agua astronómico de la dinastía Joseon, así como en las leyendas tradicionales y los registros históricos relacionados con él. Esta propiedad intelectual reinterpreta figuras emblemáticas del patrimonio coreano, entre ellas se incluyen las hadas, los doce animales del zodiaco y las cuatro deidades guardianas (el dragón azul, el tigre blanco, el pájaro bermellón y la tortuga negra); este objetivo se logra a través de un diseño contemporáneo de los personajes. Los personajes de este universo pueden desarrollarse en artículos de promoción comercial, animación, publicaciones, exposiciones y experiencias interactivas, ya que están diseñados para una amplia gama de aplicaciones comerciales. Al combinar el simbolismo de la cultura tradicional coreana con la narrativa moderna, el universo de OrlgnU ofrece un gran potencial para la concesión de licencias a nivel mundial, la creación de productos culturales y colaboraciones entre distintos medios.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="09" data-ip-number="3"><img alt="Nuruki" loading="lazy" src="IP_image/07.png"/></div>
+<div><h3 class="detail-ip-title">Nuruki</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> personaje tradicional coreano relacionado con la fermentación y el estilo de vida</span><span><strong>PÚBLICO OBJETIVO</strong> 2 a 40 años</span></div><p class="detail-ip-desc">Nuruki es una propiedad intelectual de personaje original creada para dar a conocer la cultura coreana de la fermentación y las bebidas alcohólicas tradicionales de una forma divertida, atractiva y accesible. Al vincular las bebidas alcohólicas tradicionales y la cultura de la fermentación con la educación, las experiencias prácticas, las exposiciones y los productos relacionados con el personaje, Nuruki permite a públicos de todas las edades explorar la cultura gastronómica coreana a través de la interacción con contenido entretenido. Diseñada como una marca de estilo de vida, Nuruki tiene un gran potencial para expandirse en programas de experiencia con licores tradicionales, iniciativas de turismo cultural, productos derivados del personaje y contenidos sobre cultura gastronómica a nivel mundial. A través de la narración de historias y las experiencias culturales, la marca pretende promover el valor del rico patrimonio de la fermentación de Corea entre público de todo el mundo.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="PIXEL PLANET Inc. — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-10" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-10" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.youtube.com/@dokdo-sealion" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-10" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">PIXEL PLANET Inc.</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="10" data-ip-number="1"><img alt="Gangchi Island" loading="lazy" src="IP_image/18.png"/></div>
+<div><h3 class="detail-ip-title">Gangchi Island</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> animación 3D</span><span><strong>PÚBLICO OBJETIVO</strong> preescolar</span></div><p class="detail-ip-desc">En la misteriosa isla de Gangchi, cinco pequeños leones marinos, Gangchi, Umchi, Achi, Echi y Mangchi, asisten a una escuela mágica para proteger el océano. Al ayudar a las criaturas marinas, consiguen cartas mágicas con poderes únicos. Mientras el travieso Gangchi siempre se mete en líos, el malvado mago Juku amenaza la isla. ¿Podrán los estos lobitos marinos detenerlo y salvar su colegio? ¡Acompáñalos en una aventura mágica llena de amistad, valentía y conservación marina!</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="Rumong Studio Inc. — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-11" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-11" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.rumong.kr/" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-11" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">Rumong Studio Inc.</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="11" data-ip-number="1"><img alt="FELIN (versión idol)" loading="lazy" src="IP_image/22.png"/></div>
+<div><h3 class="detail-ip-title">FELIN (versión idol)</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> IP de personajes</span><span><strong>PÚBLICO OBJETIVO</strong> todas las edades</span></div><p class="detail-ip-desc">FÉLIN es un grupo de idols virtuales formado por cinco miembros que combina el k-pop con una narrativa dramática, generando una fuerte empatía e inmersión entre el público de la Generación Z y los millennials a través de su distintivo universo visual y sus personajes. A diferencia de los personajes virtuales individuales de tipo humano, FÉLIN combina tres elementos: gato, idol virtual y diseño de personajes de estilo “moe”, que aportan intimidad emocional, atractivo de los personajes e identidad visual al mismo tiempo.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="11" data-ip-number="2"><img alt="FELIN (versión gato)" loading="lazy" src="IP_image/23.png"/></div>
+<div><h3 class="detail-ip-title">FELIN (versión gato)</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> personaje</span><span><strong>PÚBLICO OBJETIVO</strong> todas las edades TIPO : personaje</span></div><p class="detail-ip-desc">FÉLIN (versión Gato) es una entrañable propiedad intelectual de personajes inspirada en el aspecto, la personalidad y el encanto característicos de razas de gatos reales. Cada uno de los cinco personajes refleja rasgos específicos de su raza, como el color del pelaje, el color de los ojos, las características físicas y el temperamento, mientras que sus fechas de nacimiento se inspiran en días conmemorativos relacionados con los gatos que se celebran en todo el mundo. Más allá del atractivo que generan sus personajes, FÉLIN (Cat Ver.) puede ampliarse a cómics costumbristas con los que se identificarán los amantes de los gatos, encantadoras animaciones cortas en 2D y 3D y productos de estilo de vida, lo que ofrece una fuerte conexión emocional y un amplio potencial como propiedad intelectual de personajes a nivel mundial.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="NONSENSE FORMATS — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-12" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-12" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-12" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">NONSENSE FORMATS</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="12" data-ip-number="1"><img alt="TALENTO EN LA COCINA" loading="lazy" src="IP_image/42.png"/></div>
+<div><h3 class="detail-ip-title">TALENTO EN LA COCINA</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> programa de cocina</span><span><strong>PÚBLICO OBJETIVO</strong> adultos</span></div><p class="detail-ip-desc">A los niños les cuesta mucho comer; son muy exigentes con la comida y se aburren con facilidad. Por eso, ahora llega un revolucionario concurso de cocina que combina ambos aspectos: los equipos deben mantener entretenido a un jurado de niños exigentes y satisfacer sus paladares para ganar este formato híbrido tan entretenido. En cada episodio, tres equipos de dos personas competirán en nuestra exclusiva cocina de estudio. Cada equipo está formado por un chef y un animador. Este formato consta de dos rondas y serán nuestros niños quienes elijan al ganador.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="12" data-ip-number="2"><img alt="LOVE SUMMIT" loading="lazy" src="IP_image/43.png"/></div>
+<div><h3 class="detail-ip-title">LOVE SUMMIT</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> programa de citas</span><span><strong>PÚBLICO OBJETIVO</strong> adultos</span></div><p class="detail-ip-desc">Un programa internacional de citas en el que hombres y mujeres de todo el mundo tienen citas en el hotel donde se celebró la cumbre del siglo. Tres hombres y tres mujeres de diferentes nacionalidades pasan cada uno una noche y dos días en este lugar. Primero, se conocen en una rueda de prensa. Luego, durante las siguientes 48 horas, tienen tres citas con tres parejas en tres lugares diferentes. Una vez finalizadas todas las citas, se anunciará el acuerdo de emparejamiento en la rueda de prensa del vestíbulo, donde fue el primer encuentro cara a cara. ¿Qué tipo de pareja internacional surgirá de esta cumbre?</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="12" data-ip-number="3"><img alt="ORDENADOR DE SOBREMESA" loading="lazy" src="IP_image/44.png"/></div>
+<div><h3 class="detail-ip-title">ORDENADOR DE SOBREMESA</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> concurso</span><span><strong>PÚBLICO OBJETIVO</strong> adultos</span></div><p class="detail-ip-desc">El escritorio de tu PC dice mucho de ti. Si eres ordenado o desordenado, lo que te gusta tener a mano, lo que bebes, cómo trabajas, qué te interesa y ¡qué acaba en la papelera! Pero, ¿podrá un grupo de famosos descubrir la identidad secreta de un invitado misterioso con solo tener acceso a su escritorio? Si alguien que te conociera viera tu escritorio, ¿sabría que eres tú? ¡Un concurso de misterio en que un grupo de concursantes intenta adivinar la identidad de un famoso oculto con solo mirar su escritorio! Una vez revelado el famoso, el programa se convierte en un programa de entrevistas y el famoso nos guía por su escritorio y nos cuenta todo lo que está pasando en su vida en este momento.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="CJ ENM Co., Ltd — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-13" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-13" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="http://watch.cjenm.com" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-13" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">CJ ENM Co., Ltd</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="13" data-ip-number="1"><img alt="La leyenda del cocinero del ejército" loading="lazy" src="IP_image/30.png"/></div>
+<div><h3 class="detail-ip-title">La leyenda del cocinero del ejército</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama</span><span><strong>PÚBLICO OBJETIVO</strong> adultos doblaje al</span><span><strong>IDIOMA</strong> PÚBLICO OBJETIVO : adultos doblaje al</span></div><p class="detail-ip-desc">En el juego de la vida, todos enfrentamos innumerables decisiones. Kanp Seong-jae, que se alistó en la milicia para escapar de su dura realidad, se encuentra con el ícono “misión” en una misteriosa pantalla y la órden de convertirse en cocinero del ejército. Con cada misión que supera, un nuevo secreto oculto de la base sale a la luz.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="13" data-ip-number="2"><img alt="Verdadera belleza" loading="lazy" src="IP_image/31.png"/></div>
+<div><h3 class="detail-ip-title">Verdadera belleza</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama</span><span><strong>PÚBLICO OBJETIVO</strong> adultos/Jóvenes</span><span><strong>IDIOMA</strong> doblaje al español y al portugués TIPO : drama PÚBLICO OBJETIVO : adultos/Jóvenes</span></div><p class="detail-ip-desc">La estudiante de instituto Lim Ju-kyung siempre ha tenido complejos por su aspecto,inclusive desde que era pequeña. Para ocultar su rostro, empezó a maquillarse en exceso. Su gran habilidad con el maquillaje la hace parecer guapa y convence a los demás de que su rostro maquillado es su aspecto natural. Entabla amistad con su compañero de instituto Su-ho, un chico rico pero frío, y con Seo-jun, un estudiante agresivo pero con mucho talento. La trama sigue a Ju-kyung mientras se abre camino en su vida cotidiana y persigue su objetivo de convertirse en cosmetóloga.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="13" data-ip-number="3"><img alt="Goblin" loading="lazy" src="IP_image/32.png"/></div>
+<div><h3 class="detail-ip-title">Goblin</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama</span><span><strong>PÚBLICO OBJETIVO</strong> adultos</span><span><strong>IDIOMA</strong> doblaje en español y portugués TIPO : drama PÚBLICO OBJETIVO : adultos</span></div><p class="detail-ip-desc">Los goblins siempre son aquellos a quienes tememos. Pero esta vez no es así. El goblin que vive en Seúl en 2016 es un auténtico imán para las chicas y, aunque en realidad tiene más de cien años, se codea con los jóvenes como si fuera uno más. Poca gente sabe que por dentro está vacío; que Kim Shin lleva décadas buscando a la “novia del Ser Inmortal”, pero que no la encuentra por ninguna parte. Un día, Eun-tak no deja de convocarlo. Allí se encuentra con el Ángel de la muerte, sin saber que acabarán siendo compañeros de piso. Ahí es donde comienza la historia. Un goblin que intenta proteger a una chica que debería haber muerto hace mucho tiempo. Un ángel de la muerte que desea desesperadamente llevarse a la chica para cumplir con su misión.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="Westworld Story Co., Ltd. — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-14" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-14" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.westworld.co.kr/" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-14" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">Westworld Story Co., Ltd.</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="14" data-ip-number="1"><img alt="Face Me" loading="lazy" src="IP_image/57.png"/></div>
+<div><h3 class="detail-ip-title">Face Me</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama</span><span><strong>PÚBLICO OBJETIVO</strong> adultos</span></div><p class="detail-ip-desc">Face Me es una serie de investigación médica de 12 episodios producida por WESTWORLD STORY, emitida por KBS y protagonizada por Lee Min-ki y Han Ji-hyeon. Con derechos de emisión en más de 170 países de todo el mundo, la serie sigue a un frío cirujano plástico y a una apasionada detective mientras desentrañan la verdad detrás de los crímenes mediante la cirugía reconstructiva de las víctimas, lo que les lleva a descubrir el impactante secreto que se esconde tras una sospechosa muerte.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="14" data-ip-number="2"><img alt="Touch Me Not" loading="lazy" src="IP_image/58.png"/></div>
+<div><h3 class="detail-ip-title">Touch Me Not</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama</span><span><strong>PÚBLICO OBJETIVO</strong> adultos</span></div><p class="detail-ip-desc">Touch Me Not es una comedia romántica y fantástica de seis episodios producida por WESTWORLD STORY. La historia gira en torno a dos personas unidas por un destino peligroso: cuanto más se acercan, más se ponen en riesgo sus vidas. A medida que salen a la luz fragmentos de una vida pasada y un antiguo misterio, deben decidir si rendirse al destino o luchar por su amor. Está previsto que Touch Me Not se estrene en enero de 2027 a nivel mundial en Rakuten Viki.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="14" data-ip-number="3"><img alt="My Daughter's Bias Loves Me" loading="lazy" src="IP_image/59.png"/></div>
+<div><h3 class="detail-ip-title">My Daughter's Bias Loves Me</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama</span><span><strong>PÚBLICO OBJETIVO</strong> adultos</span></div><p class="detail-ip-desc">My Daughter 's Bias Loves Me es un microdrama de comedia romántica producido por WESTWORLD STORY y cuya finalización está prevista para este mismo año. Tras un repentino accidente, una madre soltera se despierta en el cuerpo de la estilista del ídolo favorito de su hija. Atrapada entre él y un primer amor que reaparece en su vida, se ve envuelta en una divertida historia romántica que le permite empezar de cero. Es una serie pensada especialmente para verla en el móvil.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="EL TV Inc. — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-15" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-15" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="http://eltv.kr" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-15" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">EL TV Inc.</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="15" data-ip-number="1"><img alt="Monks in the Kitchen" loading="lazy" src="IP_image/33.png"/></div>
+<div><h3 class="detail-ip-title">Monks in the Kitchen</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> gastronomía y reality</span><span><strong>PÚBLICO OBJETIVO</strong> todas las edades</span></div><p class="detail-ip-desc">Seis maestros monjes, representantes de la cocina de los distintos templos coreanos, se reúnen para cocinar, compartir e intercambiar sus filosofías sobre la comida, la práctica espiritual y la vida. A través de platos arraigados en el respeto por la naturaleza y las estaciones, comparten la sabiduría de la cocina de los templos coreanos. Monks in the Kitchen es un cálido y cautivador reality gastronómico que va más allá de las recetas y explora cómo la comida une a las personas y crea un sentido de comunidad.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="15" data-ip-number="2"><img alt="The Philosopher’s Kitchen - Jeong Kwan" loading="lazy" src="IP_image/34.png"/></div>
+<div><h3 class="detail-ip-title">The Philosopher’s Kitchen - Jeong Kwan</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> gastronomía y reality</span><span><strong>PÚBLICO OBJETIVO</strong> todas las edades</span></div><p class="detail-ip-desc">«Una gastronomía espiritual, que encarna el corazón de quien busca». Descrita por The New York Times como una «chef filósofa», Jeong Kwan es una monja budista coreana cuya cocina monástica ha inspirado a chefs y al público de todo el mundo. The Philosopher's Kitchen es un documental de alta calidad que recorre su vida y su filosofía a través de la comida, revelando cómo cocinar puede ser algo más que una práctica culinaria: una forma de meditación, una forma de vida y una conexión más profunda con la naturaleza.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="15" data-ip-number="3"><img alt="FoodSong Writer" loading="lazy" src="IP_image/35.png"/></div>
+<div><h3 class="detail-ip-title">FoodSong Writer</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> gastronomía y reality</span><span><strong>PÚBLICO OBJETIVO</strong> todas</span></div><p class="detail-ip-desc">FoodSong Writer es un formato de entretenimiento que combina gastronomía y música; los artistas convierten la inspiración que les proporciona la comida en canciones originales. Inspirados por un único plato, seis artistas disponen de dos semanas para crear canciones originales basadas en sus propios recuerdos y experiencias. Las historias que tienen como punto de partida la comida se transforman en música de diferentes géneros, culminando en una presentación en vivo. Basado en la gastronomía local y en los artistas locales, FoodSong Writer es un formato muy adaptable que puede reflejar la cultura y las historias de cada mercado.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="SIMSTORY — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-16" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-16" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://simstoryent.co.kr/" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-16" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">SIMSTORY</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="16" data-ip-number="1"><img alt="kiDnap GAME" loading="lazy" src="IP_image/51.png"/></div>
+<div><h3 class="detail-ip-title">kiDnap GAME</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> serie de televisión</span><span><strong>PÚBLICO OBJETIVO</strong> a partir de 15 años</span></div><p class="detail-ip-desc">Siete secuestros simultáneos, siete ciudades asiáticas. Cuando las familias de las víctimas reciben un misterioso mensaje: «Solo uno de ellos sobrevivirá», se da comienzo a un brutal juego de supervivencia que trasciende las fronteras nacionales. kiDnap GAME es una serie de televisión de suspenso e intriga de 11 episodios, coproducida por Corea, Japón y Hong Kong, cuya acción se desarrolla en Seúl, Tokio, Taipéi, Singapur, Hong Kong, Bangkok, Naha y Manila. Con un reparto repleto de estrellas, formado por destacados actores asiáticos, como Kentaro Sakaguchi, Lee Joon-gi y Alice Ko, la serie ofrece una escala épica en la que casos aparentemente inconexos convergen poco a poco hacia una única verdad, sometiendo a la naturaleza humana a la prueba definitiva.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="16" data-ip-number="2"><img alt="Casting 1147 km" loading="lazy" src="IP_image/52.png"/></div>
+<div><h3 class="detail-ip-title">Casting 1147 km</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> programa de entretenimiento</span><span><strong>PÚBLICO OBJETIVO</strong> todas</span></div><p class="detail-ip-desc">Casting 1147 km es un programa de supervivencia para la formación de actores internacionales, que recibe su nombre por los 1 147 kilómetros que separan Seúl de Tokio. A lo largo de un campamento intensivo de dos semanas, seis aspirantes a actores coreanos se enfrentan a una serie de pruebas de interpretación y audiciones diseñadas para prepararlos para una producción televisiva real. El ganador se lleva la oportunidad de debutar como protagonista en una serie coproducida por Corea y Japón. Lo que distingue a este programa es la participación directa de profesionales del sector,entre los que se incluyen directores de teatro, guionistas y actores consagrados, quienes actúan como jueces y mentores. A los concursantes se les evalúa no solo por su talento, sino también por su potencial como estrellas, su creatividad, su capacidad para trabajar en equipo y su adaptabilidad. Durante el concurso, los participantes superan una amplia variedad de retos que reflejan el proceso de producción real; se incluyen misiones individuales y en equipo, representaciones de guiones teatrales, escenas junto a actores profesionales y una actuación final. A medida que avanzan, los espectadores son testigos de su evolución como intérpretes y futuras estrellas. Más que un simple concurso de talentos, Casting 1147 km sigue el recorrido del ganador más allá de la final, documentando su transición al papel protagonista de una serie coproducida por Corea y Japón y marcando el inicio de un proyecto de entretenimiento verdaderamente global.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="16" data-ip-number="3"><img alt="Ailee Band" loading="lazy" src="IP_image/53.png"/></div>
+<div><h3 class="detail-ip-title">Ailee Band</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> programa de entretenimiento</span><span><strong>PÚBLICO OBJETIVO</strong> todas las edades</span></div><p class="detail-ip-desc">AiIee Band es un reality musical que sigue a Ailee, una de las vocalistas más destacadas de Corea del Sur, mientras se enfrenta a un nuevo reto: formar una banda y actuar con ella. Cientos de candidatos, músicos con talento y prometedores debutantes especializados en varios instrumentos y otros puestos esenciales de una banda compiten en un riguroso proceso de audición para formar parte de un único grupo. El programa recoge no solo su evolución hasta convertirse en un grupo cohesionado a través de ensayos, sesiones de práctica y actuaciones en directo, sino también sus esfuerzos por alcanzar una mayor excelencia musical, los conflictos y los lazos que se crean entre los miembros y sus historias sinceras entre bastidores. Finalmente, el grupo ya consolidado, sube al escenario junto a Ailee para ofrecer una actuación en directo. AiIee Band es un proyecto de desarrollo musical que documenta cada paso del camino, desde la selección de sus miembros hasta la creación de una banda completamente formada.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="ADHESIVE Co.Ltd — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-17" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-17" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.weareadhesive.com" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-17" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">ADHESIVE Co.Ltd</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="17" data-ip-number="1"><img alt="Tunda" loading="lazy" src="IP_image/27.png"/></div>
+<div><h3 class="detail-ip-title">Tunda</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama</span><span><strong>PÚBLICO OBJETIVO</strong> Adult</span></div><p class="detail-ip-desc">“Diecisiete pasos... y, de repente, me encuentro al otro lado del mundo.” Tunda: la roca de los cansados es una serie de suspenso, misterio y fantasía ambientada en Corea del Sur y Colombia. Tras descubrir la misteriosa Cueva de Dios, Ji-seok, un joven coreano como cualquier otro, empieza a intercambiar de cuerpo con Santiago, un joven colombiano, cada vez que atraviesa la cueva. Obligados a vivir la vida del otro, descubren una serie de misteriosas desapariciones de niños relacionadas con la “Tunda”, una criatura legendaria del folclore latinoamericano. Mientras recorren dos continentes a toda prisa, deben desentrañar la verdad que se esconde tras la leyenda antes de que se pierdan más vidas inocentes. Combinando el misterio coreano con la mitología sudamericana, Tunda: la roca de los cansados es una serie de alcance internacional que explora el deseo humano, el sacrificio y la fe a través de una historia llena de suspenso que abarca dos continentes.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="17" data-ip-number="2"><img alt="TAE WON JANG" loading="lazy" src="IP_image/28.png"/></div>
+<div><h3 class="detail-ip-title">TAE WON JANG</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama</span><span><strong>PÚBLICO OBJETIVO</strong> Adult</span></div><p class="detail-ip-desc">Serie de fantasía y comedia. Protagonizada por Bang Min-ah, de la banda Girl's Day. Tras la repentina muerte de su padre, los gemelos Gitae y Giwon heredan TAE WON JANG, una casa de baños pública al borde de la quiebra. La herencia ya era bastante mala: un sauna vacío, facturas pendientes y ni la más mínima idea de cómo mantener a flote el negocio familiar; los hermanos descubren la túnica de una doncella celestial escondida en la montaña y ahí es cuando las cosas se complican de verdad. Esta misteriosa túnica causa que un grupo de doncellas celestiales irrumpa en sus vidas y, de repente, la destartalada casa de baños del barrio se convierte en el epicentro de un desastre mágico tras otro. Entre mantener un negocio en ruinas, lidiar con seres celestiales llenos de sorpresas y sobrevivir a una serie de accidentes ridículos, los gemelos pronto se darán cuenta que estar en quiebra es el menor de sus problemas. TAE WON JANG es una comedia fantástica, cálida e impredecible en la que una antigua casa de baños coreana se convierte en el insólito lugar de encuentro entre gente corriente y seres extraordinarios.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="17" data-ip-number="3"><img alt="Agency ChiChi: Ad Heat Special" loading="lazy" src="IP_image/29.png"/></div>
+<div><h3 class="detail-ip-title">Agency ChiChi: Ad Heat Special</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama</span><span><strong>PÚBLICO OBJETIVO</strong> Adult</span></div><p class="detail-ip-desc">en el mundo laboral Protagonizada por Park Cho-rong, del grupo Apink Se estrenará en TVING y Wavve en Corea. Yong-sik, que en sus días fue genio de la publicidad, ahora trabaja fregando parrillas en un restaurante. Lejos de su legendaria carrera. Sin embargo, la tranquilidad de su nueva vida llega a su fin con el abrupto regreso de su antiguo compañero Soo-hyun y la llegada de Min-joo, una perspicaz e intrépida ejecutiva que ya está harta de la vida corporativa. Antes de que Yong-sik se dé cuenta, la infame agencia de publicidad CHICHI vuelve a estar en marcha, le guste o no. Desde un desastre informático que cuesta mil millones de wones y una política corporativa despiadada hasta clientes extravagantes con peticiones aún más alocadas, cada nueva campaña se convierte en una nueva crisis. Más atrevida, más loca y más descarada que nunca, CHICHI vuelve para demostrar que, en publicidad, a veces la peor idea puede convertirse en la mejor campaña. Agency ChiChi: Ad Heat Special es una comedia laboral trepidante repleta de clientes escandalosos, trabajo en equipo caótico, romances inesperados y la absurda realidad del mundo de la publicidad.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="WINDIA INC — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-18" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-18" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-18" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">WINDIA INC</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="18" data-ip-number="1"><img alt="ROUND" loading="lazy" src="IP_image/60.png"/></div>
+<div><h3 class="detail-ip-title">ROUND</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> WEBTOON (Modelo de negocio deseado: coproducción de series dramáticas)</span><span><strong>PÚBLICO OBJETIVO</strong> preadolescentes y adolescentes</span></div><p class="detail-ip-desc">ROUND es un webtoon de acción y drama ambientado en un futuro cercano en el que la pena de muerte ha sido sustituida por la condena a combate indefinido. Los delincuentes condenados se ven obligados a luchar a muerte en combates carcelarios retransmitidos a nivel nacional como espectáculo público. El protagonista es un adolescente que entra en la arena en busca de redención. El director Park Jeong-woo ha mostrado interés en dirigir el proyecto si se adapta a una serie dramática.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="18" data-ip-number="2"><img alt="Cash Therapy" loading="lazy" src="IP_image/61.png"/></div>
+<div><h3 class="detail-ip-title">Cash Therapy</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> modelo de negocio / coproducción de series dramáticas</span><span><strong>PÚBLICO OBJETIVO</strong> preadolescentes y adolescentes</span></div><p class="detail-ip-desc">En Cash Therapy, tras despertar de un coma de ocho años provocado por un incidente de violencia escolar, Kim Juwon descubre que su vida está en ruinas, mientras que prosperan sus agresores. Es entonces cuando descubre que se ha ingresado la asombrosa cifra de un billón a su cuenta de banco. Armado con una inmensa fortuna, comienza a destruir, uno a uno, el dinero, el estatus, las relaciones y la posición social de los agresores.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="18" data-ip-number="3"><img alt="I`d Rather Not Take the Crown" loading="lazy" src="IP_image/62.png"/></div>
+<div><h3 class="detail-ip-title">I`d Rather Not Take the Crown</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama y webtoon</span><span><strong>PÚBLICO OBJETIVO</strong> familia</span></div><p class="detail-ip-desc">Una comedia dramática ambientada en una monarquía moderna en la que un rey abdica de repente, lo que obliga a sus tres príncipes y a su princesa más joven a enzarzarse en una inesperada lucha por el trono. El giro inesperado es que ninguno de ellos lo quiere. Mientras que los hermanos luchapor proteger su propio sueño, la princesa más joven, Jiho, empieza a descubrir lo que realmente quiere. La directora Kwan Su-kyung ha mostrado interés en dirigir el proyecto si se adapta a una serie de televisión. Ya se han completado seis guiones para la serie.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="NOVA square Inc. — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-19" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-19" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.everyreels.com" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-19" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">NOVA square Inc.</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="19" data-ip-number="1"><img alt="Love.exe" loading="lazy" src="IP_image/45.png"/></div>
+<div><h3 class="detail-ip-title">Love.exe</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama</span><span><strong>PÚBLICO OBJETIVO</strong> adultos</span></div><p class="detail-ip-desc">(mujeres de entre 20 y 30 años) Romántica | 30 min x 16 episodios | Emisión: Wavve, VIU Director : YOON SEONGHO | REPARTO : KIM YOHAN, HWANG BOREUMBYEOL Cuando los departamentos de Ingeniería Informática y Modelaje se fusionan en una sola facultad, Min-hak, el chico más guapo del campus y estrella de un programa de citas con un millón de seguidores, conoce a Yeon-san, una genio académica sin ninguna habilidad para las relaciones sentimentales. Él es capaz de conquistar el corazón de cualquiera; ella puede resolver cualquier cosa menos el amor. Al colisionar sus mundos opuestos, comienza un romance universitario impredecible, lleno de química, caos y errores que ningún algoritmo puede solucionar.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="19" data-ip-number="2"><img alt="Mi corazón es AAA" loading="lazy" src="IP_image/46.png"/></div>
+<div><h3 class="detail-ip-title">Mi corazón es AAA</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> serie corta</span><span><strong>PÚBLICO OBJETIVO</strong> mujeres de entre 20 y 30 años</span></div><p class="detail-ip-desc">Comedia romántica | 2 min x 51 episodios | Emisión: everyreels, Reelshot Director : YANG KYEONGHUI | REPARTO : YOON SEOBIN, CHOO YE-JIN Ga-young, una brillante estudiante, renuncia a la universidad de sus sueños y se matricula en la poco conocida Universidad de Yuil tras enamorarse del embajador estudiantil, Jung-woo. Cuando descubre que la mujer ideal para él tiene un busto más voluminoso, sus desesperados intentos por transformarse acaban en desastre… hasta que se encuentra con un misterioso mensaje: «Podemos transformar incluso una copa AAA en una D, E o F». Con su amigo de la infancia, Seo-jun, a su lado, Ga-young entra en Elysia, donde le espera una transformación inesperada.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="19" data-ip-number="3"><img alt="EveryReels" loading="lazy" src="IP_image/47.png"/></div>
+<div><h3 class="detail-ip-title">EveryReels</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> aplicación de cortometrajes dramáticos</span><span><strong>PÚBLICO OBJETIVO</strong> mujeres de entre 20 y 40 años</span></div><p class="detail-ip-desc">Cada día, un minuto emocionante ¡Todo lo que te encanta de los dramas cortos! Everyreels es una plataforma con sede en Corea dedicada a los dramas de formato corto. Su público principal son las mujeres aficionadas a los dramas, con especial énfasis en las comedias románticas y los melodramas. La plataforma seguirá ampliando su catálogo de dramas originales.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="WEMAD Co., Ltd. — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-20" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-20" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.wemadenter.com/" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-20" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">WEMAD Co., Ltd.</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="20" data-ip-number="1"><img alt="Love Phobia" loading="lazy" src="IP_image/54.png"/></div>
+<div><h3 class="detail-ip-title">Love Phobia</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> Drama</span><span><strong>PÚBLICO OBJETIVO</strong> Adult</span></div><p class="detail-ip-desc">Love Phobia es una comedia romántica ambientada en un mundo en el que la IA se ha convertido en parte de la vida cotidiana. La historia gira en torno a Sunho, un exitoso escritor de novelas románticas que cree firmemente en el amor verdadero, y a Bia, la directora general de una plataforma de citas potenciada por IA, que confía más en los datos que en las emociones. Cuando estas dos personas, con visiones del amor totalmente opuestas, se cruzan, comienzan un viaje para descubrir el verdadero significado del amor. Aunque no dejan de enfrentarse por sus diferentes creencias, Sunho y Bia aprenden poco a poco a comprenderse mutuamente, a sanar las heridas emocionales del otro y a crecer juntos. Al combinar el novedoso concepto de la tecnología de inteligencia artificial con las emociones humanas más auténticas, la serie entrelaza un romance conmovedor con el misterio a través de acontecimientos inesperados y secretos ocultos. Al explorar las relaciones modernas desde la perspectiva de la inteligencia artificial, Love Phobia ofrece romance, humor, profundidad emocional y misterio, al tiempo que transmite, en última instancia, un mensaje sincero sobre el amor, las relaciones y lo que realmente significa ser humano.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="20" data-ip-number="2"><img alt="End up In INKIGAYO" loading="lazy" src="IP_image/55.png"/></div>
+<div><h3 class="detail-ip-title">End up In INKIGAYO</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> Drama</span><span><strong>PÚBLICO OBJETIVO</strong> Adult</span></div><p class="detail-ip-desc">Este drama es una historia de amor agridulce sobre jóvenes que no tienen más remedio que calcular su popularidad. Cuenta la historia del detrás de las cámaras de Inkigayo, algo que resulta más intenso y angustioso que las retransmisiones en directo. Explora cómo se creó el k-pop actual, qué canciones eran populares en el pasado y cómo ha cambiado la cultura de los idols y sus fandoms. Aunque pueda parecer una historia cualquiera, aquí el objetivo es contarla de una forma poco común, adentrándonos en los 30 años de historia de Inkigayo. Al igual que un hermoso cisne rema sin descanso bajo el agua para mantener una apariencia perfecta, los «cisnes » de Inkigayo nos hablan de sus incansables esfuerzos detrás de los perfectos escenarios en una auténtica historia del k-pop. El programa es glamuroso y profesional en apariencia, pero tras bastidores no todo es tan brillante. Las historias de las personas tras el show (torpes, humildes y que, a veces, te hacen llorar con su devoción ciega) recordarán su pasado y tratarán de revivir los clásicos del k-pop. Pretendemos crear una serie descarada que, aunque un poco anticuada, recuerde los momentos conmovedores y emocionantes, mientras busca un resurgimiento de los clásicos del k-pop.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="20" data-ip-number="3"><img alt="Myeong-Dong" loading="lazy" src="IP_image/56.png"/></div>
+<div><h3 class="detail-ip-title">Myeong-Dong</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> Drama</span><span><strong>PÚBLICO OBJETIVO</strong> Adult</span></div><p class="detail-ip-desc">Myeong Dong es un drama de cine negro, basado en la novela web original de Naver, ambientado en Myeong-dong, que en su día fue el centro del mercado de préstamos privados de Corea. Inspirada en escándalos financieros reales, la serie narra una encarnizada batalla entre dos generaciones motivadas por el poder, la ambición y el dinero. A medida que políticos, mafiosos, abogados, contadores y asesores financieros se ven enredados en una compleja red de intereses, operaciones de fusiones y adquisiciones de alto riesgo, proyectos inmobiliarios a gran escala y despiadadas estratagemas financieras se van desarrollando en la trama. La traición, la manipulación y las maniobras estratégicas de poder alimentan una intensa guerra por la riqueza y el control. Al explorar el enfrentamiento entre la generación que forjó su influencia a través del capital y la generación más joven, que busca remodelar el panorama financiero, Myeong Dong ofrece un retrato cautivador del deseo humano, el poder y el verdadero coste del dinero. Combinando el crimen financiero realista con un apasionante drama de personajes, la serie ofrece un sofisticado thriller con un atractivo universal.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="PH E&amp;M — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-21" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-21" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.phenm.com/" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-21" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">PH E&amp;M</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="21" data-ip-number="1"><img alt="The Egg" loading="lazy" src="IP_image/48.png"/></div>
+<div><h3 class="detail-ip-title">The Egg</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama</span><span><strong>PÚBLICO OBJETIVO</strong> adultos</span></div><p class="detail-ip-desc">The Egg es un thriller social ambientado en una pequeña comunidad isleña que lucha por recuperarse del vertido de petróleo del «Hebei Spirit» ocurrido en 2007 en Taean, Corea del Sur. Con el mar contaminado y sus medios de vida destruidos, los habitantes sobreviven gracias a las indemnizaciones del Gobierno, mientras su comunidad, antaño próspera, se desmorona poco a poco. Es en este contexto que una creencia invisible comienza a extenderse entre ellos: la existencia de «el huevo» (the egg). Aunque nadie lo ha visto, la gente ha llegado a creer que representa la esperanza; una oportunidad y una forma de escapar de su desesperada realidad. A medida que esta creencia compartida se va afianzando, la esperanza se convierte poco a poco en obsesión, la confianza da paso a la desconfianza y la comunidad se ve abocada a tomar decisiones cada vez más peligrosas. En lugar de centrarse en la catástrofe, The Egg explora cómo el miedo, el deseo y las creencias colectivas pueden alterar el comportamiento humano. Combinando el realismo social con el suspenso psicológico, la película ofrece un impactante retrato de una comunidad llevada al límite y se pregunta qué están dispuestas a creer las personas cuando la esperanza es lo único que les queda.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="21" data-ip-number="2"><img alt="El tiempo sin ella" loading="lazy" src="IP_image/49.png"/></div>
+<div><h3 class="detail-ip-title">El tiempo sin ella</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama</span><span><strong>PÚBLICO OBJETIVO</strong> adultos</span></div><p class="detail-ip-desc">El tiempo sin ella es un drama romántico de fantasía coproducido por Corea y Japón que narra la historia de un hombre que, tras la impactante muerte de su esposa, pierde solo los recuerdos de ella. Mientras busca los recuerdos que ya no puede evocar, se encuentra con una misteriosa estudiante de instituto que le lleva a emprender un extraordinario viaje más allá de los límites de la memoria y el tiempo. A medida que los fragmentos del pasado van resurgiendo, descubre la verdad sobre la mujer a la que amó y se da cuenta de que algunos lazos pueden perdurar más allá de la pérdida e incluso del tiempo. Mezclando romance, fantasía y misterio, El tiempo sin ella explora temas universales como el amor, la memoria, el dolor y la sanación. A través de su narrativa emotiva y su estilo cinematográfico, la serie presenta una historia atemporal que trasciende toda cultura, ofreciendo al público de todo el mundo un conmovedor viaje sobre el poder perdurable del amor.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="21" data-ip-number="3"><img alt="Broke Rookie Star" loading="lazy" src="IP_image/50.png"/></div>
+<div><h3 class="detail-ip-title">Broke Rookie Star</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama</span><span><strong>PÚBLICO OBJETIVO</strong> adultos</span></div><p class="detail-ip-desc">Broke Rookie Star es una comedia de drama juvenil que ofrece una visión fresca y conmovedora de lo que hay detrás del glamuroso mundo del k-pop. La serie narra la historia de un grupo novato de idols que alcanza la fama de forma inesperada gracias a un éxito viral, solo para descubrir que el éxito en el escenario no garantiza la estabilidad económica. A pesar de su creciente popularidad, los miembros siguen enfrentándose a las dificultades del día a día mientras persiguen sus sueños. Combinando comedia con una narrativa conmovedora, Broke Rookie Star revela la realidad de la industria del k-pop a través de personajes con los que es fácil identificarse y experiencias auténticas. Más allá del mundo de los idols, la serie transmite un mensaje universal sobre la juventud, la amistad, la perseverancia y el valor de perseguir sueños. Es una historia con la que se identifica el público de todo el mundo.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="Hanteo Global, Inc. — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-22" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-22" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.hanteoglobal.com/" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-22" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">Hanteo Global, Inc.</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="22" data-ip-number="1"><img alt="Premios Hanteo Music Awards (HMA)" loading="lazy" src="IP_image/36.png"/></div>
+<div><h3 class="detail-ip-title">Premios Hanteo Music Awards (HMA)</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> premios musicales / evento en directo</span><span><strong>PÚBLICO OBJETIVO</strong> adolescentes / jóvenes adultos</span></div><p class="detail-ip-desc">Los Hanteo Music Awards (HMA) son una prestigiosa ceremonia de premios de k-pop organizada por Hanteo Chart, la única lista del mundo de éxitos de k-pop en tiempo real con más de 30 años de historia. Basándose en macrodatos de gran fiabilidad y métricas globales, los HMA garantizan la imparcialidad en la selección de los galardonados, mientras ofrecen actuaciones espectaculares y exclusivas de los artistas de k-pop más destacados. Impulsados por la votación de los fans de todo el mundo y su participación activa, los HMA constituyen la celebración definitiva del k-pop, que conecta a los fans de todo el mundo a través de la música.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="22" data-ip-number="2"><img alt="Everyday We Are" loading="lazy" src="IP_image/37.png"/></div>
+<div><h3 class="detail-ip-title">Everyday We Are</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> película / drama</span><span><strong>PÚBLICO OBJETIVO</strong> adolescentes / jóvenes adultos</span></div><p class="detail-ip-desc">Everyday We Are es una película romántica juvenil basada en el popular webtoon de Kakao, que cuenta una historia conmovedora sobre la amistad y el crecimiento de Yeo Woo-ri y Kwon Ho-soo, amigos de la infancia, junto con la historia de su primer amor. Al plasmar la dulce emoción y los recuerdos nostálgicos de sus días de colegio (con unas imágenes preciosas), esta película ofrece una experiencia de drama coreano única y con la que es fácil identificarse, tanto para el público joven como para los espectadores nostálgicos.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="22" data-ip-number="3"><img alt="Sometoon 2021" loading="lazy" src="IP_image/38.png"/></div>
+<div><h3 class="detail-ip-title">Sometoon 2021</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> serie web</span><span><strong>PÚBLICO OBJETIVO</strong> adolescentes / Jóvenes adultos</span></div><p class="detail-ip-desc">Basada en el popular webtoon del mismo nombre, Sometoon 2021 es una serie web romántica y juvenil que te hará latir el corazón. Inspirada en historias reales enviadas por los espectadores, despierta una profunda empatía en adolescentes y jóvenes adultos. Con la participación de populares artistas de k-pop, esta serie de formato corto captura maravillosamente los momentos dulces y emocionantes del primer amor, los sentimientos no correspondidos y el romance juvenil con unas imágenes encantadoras y escenas cálidas.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="NewUnivers — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-23" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-23" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.youtube.com/@NewUnivers1" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-23" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">NewUnivers</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="23" data-ip-number="1"><img alt="La jaula dorada" loading="lazy" src="IP_image/39.png"/></div>
+<div><h3 class="detail-ip-title">La jaula dorada</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> serie corta</span><span><strong>PÚBLICO OBJETIVO</strong> mujeres de 20 a 40 años</span></div><p class="detail-ip-desc">Miniserie 100 % generada por IA / duración: 75 min / 50 episodios Sinopsis: una historia de amor sobre la peligrosa y adictiva relación entre Ryu, una superestrella del k-pop que ha conquistado al mundo, y Chloe, una desconocida actriz de Hollywood. Chloe, una desconocida actriz de Hollywood, se cruza en el camino de Ryu, una superestrella del k-pop, durante una sesión de fotos informal a la que acude solo para poder pagar el alquiler. Una estrella de primer nivel, con una belleza deslumbrante, un físico perfecto y una imagen impecable, pero de quien se rumorea que tiene un carácter peligrosamente obsesivo. Bajo el control de Ryu, Chloe se ve arrastrada a un placer tan intenso que le nubla el sentido de la realidad. «Eres actriz, ¿verdad? La forma en que tiemblas delante de mí... ¿es actuación o es real?». ¿Se convertirá en su posesión perfecta o en la única debilidad capaz de destruirlo?</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="23" data-ip-number="2"><img alt="Enamorándome de mi jefe" loading="lazy" src="IP_image/40.png"/></div>
+<div><h3 class="detail-ip-title">Enamorándome de mi jefe</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama corto de IA</span><span><strong>PÚBLICO OBJETIVO</strong> mujeres de entre 20 y 40 años</span></div><p class="detail-ip-desc">Miniserie híbrida con IA / duración: 75 min / 50 episodios / historia de romance en la oficina Hong (mujer, 25 años, podría tratarse de una mujer de Singapur), una trabajadora temporal de la embajada, le muestra su novela romántica +18 a su superior, un diplomático de 33 años… coincidentemente, el nombre de la protagonista femenina es Yeo Ju-hwan (igual a él) y es una diplomática con responsabilidades similares… Enamorandome de mi jefe es una comedia romántica de oficina que cuenta la historia de una pareja de solteros eternos, quienes buscan el balance entre sus responsabilidades laborales y su redescubierta vida amorosa.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="23" data-ip-number="3"><img alt="El beso que despertó a las tres bestias divinas" loading="lazy" src="IP_image/41.png"/></div>
+<div><h3 class="detail-ip-title">El beso que despertó a las tres bestias divinas</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> cortometraje de animación de fantasía oriental con IA</span><span><strong>PÚBLICO OBJETIVO</strong> mujeres de 20 a 40 años / aficionados al BL</span></div><p class="detail-ip-desc">Género: romance / «Boy love» Formato: serie de 50 episodios de formato corto Palabras clave: #MMReverseHarem #FantasíaOriental #VidasAnteriores/Reencarnación #ImprontaDelDestino Sinopsis: Unas manos que dan vida a todo lo que tocan, pero ningún humano puede resistir su poder. Un chico que ha vivido toda su vida envuelto en vendajes, incapaz de tocar a otra persona, queda un día encerrado en un palacio abandonado y maldito. Con su beso, se despierta un sello centenario. Así comienza una tierna y, a su vez, feroz batalla por su corazón, librada por tres bestias divinas; los únicos seres que pueden soportar su tacto y recibirlo por completo.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="DevUnlimit — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-24" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-24" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://devunlimit.com" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-24" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">DevUnlimit</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="24" data-ip-number="1"><img alt="CHOOMCHOOM DANCE" loading="lazy" src="IP_image/63.png"/></div>
+<div><h3 class="detail-ip-title">CHOOMCHOOM DANCE</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> AI-Powered K-pop Dance Game</span><span><strong>PÚBLICO OBJETIVO</strong> Teens / Young Adults / Family</span></div><p class="detail-ip-desc">CHOOMCHOOM DANCE es un juego de baile de k-pop generado con IA dentro de CHOOMCHOOM. Convierte el cuerpo del jugador en el mando, utilizando una cámara para seguir el movimiento en tiempo real sin necesidad de dispositivos ni sensores adicionales. Analiza la sincronización y la precisión de la coreografía y ofrece puntuaciones y comentarios al instante, lo que lo hace ideal para eventos, centros comerciales, centros de entretenimiento familiar (FEC), lugares turísticos y actividades para fans.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="24" data-ip-number="2"><img alt="CHOOMCHOOM   4-CUT" loading="lazy" src="IP_image/64.png"/></div>
+<div><h3 class="detail-ip-title">CHOOMCHOOM   4-CUT</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> experiencia fotográfica de k-pop interactiva</span><span><strong>PÚBLICO OBJETIVO</strong> jóvenes / adultos jóvenes / familia</span></div><p class="detail-ip-desc">CHOOMCHOOM 4-CUT es una experiencia fotográfica interactiva dentro de CHOOMCHOOM, que convierte los retratos tomados in situ en una imagen de cuatro fotogramas con temática k-pop mediante un proceso rápido e intuitivo. El resultado final se convierte tanto en un recuerdo personal como en contenido para compartir en redes sociales, lo que lo hace adecuado para eventos, centros comerciales, actividades para fans, lugares turísticos y promociones de marcas.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="24" data-ip-number="3"><img alt="CHOOMCHOOM ANIMATE" loading="lazy" src="IP_image/65.png"/></div>
+<div><h3 class="detail-ip-title">CHOOMCHOOM ANIMATE</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> baile con IA</span><span><strong>PÚBLICO OBJETIVO</strong> adolescentes / adultos / familias</span></div><p class="detail-ip-desc">CHOOMCHOOM ANIMATE es una experiencia de baile con IA dentro de CHOOMCHOOM. Utiliza la foto o imagen del participante para crear un vídeo en el que parece que el usuario está interpretando una coreografía de k-pop. Cualquiera puede convertirse en la estrella, independientemente de su habilidad para bailar, y el resultado se puede utilizar como recuerdo personal o como contenido breve para compartir en eventos, centros comerciales, lugares turísticos, promociones para fans y campañas de marca.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="L&amp;K Co., Ltd. — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-25" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-25" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.logickorea.co.kr/" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-25" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">L&amp;K Co., Ltd.</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="25" data-ip-number="1"><img alt="RED STONE Online" loading="lazy" src="IP_image/68.png"/></div>
+<div><h3 class="detail-ip-title">RED STONE Online</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> juego en línea (MMOPPG)</span><span><strong>PÚBLICO OBJETIVO</strong> TODOS</span></div><p class="detail-ip-desc">RED STONE, un MMORPG en línea lanzado en 2003, ha tenido una acogida sensacional, especialmente en Japón, donde es muy querido como uno de los MMORPG en línea más representativos. Los aventureros que buscan la misteriosa «piedra roja» que cayó del «cielo» son los protagonistas de esta historia y actúan como avatares de los jugadores. Los jugadores pueden transformarse en diferentes tipos o clases.. Por ejemplo, un mago capaz de lanzar ataques mágicos puede transformarse en un hombre lobo capaz de realizar ataques físicos a corta distancia para escapar de situaciones peligrosas. Tras haberse ganado una base de jugadores fieles en los mercados internacionales, con una sólida presencia en Corea y Japón, RED STONE se prepara para expandirse a Latinoamérica con servicios adaptados específicamente a las necesidades y preferencias de los jugadores locales.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="Gawon Global — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-26" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-26" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://store.steampowered.com/app/2603290/Block_The_Monster/" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-26" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">Gawon Global</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="26" data-ip-number="1"><img alt="Block the Monster" loading="lazy" src="IP_image/66.png"/></div>
+<div><h3 class="detail-ip-title">Block the Monster</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> juego en equipo</span><span><strong>PÚBLICO OBJETIVO</strong> todas</span></div><p class="detail-ip-desc">¡La forma en que lo hago se convierte en el camino! Bienvenido a Block the Monster, un juego de defensa de torres en 3D donde los bloques cuadrados dan forma a estrategias infinitas y los héroes cambian el rumbo de la batalla. Construye tu defensa, elige tu ruta y sobrevive a oleadas y oleadas de monstruos implacables. Esto no es solo defensa. Es tu aventura. Adéntrate en un mundo de fantasía lleno de imaginación, repleto de historias envolventes, personajes únicos y decisiones que dan lugar a múltiples caminos. Conviértete en el héroe, libra batallas dinámicas y decide el destino de un mundo al borde del abismo. Cada bloque que coloques, cada héroe que invoques, escribirá una historia legendaria. Elabora estrategias. Sobrevive. Cuenta tu historia.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="26" data-ip-number="2"><img alt="Flow of Sound" loading="lazy" src="IP_image/67.png"/></div>
+<div><h3 class="detail-ip-title">Flow of Sound</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> juego de puzzle</span><span><strong>PÚBLICO OBJETIVO</strong> todas</span></div><p class="detail-ip-desc">Un viaje relajante a través de la música y la luz Guía unas bolas vibrantes y coloridas hasta su destino, en un juego de puzzles de precioso diseño en que cada movimiento está en armonía con la música. Observa cómo cada bola nace y se desvanece al ritmo de la evocadora banda sonora, creando una experiencia meditativa e hipnótica. Resuelve rompecabezas únicos inspirados en el flujo del sonido y el movimiento. Con unos gráficos impresionantes y una jugabilidad que te llega al corazón, este juego invita a relajarse, reflexionar y sumergirte en un mundo donde se unen el ritmo, el color y la lógica. Deja que la belleza del sonido y la luz te guíen.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="Sugar Works — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-27" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-27" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://youtu.be/qFxl1r9p7N0" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-27" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">Sugar Works</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="27" data-ip-number="1"><img alt="Proyecto G" loading="lazy" src="IP_image/74.png"/></div>
+<div><h3 class="detail-ip-title">Proyecto G</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> juego, e-Sports</span><span><strong>PÚBLICO OBJETIVO</strong> +12</span></div><p class="detail-ip-desc">Un MOBA Lite de nueva generación que ofrece la profundidad estratégica de los MOBA tradicionales, pero en partidas rápidas y llenas de acción, diseñadas para los jugadores actuales. Rompe con la jugabilidad repetitiva centrada en las líneas gracias a mecánicas de mapa interactivas, objetivos dinámicos y estrategias de combate creativas basadas en el trabajo en equipo. Creado tanto para ofrecer emoción competitiva como accesibilidad, el juego combina una fácil iniciación, una alta rejugabilidad y batallas atractivas para los espectadores en una nueva experiencia PvP global.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="SKYWALK — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-28" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-28" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.skywalkgames.com/" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-28" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">SKYWALK</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="28" data-ip-number="1"><img alt="COCOMINE Personajes de Sanrio" loading="lazy" src="IP_image/71.png"/></div>
+<div><h3 class="detail-ip-title">COCOMINE Personajes de Sanrio</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> juego</span><span><strong>PÚBLICO OBJETIVO</strong> adulto</span></div><p class="detail-ip-desc">¡Sumérgete en un nuevo mundo social con personajes de Sanrio con Cocomine Sanrio Characters! Únete a todos tus personajes favoritos de Sanrio para vivir una experiencia social emocionante, adorable y conmovedora.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="28" data-ip-number="2"><img alt="HELLO HERO: LION HEART" loading="lazy" src="IP_image/72.png"/></div>
+<div><h3 class="detail-ip-title">HELLO HERO: LION HEART</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> videojuegos</span><span><strong>PÚBLICO OBJETIVO</strong> todas las edades</span></div><p class="detail-ip-desc">«Proyecto del 10.º aniversario de Global IP Hello Hero, creador del RPG colectivo» Universo amplio y variedad de escenas del mundo de Hello Hero. Hasta 268 tipos de personajes y trajes atractivos. Batallas estratégicas únicas y profundas con contenido expandible infinito Contenido de pueblo al estilo SNG que despertará las emociones de los usuarios</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="28" data-ip-number="3"><img alt="Girl Globe" loading="lazy" src="IP_image/73.png"/></div>
+<div><h3 class="detail-ip-title">Girl Globe</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> -</span><span><strong>PÚBLICO OBJETIVO</strong> -</span></div><p class="detail-ip-desc">GIRL GLOBE es un juego de vestir de estilo anime en el que podrás descubrir la belleza en estado puro, mientras disfrutas de una gran variedad de opciones para vestir a tus personajes. Con más de 4 000 marcas de moda reales.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="Takeone Company — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-29" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-29" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.takeonecompany.com/" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-29" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">Takeone Company</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="29" data-ip-number="1"><img alt="ENHYPEN WORLD: ETERNAL MOMENT" loading="lazy" src="IP_image/75.png"/></div>
+<div><h3 class="detail-ip-title">ENHYPEN WORLD: ETERNAL MOMENT</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> juego para móvil</span><span><strong>PÚBLICO OBJETIVO</strong> todas</span></div><p class="detail-ip-desc">ENHYPEN WORLD: Eternal Moment es un juego de aventuras cinematográfico que utiliza la propiedad intelectual del grupo de idols ENHYPEN. ENHYPEN es muy conocido por su característico concepto de vampiros, pero ¿y si eso no fuera solo un concepto? En realidad, los miembros sí son vampiros. Sus vívidos recuerdos, acumulados a lo largo de siglos de inmortalidad, constituyen la fuente misma de su poder. Sin embargo, un día, unas misteriosas criaturas comienzan a atacar esos recuerdos, intentando drenar su fuerza. A medida que los ataques se intensifican, los recuerdos de los miembros se distorsionan y, finalmente, incluso su santuario, Vampire Town, cae en ruinas. Al poseer una habilidad única que refuerza los poderes de los miembros, ENHYPEN te reconoce como un aliado clave. Los jugadores pueden elegir a su miembro favorito y participar en un juego de puzzles de arrastrar y combinar tres para proteger los recuerdos del grupo. Los jugadores pueden recoger recursos con los «Vamkids», unas simpáticas versiones en 3D de los miembros de ENHYPEN (que solo se encuentran en ENHYPEN WORLD), y decorar su pueblo con diversos objetos que reflejen su propio estilo único.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="29" data-ip-number="2"><img alt="KITZ" loading="lazy" src="IP_image/76.png"/></div>
+<div><h3 class="detail-ip-title">KITZ</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> plataforma de formato corto de k-pop</span><span><strong>PÚBLICO OBJETIVO</strong> a partir de 3 años</span></div><p class="detail-ip-desc">Una plataforma global de formato corto dedicada al k-pop en la que podrás disfrutar del género de la forma más impactante y concisa: con series de formato corto de alta calidad protagonizadas por idols del k-pop, programas variados, historias interactivas que se desarrollan según las elecciones de los espectadores, elementos coleccionables que despiertan el deseo de poseerlos y contenido exclusivo. Woojin, un estudiante de instituto que en su día fue un lanzador prodigioso, ya no es capaz de lanzar strikes. Un día, una misteriosa estudiante transferida llamada Taehee aparece ante él y le ayuda a encontrar el camino de vuelta al montículo. Wind Up, protagonizada por Jeno y Jaemin de NCT, es un drama juvenil sobre béisbol que captura la brillante amistad y el crecimiento de dos chicos. Otro título, Jump Boy LIVE, está protagonizado por Kangmin, de VERIVERY, y narra la historia de madurez de un estudiante de un instituto de ciencias que sueña con convertirse en influencer, pero que, tras descubrir accidentalmente un meteorito, adquiere el poder de la teletransportación y se convierte en un «héroe» reconocido a nivel mundial. Estos títulos son de alta calidad y muchos más están disponibles en exclusiva en KITZ.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="3">
+<div class="detail-ip-image" data-ip-company="29" data-ip-number="3"><img alt="QQu ENT" loading="lazy" src="IP_image/77.png"/></div>
+<div><h3 class="detail-ip-title">QQu ENT</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> drama animado de formato corto</span><span><strong>PÚBLICO OBJETIVO</strong> 15 a 20 años</span></div><p class="detail-ip-desc">Una comedia de situación que retrata la vida de unas aspirantes a idols en QQU Entertainment; todas ellas con el sueño de debutar mientras viven en un destartalado ático. Lideradas por la apasionada, aunque algo torpe, directora general Kim Pink, las trainees se esfuerzan por debutar en unas condiciones que distan mucho de ser ideales. Aguantan, sobreviven y se plantean nuevos retos una y otra vez. La serie plasma este viaje mediante una mezcla de comedia y momentos cotidianos conmovedores. Al retratar de manera auténtica la cultura de los trainees de k-pop, esta serie ofrece una historia que resuena no solo con quienes sueñan con ser idols, sino también con los fans que entienden y se identifican con su camino.</p></div>
+</article>
+</div>
+</section><section aria-hidden="true" aria-label="QLAB — detalles de contenidos e IP" aria-modal="true" class="company-detail-overlay" id="kexpo-detail-30" role="dialog"><button aria-label="Cerrar al pulsar fuera del cuadro" class="detail-dismiss" data-modal-close="kexpo-detail-30" type="button"></button>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.qlab.co.kr/" rel="noopener noreferrer" target="_blank">Visitar sitio web →</a><button aria-label="Cerrar" class="detail-close" data-modal-close="kexpo-detail-30" type="button">×</button></div>
+<p class="detail-eyebrow">CONTENIDOS DESTACADOS / IP</p>
+<h2 class="detail-company">QLAB</h2>
+<div class="detail-separator"></div>
+<article class="detail-ip" data-ip-index="1">
+<div class="detail-ip-image" data-ip-company="30" data-ip-number="1"><img alt="EDUGYM" loading="lazy" src="IP_image/69.png"/></div>
+<div><h3 class="detail-ip-title">EDUGYM</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> tecnologia de educación</span><span><strong>PÚBLICO OBJETIVO</strong> menores de 15</span></div><p class="detail-ip-desc">Una plataforma de aprendizaje interactiva para interiores que utiliza pantallas frontales y de suelo para enseñar a través de la actividad física, con más de 40 módulos de contenido en lengua, matemáticas, educación física, juegos y mucho más.</p></div>
+</article>
+<article class="detail-ip" data-ip-index="2">
+<div class="detail-ip-image" data-ip-company="30" data-ip-number="2"><img alt="KPOP DANCE MASTER" loading="lazy" src="IP_image/70.png"/></div>
+<div><h3 class="detail-ip-title">KPOP DANCE MASTER</h3><div class="detail-ip-meta"><span><strong>TIPO</strong> juego</span><span><strong>PÚBLICO OBJETIVO</strong> público general</span></div><p class="detail-ip-desc">A K-POP Dance Game that Players Follow Along with On-Screen Choreography Supports Both Single-Player and Two-Player Modes</p></div>
+</article>
+</div>
+</section></div><script>
+/* JavaScript executes on the Vercel page, not in the homepage editor. */
+(function () {
+  'use strict';
+  const root = document.getElementById('kexpo-comp-directory');
+  if (!root) return;
+  let currentModal = null;
+  let lastOpener = null;
+
+  function openModal(id, opener) {
+    const modal = document.getElementById(id);
+    if (!modal || !modal.classList.contains('company-detail-overlay')) return;
+    if (currentModal && currentModal !== modal) closeModal();
+    lastOpener = opener;
+    currentModal = modal;
+    const panel = modal.querySelector('.detail-panel');
+    if (panel) panel.scrollTop = 0;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    const closeButton = modal.querySelector('.detail-close');
+    if (closeButton) closeButton.focus({ preventScroll: true });
+  }
+
+  function closeModal() {
+    if (!currentModal) return;
+    currentModal.classList.remove('is-open');
+    currentModal.setAttribute('aria-hidden', 'true');
+    currentModal = null;
+    if (lastOpener && lastOpener.isConnected) {
+      lastOpener.focus({ preventScroll: true });
+    }
+    lastOpener = null;
+  }
+
+  root.addEventListener('click', function (event) {
+    const opener = event.target.closest('[data-modal-open]');
+    if (opener && root.contains(opener)) {
+      event.preventDefault();
+      openModal(opener.dataset.modalOpen, opener);
+      return;
+    }
+    const closer = event.target.closest('[data-modal-close]');
+    if (closer && root.contains(closer)) {
+      event.preventDefault();
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (!currentModal) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeModal();
+    }
+  });
+})();
+</script>
+<script>
+/* Solo se ejecuta en Vercel; no requiere JavaScript en la web que contiene el iframe. */
+(function () {
+  'use strict';
+  const root = document.getElementById('kexpo-comp-directory');
+  if (!root) return;
+  const entries = Array.from(root.querySelectorAll('.company-more-toggle')).map(function (button) {
+    return { button: button, description: document.getElementById(button.getAttribute('aria-controls')) };
+  }).filter(function (entry) { return !!entry.description; });
+
+  function refresh() {
+    entries.forEach(function (entry) {
+      const description = entry.description;
+      const button = entry.button;
+      if (button.getAttribute('aria-expanded') === 'true') return;
+      description.classList.add('is-collapsed');
+      button.hidden = !(description.scrollHeight > description.clientHeight + 2);
+    });
+  }
+
+  root.addEventListener('click', function (event) {
+    const button = event.target.closest('.company-more-toggle');
+    if (!button || !root.contains(button)) return;
+    const description = document.getElementById(button.getAttribute('aria-controls'));
+    if (!description) return;
+    const expanded = button.getAttribute('aria-expanded') === 'true';
+    description.classList.toggle('is-collapsed', expanded);
+    button.setAttribute('aria-expanded', String(!expanded));
+    button.textContent = expanded ? 'Leer más ↓' : 'Leer menos ↑';
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', refresh, {once:true});
+  } else { refresh(); }
+  window.addEventListener('load', refresh);
+  let pending = false;
+  window.addEventListener('resize', function () {
+    if (pending) return;
+    pending = true;
+    requestAnimationFrame(function () { pending = false; refresh(); });
+  });
+})();
+</script>
+</body></html>
