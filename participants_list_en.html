@@ -421,6 +421,31 @@
 .kexpo-comp .detail-close{padding:0;appearance:none;cursor:pointer}
 .kexpo-comp .company-footer .company-btn{background:transparent;display:inline-block;text-align:center;line-height:1.3;cursor:pointer;border-radius:0}
 .kexpo-comp .company-footer .company-btn:hover{background:#E8192C;color:#fff}
+
+/* Company description: five-line preview; keeps View Details visible at all times. */
+.kexpo-comp .company-preview.preview-collapsible {
+    max-height: 8.6em; /* five lines at the existing line-height of 1.72 */
+    overflow: hidden;
+}
+.kexpo-comp .company-preview.preview-collapsible.preview-expanded {
+    max-height: none;
+}
+.kexpo-comp .company-read-more {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #89A6E9;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    cursor: pointer;
+    text-align: left;
+}
+.kexpo-comp .company-read-more:hover { color: #FFFFFF; text-decoration: underline; }
+.kexpo-comp .company-read-more:focus-visible { outline: 2px solid #89A6E9; outline-offset: 4px; }
 </style>
 <div class="kexpo-comp" id="kexpo-comp-directory">
 <div class="k-stripe">
@@ -1746,6 +1771,41 @@ By authentically portraying the culture of K-pop trainees, it delivers a story t
       event.preventDefault();
       closeModal();
     }
+  });
+})();
+</script>
+
+<script>
+/* Only company description presentation is modified. Company/IP data and detail modal are untouched. */
+(function () {
+  'use strict';
+  var root = document.getElementById('kexpo-comp-directory');
+  if (!root) return;
+  var previews = root.querySelectorAll('.company-card .company-preview');
+
+  previews.forEach(function (preview) {
+    // Check actual text height for this card, rather than truncating source text.
+    var lineHeight = parseFloat(window.getComputedStyle(preview).lineHeight);
+    if (!Number.isFinite(lineHeight) || lineHeight <= 0) return;
+    var limit = lineHeight * 5;
+    var fullHeight = preview.scrollHeight;
+    if (fullHeight <= limit + 2) return;
+
+    preview.classList.add('preview-collapsible');
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'company-read-more';
+    btn.textContent = 'Read More ↓';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Read more about ' +
+      (preview.closest('.company-card').querySelector('.company-name')?.textContent.trim() || 'this company'));
+    preview.insertAdjacentElement('afterend', btn);
+
+    btn.addEventListener('click', function () {
+      var expanded = preview.classList.toggle('preview-expanded');
+      btn.textContent = expanded ? 'Read Less ↑' : 'Read More ↓';
+      btn.setAttribute('aria-expanded', String(expanded));
+    });
   });
 })();
 </script>
