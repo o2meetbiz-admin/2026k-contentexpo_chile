@@ -369,7 +369,7 @@
 
 /* 기업별 IP 상세 보기: 원본 색상/버튼 톤 유지, JavaScript 불필요 */
 .kexpo-comp .company-detail-overlay{display:none;position:fixed;inset:0;z-index:99999;background:rgba(3,8,21,.88);padding:28px 18px;overflow-y:auto;align-items:center;justify-content:center}
-.kexpo-comp .company-detail-overlay:target{display:flex}
+.kexpo-comp .company-detail-overlay:target{display:none}
 .kexpo-comp .detail-panel{position:relative;width:min(100%,990px);max-height:calc(100vh - 56px);overflow-y:auto;background:#0E1830;border:1px solid #3A6FD8;box-shadow:0 18px 65px rgba(0,0,0,.55);padding:36px 40px}
 .kexpo-comp .detail-close{position:sticky;top:0;float:right;width:38px;height:38px;border:1px solid #3A6FD8;background:#0A1225;color:#fff;font-size:23px;text-align:center;line-height:35px;z-index:2}
 .kexpo-comp .detail-company{font-size:23px;line-height:1.4;font-weight:700;margin:4px 50px 9px 0}
@@ -401,6 +401,49 @@
 .kexpo-comp .detail-dismiss{position:absolute;inset:0;display:block;z-index:0;cursor:default}
 .kexpo-comp .detail-panel{z-index:1}
 @media(max-width:768px){.kexpo-comp .detail-actions{gap:7px}.kexpo-comp .detail-actions .detail-website{font-size:11px;padding:10px 8px}}
+
+/* 2026-10: 레이아웃 및 팝업 동작만 보정. 기업/IP 정보는 유지 */
+.kexpo-comp .inner,.kexpo-comp .filter-bar{max-width:1200px}
+.kexpo-comp .ip-modal-toggle{position:absolute!important;width:1px;height:1px;opacity:0;pointer-events:none;clip-path:inset(50%)}
+.kexpo-comp #ip-modal-01:checked ~ #kexpo-detail-01{display:flex}
+.kexpo-comp #ip-modal-02:checked ~ #kexpo-detail-02{display:flex}
+.kexpo-comp #ip-modal-03:checked ~ #kexpo-detail-03{display:flex}
+.kexpo-comp #ip-modal-04:checked ~ #kexpo-detail-04{display:flex}
+.kexpo-comp #ip-modal-05:checked ~ #kexpo-detail-05{display:flex}
+.kexpo-comp #ip-modal-06:checked ~ #kexpo-detail-06{display:flex}
+.kexpo-comp #ip-modal-07:checked ~ #kexpo-detail-07{display:flex}
+.kexpo-comp #ip-modal-08:checked ~ #kexpo-detail-08{display:flex}
+.kexpo-comp #ip-modal-09:checked ~ #kexpo-detail-09{display:flex}
+.kexpo-comp #ip-modal-10:checked ~ #kexpo-detail-10{display:flex}
+.kexpo-comp #ip-modal-11:checked ~ #kexpo-detail-11{display:flex}
+.kexpo-comp #ip-modal-12:checked ~ #kexpo-detail-12{display:flex}
+.kexpo-comp #ip-modal-13:checked ~ #kexpo-detail-13{display:flex}
+.kexpo-comp #ip-modal-14:checked ~ #kexpo-detail-14{display:flex}
+.kexpo-comp #ip-modal-15:checked ~ #kexpo-detail-15{display:flex}
+.kexpo-comp #ip-modal-16:checked ~ #kexpo-detail-16{display:flex}
+.kexpo-comp #ip-modal-17:checked ~ #kexpo-detail-17{display:flex}
+.kexpo-comp #ip-modal-18:checked ~ #kexpo-detail-18{display:flex}
+.kexpo-comp #ip-modal-19:checked ~ #kexpo-detail-19{display:flex}
+.kexpo-comp #ip-modal-20:checked ~ #kexpo-detail-20{display:flex}
+.kexpo-comp #ip-modal-21:checked ~ #kexpo-detail-21{display:flex}
+.kexpo-comp #ip-modal-22:checked ~ #kexpo-detail-22{display:flex}
+.kexpo-comp #ip-modal-23:checked ~ #kexpo-detail-23{display:flex}
+.kexpo-comp #ip-modal-24:checked ~ #kexpo-detail-24{display:flex}
+.kexpo-comp #ip-modal-25:checked ~ #kexpo-detail-25{display:flex}
+.kexpo-comp #ip-modal-26:checked ~ #kexpo-detail-26{display:flex}
+.kexpo-comp #ip-modal-27:checked ~ #kexpo-detail-27{display:flex}
+.kexpo-comp #ip-modal-28:checked ~ #kexpo-detail-28{display:flex}
+.kexpo-comp #ip-modal-29:checked ~ #kexpo-detail-29{display:flex}
+.kexpo-comp #ip-modal-30:checked ~ #kexpo-detail-30{display:flex}
+.kexpo-comp .company-btn{cursor:pointer}
+.kexpo-comp .company-detail-overlay{height:100%;height:100dvh;overflow:hidden;padding:clamp(10px,3vh,24px) 16px;align-items:center}
+.kexpo-comp .detail-panel{width:min(100%,1060px);max-height:calc(100% - 8px);max-height:calc(100dvh - 48px);overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.kexpo-comp .detail-dismiss{cursor:pointer}
+.kexpo-comp .detail-close{cursor:pointer}
+.kexpo-comp .detail-ip-image{background:#fff}
+.kexpo-comp .detail-ip-image img{background:#fff}
+@media(max-width:768px){.kexpo-comp .company-detail-overlay{padding:8px}.kexpo-comp .detail-panel{max-height:calc(100dvh - 16px);width:100%}}
+
 </style>
 <div class="kexpo-comp" id="kexpo-comp-directory">
 <div class="k-stripe">
@@ -438,6 +481,36 @@
 <label class="filter-chip" for="cf-broadcast">TV Content<span>12</span></label>
 <label class="filter-chip" for="cf-game">Game<span>7</span></label>
 </div></div>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-01" aria-label="1번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-02" aria-label="2번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-03" aria-label="3번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-04" aria-label="4번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-05" aria-label="5번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-06" aria-label="6번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-07" aria-label="7번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-08" aria-label="8번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-09" aria-label="9번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-10" aria-label="10번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-11" aria-label="11번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-12" aria-label="12번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-13" aria-label="13번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-14" aria-label="14번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-15" aria-label="15번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-16" aria-label="16번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-17" aria-label="17번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-18" aria-label="18번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-19" aria-label="19번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-20" aria-label="20번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-21" aria-label="21번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-22" aria-label="22번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-23" aria-label="23번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-24" aria-label="24번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-25" aria-label="25번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-26" aria-label="26번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-27" aria-label="27번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-28" aria-label="28번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-29" aria-label="29번 상세 팝업 상태"/>
+<input class="ip-modal-toggle" type="checkbox" id="ip-modal-30" aria-label="30번 상세 팝업 상태"/>
 <section class="s-list">
 <div class="inner">
 <section class="company-group" data-group="ANIMATION / CHARACTER" id="grp-animation">
@@ -453,7 +526,7 @@
 </div></div>
 <p class="company-preview">GraFiziX — 재미와 배움, 그리고 지속가능한 미래를 만듭니다 GraFiziX는 배움은 즐거워야 하며, 그 즐거움이 호기심과 창의성, 새로운 발견으로 이어져야 한다고 믿습니다. 20년이 넘는 경험을 바탕으로, 전 세계 어린이와 청소년, 그리고 가족 모두가 함께 즐길 수 있는 혁신적인 교육·엔터테인먼트 콘텐츠를 제작하고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="그래피직스 자세히 보기" class="company-btn" href="#kexpo-detail-01">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="그래피직스 자세히 보기" class="company-btn" for="ip-modal-01">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="ANIMATION / CHARACTER">
 <div class="company-body">
@@ -465,7 +538,7 @@
 </div></div>
 <p class="company-preview">아이스크림스튜디오는 2012년 설립된 애니메이션·콘텐츠 전문기업으로, TV CF와 전시영상 등 하이엔드 영상 제작 경험을 바탕으로 오리지널 IP를 기획·개발·제작하고 있습니다. 대표작 ‘두다다쿵’은 TV시리즈 3개 시즌과 극장판, 공연·공간·라이선싱 사업으로 확장됐으며, 9개 언어·180개 채널·50여 개국에 배급되었습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="아이스크림스튜디오 자세히 보기" class="company-btn" href="#kexpo-detail-02">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="아이스크림스튜디오 자세히 보기" class="company-btn" for="ip-modal-02">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="ANIMATION / CHARACTER">
 <div class="company-body">
@@ -477,7 +550,7 @@
 </div></div>
 <p class="company-preview">2026년 4월 현재 ㈜에피소드컴퍼니는 옛 캐리소프트의 새로운 법인명으로, 코스닥에 상장된 콘텐츠 IP 전문기업입니다. 3D 애니메이션과 실사 영화·드라마를 제작·투자하며 관련 IP 사업을 전개하고 있습니다. 자체 애니메이션 스튜디오를 통해 &lt;캐리와 슈퍼콜라&gt;, &lt;배달의 영웅&gt;을 한국·중국·베트남에 개봉했으며, 현재 &lt;미녀는 괴로워&gt; 등 극장용 애니메이션과 TV·OTT 시리즈를 제작하고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="에피소드컴퍼니 자세히 보기" class="company-btn" href="#kexpo-detail-03">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="에피소드컴퍼니 자세히 보기" class="company-btn" for="ip-modal-03">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="ANIMATION / CHARACTER">
 <div class="company-body">
@@ -489,7 +562,7 @@
 </div></div>
 <p class="company-preview">엑세스코리아는 대한민국의 우수한 문화콘텐츠를 국내뿐 아니라 해외 마켓으로 판로를 확대하여 한류 문화창달에 기여하고자 2019년 설립되었습니다. 캐릭터 라이선싱, 애니메이션 배급, 한류 문화상품 공급 등 한국의 우수한 문화콘텐츠를 지구촌이 즐길 수 있도록 다각적인 접근과 기회를 제공하고 있으며 유수의 해외 콘텐츠도 대한민국에 소개하고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="엑세스코리아 자세히 보기" class="company-btn" href="#kexpo-detail-04">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="엑세스코리아 자세히 보기" class="company-btn" for="ip-modal-04">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="ANIMATION / CHARACTER">
 <div class="company-body">
@@ -501,7 +574,7 @@
 </div></div>
 <p class="company-preview">2009년에 설립된 스튜디오 쉘터는 독창적인 창작 감각과 대담한 개성으로 인정받아온 한국의 애니메이션 스튜디오입니다. 오리지널 스토리텔링을 바탕으로, 상업성과 예술성이 만나는 새로운 창작 영역을 개척하며 명성을 쌓아왔습니다. 빠르게 변화하는 애니메이션 환경 속에서, 우리는 글로벌 관객을 위한 새로운 형태의 애니메이션을 만들어가는 데 기여하고자 합니다.</p>
 </div>
-<div class="company-footer"><a aria-label="주식회사 스튜디오쉘터 자세히 보기" class="company-btn" href="#kexpo-detail-05">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="주식회사 스튜디오쉘터 자세히 보기" class="company-btn" for="ip-modal-05">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="ANIMATION / CHARACTER">
 <div class="company-body">
@@ -513,7 +586,7 @@
 </div></div>
 <p class="company-preview">귀여움이 세상을 구한다! 마음에 미소가 느껴지는 감성적인 캐릭터, 일상에 즐거움을 주는 감동적인 콘텐츠를 통해 세상 모든이에게 행복한 감정을 전파하는 것이 큐티즈가 추구하는 가치이자 목표입니다.</p>
 </div>
-<div class="company-footer"><a aria-label="큐티즈(Qtizz) 주식회사 자세히 보기" class="company-btn" href="#kexpo-detail-06">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="큐티즈(Qtizz) 주식회사 자세히 보기" class="company-btn" for="ip-modal-06">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="ANIMATION / CHARACTER">
 <div class="company-body">
@@ -525,7 +598,7 @@
 </div></div>
 <p class="company-preview">이모션웨이브는 문화예술과 첨단 기술의 경계를 허물며 글로벌 시장을 선도하는 AX(AI 전환) 전문 기업입니다. AI 에이전트와 악기 제조 기술을 결합한 독창적인 피지컬 AI 기술력을 바탕으로 클래식 및 대중음악 산업의 AX 혁신을 주도하고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="(주)이모션웨이브 자세히 보기" class="company-btn" href="#kexpo-detail-07">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="(주)이모션웨이브 자세히 보기" class="company-btn" for="ip-modal-07">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="ANIMATION / CHARACTER">
 <div class="company-body">
@@ -537,7 +610,7 @@
 </div></div>
 <p class="company-preview">오로라월드㈜는 1981년 설립된 글로벌 캐릭터 및 플러시 전문 기업으로, 40여 년간 축적한 디자인 경쟁력과 제조·유통 역량을 바탕으로 전 세계 80여 개국에 제품과 브랜드를 선보이고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="오로라월드 자세히 보기" class="company-btn" href="#kexpo-detail-08">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="오로라월드 자세히 보기" class="company-btn" for="ip-modal-08">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="ANIMATION / CHARACTER">
 <div class="company-body">
@@ -549,7 +622,7 @@
 </div></div>
 <p class="company-preview">달빵크리에이티브는 한국의 역사·문화·전통을 기반으로 독창적인 캐릭터 IP와 체험형 콘텐츠를 개발하는 문화콘텐츠 기업입니다. 조선시대 과학기술과 문화유산을 기반으로 한 실감체험전시 &lt;하늘을 읽고 쓰다, 조선의 시간&gt;을 개발하고 있으며, 조선시대 천문관측기구 ‘옥루’와 관련된 전통 설화와 문헌을 바탕으로 선녀, 십이지신, 사방신(청룡·백호·주작·현무) 등 한국 전통 캐릭터 IP를 구현하고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="주식회사 달빵크리에이티브 자세히 보기" class="company-btn" href="#kexpo-detail-09">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="주식회사 달빵크리에이티브 자세히 보기" class="company-btn" for="ip-modal-09">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="ANIMATION / CHARACTER">
 <div class="company-body">
@@ -561,7 +634,7 @@
 </div></div>
 <p class="company-preview">주식회사 픽셀플레넷은 20년 이상의 업력을 보유한 대한민국의 선도적인 3D CGI 애니메이션 스튜디오입니다. 기획 및 캐릭터 디자인부터 고해상도 3D 애니메이션 제작, 후반 작업에 이르기까지 전 공정을 아우르는 원스톱 제작 파이프라인을 갖추고 있습니다. ■주요 포트폴리오 소피루비', '티티체리', '제트레인저', '독도수비대 강치' 등 대중성과 작품성을 고루 갖춘 IP를 다수 제작한 경험이 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="(주)픽셀플레넷 자세히 보기" class="company-btn" href="#kexpo-detail-10">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="(주)픽셀플레넷 자세히 보기" class="company-btn" for="ip-modal-10">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="ANIMATION / CHARACTER">
 <div class="company-body">
@@ -573,7 +646,7 @@
 </div></div>
 <p class="company-preview">(주)루몽스튜디오(Rumong Studio)는 생성형 AI 기술을 기반으로 캐릭터 IP를 기획·제작하고 이를 글로벌 시장으로 확장하는 AI 콘텐츠·엔터테인먼트 전문 기업입니다. 하나의 원천 IP를 음악, 게임, 숏폼 드라마, 만화책 등 다양한 미디어로 신속히 변환하는 독자적인 OSMU 시스템을 통해 다차원적 엔터테인먼트 경험을 선사합니다. 주요 IP인 ‘펠린(FÉLIN)’은 ‘고양이+버추얼 아이돌+모에화’를 결합한 5인조 K-POP 버추얼 아이돌입니다.</p>
 </div>
-<div class="company-footer"><a aria-label="(주)루몽스튜디오 자세히 보기" class="company-btn" href="#kexpo-detail-11">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="(주)루몽스튜디오 자세히 보기" class="company-btn" for="ip-modal-11">자세히 보기</label></div>
 </article>
 </div>
 </section>
@@ -590,7 +663,7 @@
 </div></div>
 <p class="company-preview">(주)난센스는 ‘말도 안될 거 같은데, 재미있는 콘텐츠’를 기획하기 위해 21년 6월 설립된 ‘예능 포맷 전문 기획사’입니다. (주)난센스는 기존의 완성된 예능 방송 프로그램을 국내외 시장에 판매하는 방식이 아닌, 기획안, 포맷 바이블, 트레일러로 구성된 포맷(format)패키지를 사전 제작, 이를 온라인/모바일 플랫폼을 통해 전세계에 판매하여 ‘예능 포맷’에 대한 다양한 라이선스 수익을 창출하는 ‘IP 기반’ 포맷 기획 제작사입니다.</p>
 </div>
-<div class="company-footer"><a aria-label="(주)난센스 자세히 보기" class="company-btn" href="#kexpo-detail-12">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="(주)난센스 자세히 보기" class="company-btn" for="ip-modal-12">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="TV Content">
 <div class="company-body">
@@ -602,7 +675,7 @@
 </div></div>
 <p class="company-preview">CJ ENM은 그 답을 찾기 위해 1995년부터 끝없는 여정을 시작했습니다. 놓쳐서는 안 될 드라마, 시상식을 휩쓰는 영화, 매일 챙겨 보고 싶은 리얼리티 프로그램 등을 제작하며 독창적인 영역을 개척해온 CJ ENM은 차세대 K-팝스타를 발굴하고, 새로운 돌풍을 일으킬 애니메이션과 미국의 브로드웨이와 영국의 웨스트엔드, 다른 아시아 지역을 포함한 세계 무대에 선보일 수준 높은 뮤지컬을 제작하여 그 무대를 점점 더 넓히고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="(주)씨제이이엔엠 자세히 보기" class="company-btn" href="#kexpo-detail-13">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="(주)씨제이이엔엠 자세히 보기" class="company-btn" for="ip-modal-13">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="TV Content">
 <div class="company-body">
@@ -614,7 +687,7 @@
 </div></div>
 <p class="company-preview">웨스트월드스토리는 글로벌 콘텐츠 그룹 웨스트월드의 제작사로, 드라마·영화 등 오리지널 IP를 기획·개발·제작하는 프리미엄 스튜디오입니다. 드라마 &lt;페이스미&gt;, &lt;남이 될 수 있을까&gt;, &lt;트레이서&gt;를 비롯해 영화 &lt;HOPE&gt;를 제작하며 제작 역량을 확장해왔습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="(주)웨스트월드스토리 자세히 보기" class="company-btn" href="#kexpo-detail-14">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="(주)웨스트월드스토리 자세히 보기" class="company-btn" for="ip-modal-14">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="TV Content">
 <div class="company-body">
@@ -626,7 +699,7 @@
 </div></div>
 <p class="company-preview">EL TV는 2005년 설립된 콘텐츠 제작사로, 음식을 통해 문화와 사람, 그리고 정체성의 이야기를 전하는 콘텐츠를 제작해 왔습니다. 《K-Food 랩소디》, 《맛의 나라》 시리즈, 《철학자의 요리》, 《공양간의 셰프들》, BBC Studios와 공동 제작한 《Ed &amp; Ryu: Mad About Seafood》 등을 통해 음식을 문화·역사·철학을 이해하는 창으로 풀어내는 독창적인 스토리텔링을 선보이고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="(주)이엘티비 자세히 보기" class="company-btn" href="#kexpo-detail-15">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="(주)이엘티비 자세히 보기" class="company-btn" for="ip-modal-15">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="TV Content">
 <div class="company-body">
@@ -638,7 +711,7 @@
 </div></div>
 <p class="company-preview">"당신이 곧 콘텐츠입니다." 심스토리는 사람의 마음에서 출발하는, 따뜻한 이야기를 만듭니다. 20년간 TV 예능과 교양 프로그램을 제작하며 쌓아온 경험을 바탕으로 드라마와 유튜브 콘텐츠 제작, 아티스트 매니지먼트, 콘텐츠 커머스 등 다양한 콘텐츠 비즈니스를 전개하고 있습니다. 당신의 이야기가 시작될 곳, 심스토리에서 함께하세요. 심스토리(SIM STORY)의 'SIM'은 연필의 획을 뜻하는 동시에, 한국어로 '마음'을 의미합니다.</p>
 </div>
-<div class="company-footer"><a aria-label="심스토리(주) 자세히 보기" class="company-btn" href="#kexpo-detail-16">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="심스토리(주) 자세히 보기" class="company-btn" for="ip-modal-16">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="TV Content">
 <div class="company-body">
@@ -650,7 +723,7 @@
 </div></div>
 <p class="company-preview">디자인 에이전시에서 AI 하이브리드 시네마의 선두주자로, 애드히시브(ADHESIVE) ㈜애드히시브는 세계 3대 디자인 어워드를 석권한 비주얼 전략 역량을 바탕으로, 2016년부터 오리지널 IP 중심의 영상 콘텐츠를 제작해 왔습니다. 현재는 AI를 활용한 장르 영화 개발과 실사 촬영에 생성형 AI를 결합한 AI 하이브리드 제작 파이프라인을 구축하며 이 분야를 선도하고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="애드히시브 자세히 보기" class="company-btn" href="#kexpo-detail-17">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="애드히시브 자세히 보기" class="company-btn" for="ip-modal-17">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="TV Content">
 <div class="company-body">
@@ -662,7 +735,7 @@
 </div></div>
 <p class="company-preview">윈디아는 2020년 9월 설립된 오리지널 웹툰 IP 개발·제작 기업입니다. 2026년부터 국내 제작사 및 감독들과의 협력을 통해 영화·드라마 제작으로 사업을 확장하고, 다양한 형식으로 각색할 수 있는 이야기를 개발하고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="윈디아주식회사 자세히 보기" class="company-btn" href="#kexpo-detail-18">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="윈디아주식회사 자세히 보기" class="company-btn" for="ip-modal-18">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="TV Content">
 <div class="company-body">
@@ -674,7 +747,7 @@
 </div></div>
 <p class="company-preview">주식회사 노바스퀘어는 숏폼 드라마 전용 OTT 플랫폼 에브리릴스(Everyreels)를 개발·운영하는 콘텐츠 테크 기업입니다. 콘텐츠와 플랫폼 전문가들이 모여 2040 여성 타깃의 몰입감 높은 숏드라마 서비스를 제공하고 있습니다. 에브리릴스는 합리적인 이용료와 다양한 결제 방식, 광고 및 AI 기반 가상 PPL 기술을 통해 새로운 수익모델을 구축하고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="주식회사 노바스퀘어 자세히 보기" class="company-btn" href="#kexpo-detail-19">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="주식회사 노바스퀘어 자세히 보기" class="company-btn" for="ip-modal-19">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="TV Content">
 <div class="company-body">
@@ -686,7 +759,7 @@
 </div></div>
 <p class="company-preview">위매드(WEMAD)는 “WE MAKE DREAM”, “WE MAKE DRAMA”를 지향하며, 드라마 콘텐츠 제작을 주요 사업으로 하는 종합엔터테인먼트 회사입니다. 위매드(WEMAD)는 15년 이상의 콘텐츠 전문가들이 모인 집단으로 문화 콘텐츠 개발에 체계적인 시스템 지원으로 창조적인 대중 문화 형성에 기여하고자 하며, 이를 지속적으로 양성해 최상의 서비스를 제공하기 위하여 2019년 6월에 설립되었습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="주식회사 위매드 자세히 보기" class="company-btn" href="#kexpo-detail-20">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="주식회사 위매드 자세히 보기" class="company-btn" for="ip-modal-20">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="TV Content">
 <div class="company-body">
@@ -698,7 +771,7 @@
 </div></div>
 <p class="company-preview">피에이치이엔엠(PH E&amp;M)은 독창적인 아이디어를 다양한 콘텐츠와 사업 기회로 확장하는 글로벌 콘텐츠·엔터테인먼트 기업입니다. 원천 IP 발굴·개발부터 드라마, 영화, 방송 프로그램, 공연, K-POP, 다큐멘터리, 오디오 콘텐츠 제작과 글로벌 유통·라이선싱·커머스·AI 기반 IP 관리까지 통합적인 IP 가치사슬을 구축하고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="주식회사 피에이치이엔엠 자세히 보기" class="company-btn" href="#kexpo-detail-21">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="주식회사 피에이치이엔엠 자세히 보기" class="company-btn" for="ip-modal-21">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="TV Content">
 <div class="company-body">
@@ -710,7 +783,7 @@
 </div></div>
 <p class="company-preview">(주)한터글로벌은 글로벌 K-Pop 음악차트인 ‘한터차트’와 공식 K-Pop 커머스 플랫폼 ‘후즈팬스토어’를 운영하는 K-Pop 빅데이터 및 미디어·커머스 기업입니다. 실시간 음반 판매량 집계 및 빅데이터 분석 기술력을 바탕으로 K-Pop 아티스트의 글로벌 오피셜 팝업스토어 및 음반·MD·독점 상품을 공급하며 글로벌 K-Pop 생태계를 이끌어가고 있습니다. 또한, K-Pop IP의 가치를 극대화하는 미디어·콘텐츠 사업을 확장하고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="주식회사 한터글로벌 자세히 보기" class="company-btn" href="#kexpo-detail-22">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="주식회사 한터글로벌 자세히 보기" class="company-btn" for="ip-modal-22">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="TV Content">
 <div class="company-body">
@@ -722,7 +795,7 @@
 </div></div>
 <p class="company-preview">NewUnivers는 AI 기반 세로형 콘텐츠 기술을 선도하는 글로벌 기업입니다. K-숏폼 드라마를 출발점으로, 창작자와 IP를 글로벌 스트리밍 시장에 연결하는 확장형 AI 콘텐츠 생태계를 구축하고 있으며, 이를 바탕으로 다양한 콘텐츠 영역과 제작 솔루션으로 빠르게 확장하고 있습니다. 2024년 설립 이후, 20편 이상의 숏폼 드라마를 제작하고 글로벌 Top 10 플랫폼에 성공적으로 론칭했습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="주식회사뉴유니버스 자세히 보기" class="company-btn" href="#kexpo-detail-23">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="주식회사뉴유니버스 자세히 보기" class="company-btn" for="ip-modal-23">자세히 보기</label></div>
 </article>
 </div>
 </section>
@@ -739,7 +812,7 @@
 </div></div>
 <p class="company-preview">㈜데브언리밋은 AI 모션 인식과 이미지 생성 기술을 기반으로 디지털과 오프라인 공간을 연결하는 인터랙티브 엔터테인먼트를 개발합니다. 대표 오프라인 아케이드 브랜드 ‘춤춤(CHOOMCHOOM)’은 춤춤 댄스, 춤춤 네컷, 춤춤 애니메이트로 구성됩니다. 게임·사진·AI 영상이 결합된 참여형 경험을 행사, 쇼핑몰, FEC, 관광시설, K-POP 팬 이벤트에 제공해 이용자의 참여와 콘텐츠 공유를 유도합니다.</p>
 </div>
-<div class="company-footer"><a aria-label="(주)데브언리밋 자세히 보기" class="company-btn" href="#kexpo-detail-24">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="(주)데브언리밋 자세히 보기" class="company-btn" for="ip-modal-24">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="Game">
 <div class="company-body">
@@ -751,7 +824,7 @@
 </div></div>
 <p class="company-preview">1997년에 설립하여 창립 30주년을 앞두고 있는 (주)엘엔케이로직코리아는 대한민국 게임 업계의 1세대 개발사답게 Stand Alone PC 게임, 온라인 PC 게임, 그리고 모바일 게임까지 영역을 넓히며 꾸준히 활동해왔습니다. ‘붉은보석’, ‘로도스도전기’, ‘거울전쟁’ 총 3종의 PC 온라인 게임을 런칭, 글로벌 서비스를 진행한 바 있으며, 모바일 게임 ‘붉은보석2’를 한국과 일본 시장에 성공적으로 런칭 하였습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="(주)엘엔케이로직코리아 자세히 보기" class="company-btn" href="#kexpo-detail-25">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="(주)엘엔케이로직코리아 자세히 보기" class="company-btn" for="ip-modal-25">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="Game">
 <div class="company-body">
@@ -763,7 +836,7 @@
 </div></div>
 <p class="company-preview">게임을 통해 힐링을 전하고자 하는 열정적인 게임 개발팀입니다. 진정으로 원하는 것을 만들고자 하는 애정으로 뭉쳐 의미 있으면서도 재미있는 게임을 만드는 과정 그 자체를 즐깁니다. 열정과 도전 정신을 바탕으로, 세상에 긍정적인 영향을 미치는 감성 풍부한 콘텐츠를 창조합니다. 게임이라는 디지털 문화 콘텐츠를 통해 플레이어들에게 새로운 경험과 따뜻한 즐거움을 선사합니다. 잠시 멈춰 숨을 고를 수 있는 여유를 제공하는 힐링 콘텐츠를 만들기 위해 노력합니다.</p>
 </div>
-<div class="company-footer"><a aria-label="가원글로벌 자세히 보기" class="company-btn" href="#kexpo-detail-26">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="가원글로벌 자세히 보기" class="company-btn" for="ip-modal-26">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="Game">
 <div class="company-body">
@@ -775,7 +848,7 @@
 </div></div>
 <p class="company-preview">슈가웍스는 기존 MOBA 게임보다 빠르고 역동적이며 더 폭넓은 이용자가 즐길 수 있는 ‘MOBA Lite’를 통해 차세대 e스포츠를 개발하고 있습니다. 경기 시간을 절반으로 단축하고 전장 전략을 새롭게 구성해 일반 이용자의 진입 장벽을 낮추면서도 e스포츠의 경쟁적 깊이를 유지하고자 합니다.</p>
 </div>
-<div class="company-footer"><a aria-label="슈가웍스 자세히 보기" class="company-btn" href="#kexpo-detail-27">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="슈가웍스 자세히 보기" class="company-btn" for="ip-modal-27">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="Game">
 <div class="company-body">
@@ -787,7 +860,7 @@
 </div></div>
 <p class="company-preview">스카이워크는 2019년 설립된 게임 개발·퍼블리싱 기업입니다. 최고의 게임으로 전 세계 이용자에게 최고의 경험을 선사하는 것을 목표로, 장르별 전문성을 높이기 위해 5개의 독립 스튜디오를 운영하며 다양한 장르의 게임을 최고의 퀄리티로 선보일 준비를 갖추고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="스카이워크 자세히 보기" class="company-btn" href="#kexpo-detail-28">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="스카이워크 자세히 보기" class="company-btn" for="ip-modal-28">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="Game">
 <div class="company-body">
@@ -799,7 +872,7 @@
 </div></div>
 <p class="company-preview">테이크원컴퍼니는 K-POP 아티스트 IP를 중심으로 콘텐츠 비즈니스를 전개해온 회사입니다. 테이크원은 ‘게임’을 통해 K-POP 콘텐츠가 팬덤과의 관계 속에서 지속적으로 소비될 수 있는 구조를 구축해왔습니다. 글로벌 서비스 운영 경험과 팬덤 데이터를 기반으로, K-POP 콘텐츠의 몰입도와 지속성을 높여왔습니다. 이러한 경험을 바탕으로, 테이크원은 K-POP 기반 게임과 플랫폼을 핵심 사업 축으로 삼아 콘텐츠 비즈니스를 확장하고 있습니다.</p>
 </div>
-<div class="company-footer"><a aria-label="주식회사 테이크원컴퍼니 자세히 보기" class="company-btn" href="#kexpo-detail-29">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="주식회사 테이크원컴퍼니 자세히 보기" class="company-btn" for="ip-modal-29">자세히 보기</label></div>
 </article>
 <article class="company-card" data-primary="Game">
 <div class="company-body">
@@ -811,7 +884,7 @@
 </div></div>
 <p class="company-preview">실내 체육 활동 기반 학습플랫폼 전문 개발 기업 동작인식 형태의 KPOP Dance 게임기 개발 기업입니다.</p>
 </div>
-<div class="company-footer"><a aria-label="(주)큐랩 자세히 보기" class="company-btn" href="#kexpo-detail-30">자세히 보기</a></div>
+<div class="company-footer"><label aria-label="(주)큐랩 자세히 보기" class="company-btn" for="ip-modal-30">자세히 보기</label></div>
 </article>
 </div>
 </section>
@@ -826,8 +899,8 @@
 </div>
 <div class="s3">
 <br/>
-</div></div><section aria-label="그래피직스 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-01"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</div></div><section aria-label="그래피직스 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-01"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-01"></label>
+<div class="detail-panel"><div class="detail-actions"><label aria-label="닫기" class="detail-close" for="ip-modal-01" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">그래피직스</h2>
 <div class="detail-separator"></div>
@@ -857,8 +930,8 @@ Facial AR 기술을 활용하여 제작되는 교육 버라이어티 프로그�
 Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하여 TV, 디지털 플랫폼, 라이브 스트리밍, 인터랙티브 교육 등 다양한 환경으로 확장 가능한 차세대 에듀테인먼트 브랜드를 지향합니다.</p></div>
 </article>
 </div>
-</section><section aria-label="아이스크림스튜디오 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-02"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="아이스크림스튜디오 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-02"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-02"></label>
+<div class="detail-panel"><div class="detail-actions"><label aria-label="닫기" class="detail-close" for="ip-modal-02" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">아이스크림스튜디오</h2>
 <div class="detail-separator"></div>
@@ -875,8 +948,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
 <div><h3 class="detail-ip-title">QQu-Ent</h3><div class="detail-ip-meta"><span><strong>TYPE</strong>Animation</span><span><strong>TARGET AGE</strong>Ages15+</span></div><p class="detail-ip-desc">〈뀨엔터테인먼트(QQu Entertainment)〉는 K-POP 아이돌 서바이벌을 소재로 한 세로형 숏폼 코미디 애니메이션(2분×50화)입니다. 1990년대 반짝 스타에서 기획사 대표가 된 '김핑크'와 옥탑방 연습생들이 데뷔를 향해 고군분투하는 이야기로, 15세 이상 하이틴·청년층을 겨냥했습니다. 훈훈한 성공담 대신 현실적인 웃음과 성장을 담았고 인스타그램·틱톡·유튜브 숏츠로 확장 가능한 캐릭터 디자인을 완성했습니다. 2026년 7월 OTT 플렛폼 KITZ에 방영을 시작으로 국내외 숏폼 OTT 플렛폼 배급을 진행하고 있습니다.</p></div>
 </article>
 </div>
-</section><section aria-label="에피소드컴퍼니 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-03"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://episodecompany.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="에피소드컴퍼니 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-03"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-03"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://episodecompany.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-03" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">에피소드컴퍼니</h2>
 <div class="detail-separator"></div>
@@ -898,8 +971,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
 <div><h3 class="detail-ip-title">Carrie and Super Kola: The School</h3><div class="detail-ip-meta"><span><strong>TYPE</strong>Animated TV series</span><span><strong>TARGET AGE</strong>Ages 3-7</span></div><p class="detail-ip-desc">11살 캐리와 친구들 그리고 우주에서 온 콜라와 배터리로봇들과의 아무에게도 말못할 비밀이 넘쳐나는 일상생활. 외계인 콜라에게 지구의 모든 것이 새롭고 신기하다. 가족과 친구들의 사랑과 우정, 존경, 신뢰, 감사 등 인간의 마음이란 알쏭달쏭하지만 무척 흥미롭다. 겉보기에는 평범해 보이는 일상 속에서 캐리와 슈퍼콜라는 매일 흥미진진한 일들을 경험하고, 인간의 마음과 사회적 가치를 이해하며 성숙해진다.</p></div>
 </article>
 </div>
-</section><section aria-label="엑세스코리아 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-04"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.accesskorea.co.kr" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="엑세스코리아 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-04"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-04"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.accesskorea.co.kr" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-04" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">엑세스코리아</h2>
 <div class="detail-separator"></div>
@@ -914,8 +987,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
 <div><h3 class="detail-ip-title">DOKKAEBI CAPTURE</h3><div class="detail-ip-meta"><span><strong>TYPE</strong>TV Animation</span><span><strong>TARGET AGE</strong>Ages 6-8</span></div><p class="detail-ip-desc">Garam과 Bongbal을 비롯한 귀여운 도깨비 사냥꾼들이 위험에 처한 사람을 돕고 도깨비의 영혼과 마법을 찾아 떠납니다. 나무꾼을 돕고 위기의 마을을 구하는 과정에서 보물이 쏟아지는 신비한 도깨비 주머니를 둘러싼 소동과 따뜻한 교훈을 전합니다.</p></div>
 </article>
 </div>
-</section><section aria-label="주식회사 스튜디오쉘터 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-05"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://studioshelter.co.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="주식회사 스튜디오쉘터 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-05"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-05"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://studioshelter.co.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-05" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">주식회사 스튜디오쉘터</h2>
 <div class="detail-separator"></div>
@@ -936,8 +1009,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
  어느 날, 미스터리한 카페에서 경고 문구를 무시하고 500년간 봉인된 항아리를 산산조각 내버린 유연. 그 순간 오랫동안 억눌려 있던 영혼들이 현대 도시로 쏟아져 나온다. 예측불허의 퇴마 능력이 깨어나기 시작하면서, 유연은 자신이 저지른 혼란을 수습해야 하는 처지에 놓이고— 꽃미남 바리스타로 위장한 채 세상에 숨어 살던 천계의 미남들과 손을 잡게 된다. 카페 알바나 하러 왔는데, 세상을 구해야한다고?</p></div>
 </article>
 </div>
-</section><section aria-label="큐티즈(Qtizz) 주식회사 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-06"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.qtizz.co.kr" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="큐티즈(Qtizz) 주식회사 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-06"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-06"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.qtizz.co.kr" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-06" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">큐티즈(Qtizz) 주식회사</h2>
 <div class="detail-separator"></div>
@@ -973,8 +1046,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
 러브(핑크) - 사랑스럽고 친절한 꼬마유니콘</p></div>
 </article>
 </div>
-</section><section aria-label="(주)이모션웨이브 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-07"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.emotionwave.com" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="(주)이모션웨이브 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-07"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-07"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.emotionwave.com" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-07" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">(주)이모션웨이브</h2>
 <div class="detail-separator"></div>
@@ -983,8 +1056,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
 <div><h3 class="detail-ip-title">INFIDITY</h3><div class="detail-ip-meta"><span><strong>TYPE</strong>AI Character Interaction Social Platform (Interactive Media / Game)</span><span><strong>TARGET AGE</strong>Ages 20+</span></div><p class="detail-ip-desc">인피디티(INFIDITY)'는 AI 이미지·영상 생성 기술, 노드 기반 시나리오 창작 툴, LLM 파라미터 튜닝 기반의 AI 페르소나 엔진을 하나의 파이프라인으로 통합한 혁신적인 AI 캐릭터 창작 및 인터랙션 플랫폼입니다. 기존의 단조로운 일러스트 만화풍 서비스들과 차별화하여, 독보적인 LoRA 파인튜닝 기술을 통해 고품질의 '실사형 AI 캐릭터 및 일관성 있는 영상 생성'을 핵심 서비스인 소셜 앱 '탱글(Tangle)'로 완벽히 구현했습니다. 유저는 단순한 텍스트 채팅을 넘어, 캐릭터 고유의 말투와 세계관이 반영된 자연어 대화, AI 실시간 영상 제작·공유, 사용자 선택에 따라 결말이 달라지는 몰입형 분기 시나리오 모드 등 멀티미디어적 '관계 경험 전체'를 매끄럽게 체험할 수 있습니다. 글로벌 크리에이터 이코노미와 AI 컴패니언 시장을 선도하는 고몰입형 차세대 콘텐츠 생태계입니다.</p></div>
 </article>
 </div>
-</section><section aria-label="오로라월드 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-08"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.auroraworld.com" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="오로라월드 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-08"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-08"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.auroraworld.com" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-08" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">오로라월드</h2>
 <div class="detail-separator"></div>
@@ -997,8 +1070,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
 <div><h3 class="detail-ip-title">YooHoo to the Rescue</h3><div class="detail-ip-meta"><span><strong>TYPE</strong>Animated Series</span><span><strong>TARGET AGE</strong>Ages 3-5</span></div><p class="detail-ip-desc">유후와 친구들 (YooHoo &amp; Friends)​은 전 세계 희귀·멸종위기 동물을 모티브로 한 오로라월드의 대표 캐릭터 IP입니다. 애니메이션 &lt;유후와 친구들: 출동! 구조대 (YooHoo to the Rescue)&gt;는 넷플릭스 오리지널 시리즈로 190개국 20개 언어로 스트리밍중입니다. 유후와 친구들이 생명의 나무에서 받은 마법의 씨앗과 함께 세계 곳곳을 여행하며 도움이 필요한 동물들을 구하고 자연의 균형을 회복하는 모험을 펼칩니다. 우정, 협동, 배려, 환경 보호의 가치를 담은 스토리를 통해 어린이들에게 긍정적인 메시지를 전하며, 완구를 비롯해 출판, 문구, 의류, 게임, 라이프스타일 등 다양한 분야로 라이선스 사업을 확장하고 있는 글로벌 캐릭터 IP입니다.</p></div>
 </article>
 </div>
-</section><section aria-label="주식회사 달빵크리에이티브 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-09"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.dalbbang.pro" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="주식회사 달빵크리에이티브 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-09"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-09"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.dalbbang.pro" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-09" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">주식회사 달빵크리에이티브</h2>
 <div class="detail-separator"></div>
@@ -1025,8 +1098,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
 주요 타겟 : 20~40대 (전통주, 미식, 라이프스타일), 관광객, 요리 클래스, 문화 체험</p></div>
 </article>
 </div>
-</section><section aria-label="(주)픽셀플레넷 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-10"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.youtube.com/@dokdo-sealion" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="(주)픽셀플레넷 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-10"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-10"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.youtube.com/@dokdo-sealion" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-10" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">(주)픽셀플레넷</h2>
 <div class="detail-separator"></div>
@@ -1043,8 +1116,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
 진정한 마법의 힘과 해양생태의 소중함을 찾아가는 여정이 펼쳐진다!</p></div>
 </article>
 </div>
-</section><section aria-label="(주)루몽스튜디오 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-11"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.rumong.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="(주)루몽스튜디오 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-11"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-11"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.rumong.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-11" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">(주)루몽스튜디오</h2>
 <div class="detail-separator"></div>
@@ -1057,8 +1130,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
 <div><h3 class="detail-ip-title">FÉLIN (Cat Ver.)</h3><div class="detail-ip-meta"><span><strong>TYPE</strong>Character IP</span><span><strong>TARGET AGE</strong>All Ages</span></div><p class="detail-ip-desc">실제 고양이 품종의 외모와 성격을 바탕으로 만든 따뜻한 캐릭터 IP입니다. 다섯 캐릭터 각각에 털색, 눈동자, 체형, 성격 등 품종별 특징을 반영했으며, 일상 만화와 2D·3D 숏폼 애니메이션, 생활용품으로 확장할 수 있습니다.</p></div>
 </article>
 </div>
-</section><section aria-label="(주)난센스 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-12"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="(주)난센스 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-12"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-12"></label>
+<div class="detail-panel"><div class="detail-actions"><label aria-label="닫기" class="detail-close" for="ip-modal-12" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">(주)난센스</h2>
 <div class="detail-separator"></div>
@@ -1082,8 +1155,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
  셀럽이 공개 된 후에는 셀럽의 요즘 관심사, 취미, 아끼는 물건을 보면서 온라인상으로 토크를 나눈다. 나와 같은 직업, 취미, 목표를 가진 셀럽은 과연 책상 위에 무엇으로 채워져 있을까 , 그리고 무슨 생각을 하고 있을까? 데스크탑 리뷰를 통해 정보를 공유하는 ‘데스크탑 리뷰 프로그램’ !</p></div>
 </article>
 </div>
-</section><section aria-label="(주)씨제이이엔엠 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-13"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="http://watch.cjenm.com" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="(주)씨제이이엔엠 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-13"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-13"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="http://watch.cjenm.com" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-13" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">(주)씨제이이엔엠</h2>
 <div class="detail-separator"></div>
@@ -1101,8 +1174,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
 그런 그들 앞에 '도깨비 신부'라 주장하는 '죽었어야 할 운명'의 소녀가 나타나며 벌어지는 신비로운 낭만 설화</p></div>
 </article>
 </div>
-</section><section aria-label="(주)웨스트월드스토리 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-14"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.westworld.co.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="(주)웨스트월드스토리 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-14"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-14"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.westworld.co.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-14" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">(주)웨스트월드스토리</h2>
 <div class="detail-separator"></div>
@@ -1119,8 +1192,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
 <div><h3 class="detail-ip-title">My Daughter's Bias Loves Me</h3><div class="detail-ip-meta"><span><strong>TYPE</strong>Drama</span><span><strong>TARGET AGE</strong>Ages 20+</span></div><p class="detail-ip-desc">&lt;내 딸의 최애가 나한테 빠졌다&gt;는 웨스트월드스토리가 제작 중인 숏폼 로맨스 드라마로, 연내 제작 완료 예정이다. K-POP 소재와 연하남 삼각로맨스 요소를 결합한 작품으로, 딸의 최애 아이돌과 얽히게 된 인물을 중심으로 유쾌하고 설레는 관계 변화를 그린다. 모바일 시청 환경에 최적화된 숏폼 콘텐츠로, 완성 후 글로벌 시청자를 만날 예정이다.</p></div>
 </article>
 </div>
-</section><section aria-label="(주)이엘티비 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-15"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="http://eltv.kr" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="(주)이엘티비 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-15"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-15"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="http://eltv.kr" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-15" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">(주)이엘티비</h2>
 <div class="detail-separator"></div>
@@ -1141,8 +1214,8 @@ Virtual Tutors는 버추얼 프로덕션 기술과 교육 콘텐츠를 결합하
 FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람들의 이야기를 음악으로 재해석하는 글로벌 포맷입니다. 매회 아티스트들은 하나의 음식을 주제로 창작 과정을 거쳐 새로운 '푸드송(Food Song)'을 완성합니다. 음식과 음악, 스토리텔링을 결합한 독창적인 포맷으로 국가별 현지화가 가능하며, 공연·음원·디지털 콘텐츠 등 다양한 IP 확장이 가능한 엔터테인먼트 프로젝트입니다.</p></div>
 </article>
 </div>
-</section><section aria-label="심스토리(주) 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-16"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://simstoryent.co.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="심스토리(주) 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-16"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-16"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://simstoryent.co.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-16" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">심스토리(주)</h2>
 <div class="detail-separator"></div>
@@ -1159,8 +1232,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
 <div><h3 class="detail-ip-title">Ailee Band</h3><div class="detail-ip-meta"><span><strong>TYPE</strong>Entertainment Show</span><span><strong>TARGET AGE</strong>All Ages</span></div><p class="detail-ip-desc">&lt;에일리 밴드&gt;는 대한민국 대표 보컬 에일리가 밴드라는 새로운 도전에 나서는 음악 리얼리티 프로그램이다. 수백 명의 지원자 가운데 드럼, 기타, 베이스, 키보드 등 밴드에 필요한 각 파트에서 활동해온 실력파 뮤지션들과 새로운 가능성을 가진 신예들이 치열한 오디션을 거쳐 한 팀이 된다. 합주와 연습, 공연을 통해 하나의 밴드로 성장하는 과정은 물론, 음악적 완성도를 높이기 위한 노력과 멤버들의 갈등과 화합, 무대 뒤 진솔한 이야기까지 담아낸다. 최종적으로 에일리와 함께 완성된 밴드는 실제 공연 무대에 오르며, 밴드가 만들어지는 모든 과정을 담아낸 성장형 음악 프로젝트다.</p></div>
 </article>
 </div>
-</section><section aria-label="애드히시브 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-17"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.weareadhesive.com" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="애드히시브 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-17"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-17"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.weareadhesive.com" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-17" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">애드히시브</h2>
 <div class="detail-separator"></div>
@@ -1187,8 +1260,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
  ‘스포티넷’의 해외 투자 기회가 찾아오자, &lt;연우&gt;는 고민 끝에 홀로 미국행을 택한다. 남겨진 &lt;용식&gt;과 &lt;수현&gt;은 각자의 길로 흩어진다. 시간이 흐르고, DS그룹에 입사한 &lt;수현&gt;은 유능하지만 어딘가 수상한 팀장 &lt;민주&gt;를 만나게 된다. 회사의 부당한 갑질과 위선에 환멸을 느낀 &lt;민주&gt;는 결국 폭발하고, &lt;용식&gt;, &lt;수현&gt;과 함께 새로운 ‘찌찌’를 창업한다. 하지만 그들 앞에 나타난 건, 상식을 초월한 차원이 다른 ‘광고계의 악마’들. 미친 클라이언트, 말도 안 되는 조건, 그리고 실패하면 바로 끝장인 프로젝트들 속에서 과연 ‘찌찌’ 팀은 절대 악을 넘어 다시 광고계의 레전드로 부활할 수 있을까? 그리고… 연애 세포마저 잠든 이 사무실에 과연 ‘사랑의 봄날’은 찾아올 수 있을까? 더 독하게, 더 웃기게, 더 짜릿하게! 《종합광고대행사 찌찌》, 이제 진짜 시작이다.</p></div>
 </article>
 </div>
-</section><section aria-label="윈디아주식회사 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-18"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="윈디아주식회사 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-18"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-18"></label>
+<div class="detail-panel"><div class="detail-actions"><label aria-label="닫기" class="detail-close" for="ip-modal-18" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">윈디아주식회사</h2>
 <div class="detail-separator"></div>
@@ -1239,8 +1312,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
 윈디아 웹툰 동시 개발</p></div>
 </article>
 </div>
-</section><section aria-label="주식회사 노바스퀘어 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-19"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.everyreels.com" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="주식회사 노바스퀘어 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-19"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-19"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.everyreels.com" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-19" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">주식회사 노바스퀘어</h2>
 <div class="detail-separator"></div>
@@ -1275,8 +1348,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
 2026년 하반기에는 아시아지역까지, 2027년에는 미주까지 서비스 지역을 확대할 예정이다.</p></div>
 </article>
 </div>
-</section><section aria-label="주식회사 위매드 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-20"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.wemadenter.com/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="주식회사 위매드 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-20"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-20"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.wemadenter.com/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-20" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">주식회사 위매드</h2>
 <div class="detail-separator"></div>
@@ -1309,8 +1382,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
 '돈이 곧 권력이었던 시대'를 살아온 기성세대와 새로운 방식으로 시장을 움직이려는 젊은 세대가 충돌하는 과정을 통해, 돈과 권력의 본질, 그리고 인간의 욕망을 밀도 있게 그려낸 작품이다. 긴장감 넘치는 전개와 현실감 있는 금융 범죄, 묵직한 캐릭터 드라마가 어우러진 웰메이드 드라마 누아르를 지향한다.</p></div>
 </article>
 </div>
-</section><section aria-label="주식회사 피에이치이엔엠 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-21"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.phenm.com/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="주식회사 피에이치이엔엠 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-21"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-21"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.phenm.com/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-21" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">주식회사 피에이치이엔엠</h2>
 <div class="detail-separator"></div>
@@ -1334,8 +1407,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
 현실적인 K-POP 산업의 이면과 개성 넘치는 캐릭터들의 이야기를 코믹하게 풀어내며, 아이돌이라는 직업을 넘어 청춘이라면 누구나 공감할 수 있는 도전과 성장의 메시지를 전합니다. 2023년 프랑스 칸 국제시리즈페스티벌(CANNESERIES) 비경쟁 부문에 공식 초청되었으며, 국내외 플랫폼을 통해 글로벌 시청자들에게도 좋은 평가를 받은 작품입니다.</p></div>
 </article>
 </div>
-</section><section aria-label="주식회사 한터글로벌 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-22"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.hanteoglobal.com/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="주식회사 한터글로벌 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-22"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-22"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.hanteoglobal.com/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-22" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">주식회사 한터글로벌</h2>
 <div class="detail-separator"></div>
@@ -1356,8 +1429,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
 <div><h3 class="detail-ip-title">Sometoon 2021</h3><div class="detail-ip-meta"><span><strong>TYPE</strong>Web Drama</span><span><strong>TARGET AGE</strong>Ages 15+</span></div><p class="detail-ip-desc">인기 웹툰 '썸툰'을 원작으로 한 설렘 가득한 청춘 로맨스 웹드라마입니다. 시청자들의 실제 사연을 바탕으로 구성되어 1020 세대의 깊은 공감을 자아내며, K-POP 아티스트들이 출연하여 신선하고 청량한 매력을 선사합니다. 누구나 한 번쯤 꿈꿔본 풋풋한 첫사랑과 짝사랑, 설레는 로맨스의 순간들을 아기자기한 연출과 따뜻한 감성으로 담아낸 숏폼 로맨스 콘텐츠입니다.</p></div>
 </article>
 </div>
-</section><section aria-label="주식회사뉴유니버스 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-23"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.youtube.com/@NewUnivers1" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="주식회사뉴유니버스 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-23"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-23"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.youtube.com/@NewUnivers1" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-23" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">주식회사뉴유니버스</h2>
 <div class="detail-separator"></div>
@@ -1394,8 +1467,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
 로그라인	닿는 것마다 생명을 불어넣는 생명의 손 — 그러나 인간만은 그 힘을 견디지 못한다. 어릴 적부터 붕대로 감은 채 누구와도 닿지 못하고 살아온 소년이, 저주받은 폐궁에 갇힌 날. 소년의 입맞춤에 백 년의 봉인이 깨어난다. 그 손길을 온전히 받아낼 수 있는 유일한 존재, 세 신수의 순애 쟁탈전!</p></div>
 </article>
 </div>
-</section><section aria-label="(주)데브언리밋 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-24"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://devunlimit.com" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="(주)데브언리밋 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-24"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-24"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://devunlimit.com" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-24" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">(주)데브언리밋</h2>
 <div class="detail-separator"></div>
@@ -1412,8 +1485,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
 <div><h3 class="detail-ip-title">CHOOMCHOOM ANIMATE</h3><div class="detail-ip-meta"><span><strong>TYPE</strong>AI Dance Video Experience</span><span><strong>TARGET AGE</strong>Ages 12+</span></div><p class="detail-ip-desc">춤춤 애니메이트는 춤춤의 AI 댄스 영상 콘텐츠입니다. 참가자의 사진 또는 이미지를 활용해 자신이 K-POP 안무를 추는 듯한 영상을 생성합니다. 춤 실력과 관계없이 누구나 주인공이 될 수 있으며, 완성된 영상은 개인 기념 콘텐츠와 소셜 미디어용 숏폼으로 활용할 수 있습니다. 행사 부스·팬 프로모션·관광시설·쇼핑몰·브랜드 캠페인에 적합합니다.</p></div>
 </article>
 </div>
-</section><section aria-label="(주)엘엔케이로직코리아 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-25"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.logickorea.co.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="(주)엘엔케이로직코리아 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-25"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-25"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.logickorea.co.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-25" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">(주)엘엔케이로직코리아</h2>
 <div class="detail-separator"></div>
@@ -1425,8 +1498,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
 캐릭터 레벨과 스킬 레벨을 두어 역동적이고 박진감 넘치는 전투를 즐길 수 있습니다. 또한, 다른 게임에서 볼 수 없는 CP(Charge Point) 시스템을 도입하여, 보다 전략적인 게임 플레이를 제공합니다.</p></div>
 </article>
 </div>
-</section><section aria-label="가원글로벌 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-26"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://store.steampowered.com/app/2603290/Block_The_Monster/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="가원글로벌 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-26"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-26"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://store.steampowered.com/app/2603290/Block_The_Monster/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-26" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">가원글로벌</h2>
 <div class="detail-separator"></div>
@@ -1457,8 +1530,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
 몇 번은 서로 부딪혀도 괜찮지만 여러 번 반복되면 움직일 수 없게 뭉치게 됩니다.</p></div>
 </article>
 </div>
-</section><section aria-label="슈가웍스 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-27"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://youtu.be/qFxl1r9p7N0" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="슈가웍스 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-27"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-27"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://youtu.be/qFxl1r9p7N0" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-27" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">슈가웍스</h2>
 <div class="detail-separator"></div>
@@ -1467,8 +1540,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
 <div><h3 class="detail-ip-title">Project-G</h3><div class="detail-ip-meta"><span><strong>TYPE</strong>Game, e-Sports</span><span><strong>TARGET AGE</strong>Ages 12+</span></div><p class="detail-ip-desc">우리의 새로운 MOBA Lite는 E스포츠로서 쉽고 직관적인 전술이 특징이며, 기존 MOBA의 어려운 전투를 혁신해서 플레이타임이 기존 대비 50%로, 빠른 매칭과 경쾌한 전투를 즐길 수 있다. 특히, 기존의 3라인의 단일맵 구조를 벗어나, 다양한 전투맵 설계로, 맵마다 독특하고 역동적이고 빠른 협동 플레이의 새로운 전투 전략을 펼칠수 있다.</p></div>
 </article>
 </div>
-</section><section aria-label="스카이워크 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-28"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.skywalkgames.com/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="스카이워크 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-28"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-28"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.skywalkgames.com/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-28" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">스카이워크</h2>
 <div class="detail-separator"></div>
@@ -1490,8 +1563,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
 <div><h3 class="detail-ip-title">Girl Globe</h3><div class="detail-ip-meta"><span><strong>TYPE</strong>Game</span><span><strong>TARGET AGE</strong>Ages 12+</span></div><p class="detail-ip-desc">걸 글로브(GIRL GLOBE)는 4000개 이상의 실제 브랜드 아이템들로 다양한 코디를 즐길 수 있는 패션 게임입니다.</p></div>
 </article>
 </div>
-</section><section aria-label="주식회사 테이크원컴퍼니 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-29"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.takeonecompany.com/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="주식회사 테이크원컴퍼니 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-29"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-29"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.takeonecompany.com/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-29" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">주식회사 테이크원컴퍼니</h2>
 <div class="detail-separator"></div>
@@ -1510,8 +1583,8 @@ FoodSong Writer는 각 지역을 대표하는 음식에 담긴 문화와 사람�
 <div><h3 class="detail-ip-title">QQu ENT</h3><div class="detail-ip-meta"><span><strong>TYPE</strong>Short Form Drama Animation</span><span><strong>TARGET AGE</strong>Ages 15+</span></div><p class="detail-ip-desc">허름한 옥탑방에서 아이돌 데뷔를 꿈꾸는 뀨엔터 친구들의 일상 시트콤. 열정이 가득하지만, 어딘가 어설픈 대표 김핑크와 데뷔를 꿈꾸지만, 열악한 상황에 놓여 있는 연습생들. 데뷔를 위해 생존하고 버티고, 도전하기를 반복한다. 그 과정을 코믹함과 힐링 일상물로 그려내고 있다. K-POP 아이돌로 데뷔를 꿈꾸는 연습생들로 K-POP 아이돌 문화를 고증하며 팬의 관점에서도 공감할 수 있는 이야기를 담고 있다.</p></div>
 </article>
 </div>
-</section><section aria-label="(주)큐랩 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-30"><a aria-label="팝업 닫기" class="detail-dismiss" href="#kexpo-comp-directory"></a>
-<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.qlab.co.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><a aria-label="닫기" class="detail-close" href="#kexpo-comp-directory">×</a></div>
+</section><section aria-label="(주)큐랩 대표 IP 상세" class="company-detail-overlay" id="kexpo-detail-30"><label aria-label="팝업 바깥 영역을 눌러 닫기" class="detail-dismiss" for="ip-modal-30"></label>
+<div class="detail-panel"><div class="detail-actions"><a class="detail-website" href="https://www.qlab.co.kr/" rel="noopener noreferrer" target="_blank">웹사이트 바로가기 →</a><label aria-label="닫기" class="detail-close" for="ip-modal-30" tabindex="0">×</label></div>
 <p class="detail-eyebrow">Featured Contents / IP</p>
 <h2 class="detail-company">(주)큐랩</h2>
 <div class="detail-separator"></div>
